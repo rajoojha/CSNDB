@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "InitiativeListSearch";
+    dynamic PrincipalList = null;
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".ui-icon").css('background', '');
+        
+        if(@Session["RoleId"].ToString()=='28' ||  @Session["RoleId"].ToString()=='1')
+        {
+          
+                $('#ddlMCSNList').attr('disabled',false );
+      
+        }
+        else
+        {
+               $('#ddlMCSNList').attr('disabled', true);
+        } 
+         
+    });
+ 
+        
+    </script>
+<div class="panel-body">
+ 
+ <div class="form-group">
+
+     <div class="col-lg-3">
+           @Html.DropDownList("ddlCSNList", new SelectList(ViewBag.CSNList, "Value", "Text"), "--Select--", new {@multiple="multiple", @class="select"})
+        
+         
+         </div>
+     <div class="col-lg-3">
+          @Html.DropDownList("ddlMPrincipalList", new SelectList(PrincipalList, "Value", "Text"), "--Select--", new {@multiple="multiple", @class="select"})        
+         </div>
+     <div class="col-lg-3">
+         </div>
+
+       <div class="col-lg-3">
+         </div>
+   </div>
+    </div>
+
+

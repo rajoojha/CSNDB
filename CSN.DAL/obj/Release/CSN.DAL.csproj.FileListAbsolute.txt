@@ -1,0 +1,10 @@
+G:\CSN2016\CSNApps_old\CSN.DAL\bin\Release\CSN.DAL.dll.config
+G:\CSN2016\CSNApps_old\CSN.DAL\bin\Release\CSN.DAL.dll
+G:\CSN2016\CSNApps_old\CSN.DAL\bin\Release\CSN.DAL.pdb
+G:\CSN2016\CSNApps_old\CSN.DAL\bin\Release\CSN.Common.dll
+G:\CSN2016\CSNApps_old\CSN.DAL\bin\Release\EntityFramework.dll
+G:\CSN2016\CSNApps_old\CSN.DAL\bin\Release\CSN.Common.pdb
+G:\CSN2016\CSNApps_old\CSN.DAL\bin\Release\EntityFramework.xml
+G:\CSN2016\CSNApps_old\CSN.DAL\obj\Release\CSN.DAL.csprojResolveAssemblyReference.cache
+G:\CSN2016\CSNApps_old\CSN.DAL\obj\Release\CSN.DAL.dll
+G:\CSN2016\CSNApps_old\CSN.DAL\obj\Release\CSN.DAL.pdb

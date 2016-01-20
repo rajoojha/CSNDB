@@ -1,0 +1,2853 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CSNDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="CSNDBModelStoreContainer">
+          <EntitySet Name="TblAccountList" EntityType="CSNDBModel.Store.TblAccountList" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblAccountType" EntityType="CSNDBModel.Store.tblAccountType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblAccountTypeMaster" EntityType="CSNDBModel.Store.TblAccountTypeMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblAcctStatus" EntityType="CSNDBModel.Store.TblAcctStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblBuyersLineCarry" EntityType="CSNDBModel.Store.TblBuyersLineCarry" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblContactMaster" EntityType="CSNDBModel.Store.TblContactMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblContactStatus" EntityType="CSNDBModel.Store.TblContactStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblCSNGroup" EntityType="CSNDBModel.Store.TblCSNGroup" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblCSNList" EntityType="CSNDBModel.Store.TblCSNList" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TBLCSNRoleAccess" EntityType="CSNDBModel.Store.TBLCSNRoleAccess" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblCSNType" EntityType="CSNDBModel.Store.TblCSNType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblCustType" EntityType="CSNDBModel.Store.TblCustType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblDivision" EntityType="CSNDBModel.Store.TblDivision" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblGeneralActivitie" EntityType="CSNDBModel.Store.TblGeneralActivitie" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblInitiativeList" EntityType="CSNDBModel.Store.TblInitiativeList" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblInitiativeResults" EntityType="CSNDBModel.Store.TblInitiativeResults" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblInitStatus" EntityType="CSNDBModel.Store.TblInitStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblInitType" EntityType="CSNDBModel.Store.TblInitType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblLineStatus" EntityType="CSNDBModel.Store.tblLineStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblMfgContactMaster" EntityType="CSNDBModel.Store.TblMfgContactMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblMfgList" EntityType="CSNDBModel.Store.TblMfgList" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TBLMfgPlatform" EntityType="CSNDBModel.Store.TBLMfgPlatform" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblMfgs" EntityType="CSNDBModel.Store.TblMfgs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblMfgStates" EntityType="CSNDBModel.Store.TblMfgStates" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblPageMaster" EntityType="CSNDBModel.Store.tblPageMaster" store:Type="Tables" store:Schema="dbo" store:Name="tblPageMaster">
+            <DefiningQuery>SELECT 
+      [tblPageMaster].[Page_Id] AS [Page_Id], 
+      [tblPageMaster].[PageName] AS [PageName], 
+      [tblPageMaster].[ParentID] AS [ParentID], 
+      [tblPageMaster].[Controller] AS [Controller], 
+      [tblPageMaster].[Action] AS [Action], 
+      [tblPageMaster].[DisplayOrder] AS [DisplayOrder], 
+      [tblPageMaster].[ClassName] AS [ClassName]
+      FROM [dbo].[tblPageMaster] AS [tblPageMaster]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TblpkInitResults" EntityType="CSNDBModel.Store.TblpkInitResults" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblPlatform" EntityType="CSNDBModel.Store.TblPlatform" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblResponseType" EntityType="CSNDBModel.Store.TblResponseType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblRoleMaster" EntityType="CSNDBModel.Store.tblRoleMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblRolePageMapping" EntityType="CSNDBModel.Store.TblRolePageMapping" store:Type="Tables" store:Schema="dbo" store:Name="TblRolePageMapping">
+            <DefiningQuery>SELECT 
+      [TblRolePageMapping].[Id] AS [Id], 
+      [TblRolePageMapping].[Role_Id] AS [Role_Id], 
+      [TblRolePageMapping].[Page_Id] AS [Page_Id]
+      FROM [dbo].[TblRolePageMapping] AS [TblRolePageMapping]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TblStates" EntityType="CSNDBModel.Store.TblStates" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TblTerritory" EntityType="CSNDBModel.Store.TblTerritory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SeeAccountsWithNOTerritories" EntityType="CSNDBModel.Store.SeeAccountsWithNOTerritories" store:Type="Views" store:Schema="dbo" store:Name="SeeAccountsWithNOTerritories">
+            <DefiningQuery>SELECT 
+      [SeeAccountsWithNOTerritories].[AccountCode] AS [AccountCode], 
+      [SeeAccountsWithNOTerritories].[Company] AS [Company], 
+      [SeeAccountsWithNOTerritories].[Territory] AS [Territory], 
+      [SeeAccountsWithNOTerritories].[AcctStatusID] AS [AcctStatusID], 
+      [SeeAccountsWithNOTerritories].[City] AS [City], 
+      [SeeAccountsWithNOTerritories].[State] AS [State]
+      FROM [dbo].[SeeAccountsWithNOTerritories] AS [SeeAccountsWithNOTerritories]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SeeBuyersLinesThatdoNOtexistInMFGList" EntityType="CSNDBModel.Store.SeeBuyersLinesThatdoNOtexistInMFGList" store:Type="Views" store:Schema="dbo" store:Name="SeeBuyersLinesThatdoNOtexistInMFGList">
+            <DefiningQuery>SELECT 
+      [SeeBuyersLinesThatdoNOtexistInMFGList].[Subline] AS [Subline], 
+      [SeeBuyersLinesThatdoNOtexistInMFGList].[Expr1] AS [Expr1]
+      FROM [dbo].[SeeBuyersLinesThatdoNOtexistInMFGList] AS [SeeBuyersLinesThatdoNOtexistInMFGList]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SeeGeneralActivitiesWithNoContacts" EntityType="CSNDBModel.Store.SeeGeneralActivitiesWithNoContacts" store:Type="Views" store:Schema="dbo" store:Name="SeeGeneralActivitiesWithNoContacts">
+            <DefiningQuery>SELECT 
+      [SeeGeneralActivitiesWithNoContacts].[ActivityItemCode] AS [ActivityItemCode], 
+      [SeeGeneralActivitiesWithNoContacts].[ContactID] AS [ContactID], 
+      [SeeGeneralActivitiesWithNoContacts].[Subline] AS [Subline], 
+      [SeeGeneralActivitiesWithNoContacts].[ActivityDate] AS [ActivityDate], 
+      [SeeGeneralActivitiesWithNoContacts].[Expr1] AS [Expr1], 
+      [SeeGeneralActivitiesWithNoContacts].[Expr2] AS [Expr2]
+      FROM [dbo].[SeeGeneralActivitiesWithNoContacts] AS [SeeGeneralActivitiesWithNoContacts]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Vw_CSN_Account_Buyers" EntityType="CSNDBModel.Store.Vw_CSN_Account_Buyers" store:Type="Views" store:Schema="dbo" store:Name="Vw_CSN_Account_Buyers">
+            <DefiningQuery>SELECT 
+      [Vw_CSN_Account_Buyers].[CSNID] AS [CSNID], 
+      [Vw_CSN_Account_Buyers].[CSNName] AS [CSNName], 
+      [Vw_CSN_Account_Buyers].[AccountCode] AS [AccountCode], 
+      [Vw_CSN_Account_Buyers].[Company] AS [Company], 
+      [Vw_CSN_Account_Buyers].[ContactID] AS [ContactID], 
+      [Vw_CSN_Account_Buyers].[BuyersFirstName] AS [BuyersFirstName], 
+      [Vw_CSN_Account_Buyers].[BuyersName] AS [BuyersName], 
+      [Vw_CSN_Account_Buyers].[AccountDryOnly] AS [AccountDryOnly], 
+      [Vw_CSN_Account_Buyers].[AccountFreezer] AS [AccountFreezer], 
+      [Vw_CSN_Account_Buyers].[AccountFood] AS [AccountFood]
+      FROM [dbo].[Vw_CSN_Account_Buyers] AS [Vw_CSN_Account_Buyers]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Vw_Mfg_CSN_Account_Buyer" EntityType="CSNDBModel.Store.Vw_Mfg_CSN_Account_Buyer" store:Type="Views" store:Schema="dbo" store:Name="Vw_Mfg_CSN_Account_Buyer">
+            <DefiningQuery>SELECT 
+      [Vw_Mfg_CSN_Account_Buyer].[MfgID] AS [MfgID], 
+      [Vw_Mfg_CSN_Account_Buyer].[MfgName] AS [MfgName], 
+      [Vw_Mfg_CSN_Account_Buyer].[CSNID] AS [CSNID], 
+      [Vw_Mfg_CSN_Account_Buyer].[SCSNID] AS [SCSNID], 
+      [Vw_Mfg_CSN_Account_Buyer].[CSNName] AS [CSNName], 
+      [Vw_Mfg_CSN_Account_Buyer].[AccountCode] AS [AccountCode], 
+      [Vw_Mfg_CSN_Account_Buyer].[Company] AS [Company], 
+      [Vw_Mfg_CSN_Account_Buyer].[ContactID] AS [ContactID], 
+      [Vw_Mfg_CSN_Account_Buyer].[BuyersFirstName] AS [BuyersFirstName], 
+      [Vw_Mfg_CSN_Account_Buyer].[BuyersName] AS [BuyersName], 
+      [Vw_Mfg_CSN_Account_Buyer].[DryOnly] AS [DryOnly], 
+      [Vw_Mfg_CSN_Account_Buyer].[Food] AS [Food], 
+      [Vw_Mfg_CSN_Account_Buyer].[Freezen] AS [Freezen], 
+      [Vw_Mfg_CSN_Account_Buyer].[AccountDryOnly] AS [AccountDryOnly], 
+      [Vw_Mfg_CSN_Account_Buyer].[AccountFreezer] AS [AccountFreezer], 
+      [Vw_Mfg_CSN_Account_Buyer].[AccountFood] AS [AccountFood]
+      FROM [dbo].[Vw_Mfg_CSN_Account_Buyer] AS [Vw_Mfg_CSN_Account_Buyer]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Vw_Mfg_Initiative_List" EntityType="CSNDBModel.Store.Vw_Mfg_Initiative_List" store:Type="Views" store:Schema="dbo" store:Name="Vw_Mfg_Initiative_List">
+            <DefiningQuery>SELECT 
+      [Vw_Mfg_Initiative_List].[MfgID] AS [MfgID], 
+      [Vw_Mfg_Initiative_List].[MfgName] AS [MfgName], 
+      [Vw_Mfg_Initiative_List].[InitiativeID] AS [InitiativeID], 
+      [Vw_Mfg_Initiative_List].[InitiativeLabel] AS [InitiativeLabel], 
+      [Vw_Mfg_Initiative_List].[InitTypeDesc] AS [InitTypeDesc], 
+      [Vw_Mfg_Initiative_List].[InitiativeDesc] AS [InitiativeDesc], 
+      [Vw_Mfg_Initiative_List].[InitiativeDate] AS [InitiativeDate]
+      FROM [dbo].[Vw_Mfg_Initiative_List] AS [Vw_Mfg_Initiative_List]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vwAccountList" EntityType="CSNDBModel.Store.vwAccountList" store:Type="Views" store:Schema="dbo" store:Name="vwAccountList">
+            <DefiningQuery>SELECT 
+      [vwAccountList].[CSNID] AS [CSNID], 
+      [vwAccountList].[CSNRep] AS [CSNRep], 
+      [vwAccountList].[AccountCode] AS [AccountCode], 
+      [vwAccountList].[Company] AS [Company], 
+      [vwAccountList].[CompanyPhone] AS [CompanyPhone], 
+      [vwAccountList].[CompanyExt] AS [CompanyExt], 
+      [vwAccountList].[CompanyFax] AS [CompanyFax], 
+      [vwAccountList].[DryOnly] AS [DryOnly], 
+      [vwAccountList].[Freezer] AS [Freezer], 
+      [vwAccountList].[Food] AS [Food], 
+      [vwAccountList].[NumStores] AS [NumStores], 
+      [vwAccountList].[Address1] AS [Address1], 
+      [vwAccountList].[Address2] AS [Address2], 
+      [vwAccountList].[City] AS [City], 
+      [vwAccountList].[Country] AS [Country], 
+      [vwAccountList].[State] AS [State], 
+      [vwAccountList].[Zip] AS [Zip], 
+      [vwAccountList].[ShipToName] AS [ShipToName], 
+      [vwAccountList].[ShipToAddress1] AS [ShipToAddress1], 
+      [vwAccountList].[ShipToAddress2] AS [ShipToAddress2], 
+      [vwAccountList].[ShipToCity] AS [ShipToCity], 
+      [vwAccountList].[ShipToState] AS [ShipToState], 
+      [vwAccountList].[ShipToCountry] AS [ShipToCountry], 
+      [vwAccountList].[ShipToMailCode] AS [ShipToMailCode], 
+      [vwAccountList].[CustType1] AS [CustType1], 
+      [vwAccountList].[CustType2] AS [CustType2], 
+      [vwAccountList].[TypeName] AS [TypeName], 
+      [vwAccountList].[StateName] AS [StateName], 
+      [vwAccountList].[ShippingState] AS [ShippingState], 
+      [vwAccountList].[Territory] AS [Territory], 
+      [vwAccountList].[TerritoryID] AS [TerritoryID], 
+      [vwAccountList].[Platforms] AS [Platforms], 
+      [vwAccountList].[PlatformID] AS [PlatformID]
+      FROM [dbo].[vwAccountList] AS [vwAccountList]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vwBuyersList" EntityType="CSNDBModel.Store.vwBuyersList" store:Type="Views" store:Schema="dbo" store:Name="vwBuyersList">
+            <DefiningQuery>SELECT 
+      [vwBuyersList].[FirstName] AS [FirstName], 
+      [vwBuyersList].[LastName] AS [LastName], 
+      [vwBuyersList].[CellNumber] AS [CellNumber], 
+      [vwBuyersList].[ContactEmail] AS [ContactEmail], 
+      [vwBuyersList].[ContactTitle] AS [ContactTitle], 
+      [vwBuyersList].[Department] AS [Department], 
+      [vwBuyersList].[FaxNumber] AS [FaxNumber], 
+      [vwBuyersList].[MailAddress1] AS [MailAddress1], 
+      [vwBuyersList].[MailAddress2] AS [MailAddress2], 
+      [vwBuyersList].[MailCity] AS [MailCity], 
+      [vwBuyersList].[MailCountry] AS [MailCountry], 
+      [vwBuyersList].[PhoneExt] AS [PhoneExt], 
+      [vwBuyersList].[OfficePhone] AS [OfficePhone], 
+      [vwBuyersList].[LineAssignment] AS [LineAssignment], 
+      [vwBuyersList].[AccountCode] AS [AccountCode], 
+      [vwBuyersList].[Company] AS [Company], 
+      [vwBuyersList].[MailState] AS [MailState], 
+      [vwBuyersList].[MailMailCode] AS [MailMailCode]
+      FROM [dbo].[vwBuyersList] AS [vwBuyersList]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vwMFGAccounts" EntityType="CSNDBModel.Store.vwMFGAccounts" store:Type="Views" store:Schema="dbo" store:Name="vwMFGAccounts">
+            <DefiningQuery>SELECT 
+      [vwMFGAccounts].[AccountCode] AS [AccountCode], 
+      [vwMFGAccounts].[Company] AS [Company], 
+      [vwMFGAccounts].[DivisionName] AS [DivisionName], 
+      [vwMFGAccounts].[Division] AS [Division]
+      FROM [dbo].[vwMFGAccounts] AS [vwMFGAccounts]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vwMFGContacts" EntityType="CSNDBModel.Store.vwMFGContacts" store:Type="Views" store:Schema="dbo" store:Name="vwMFGContacts">
+            <DefiningQuery>SELECT 
+      [vwMFGContacts].[AccountCode] AS [AccountCode], 
+      [vwMFGContacts].[Company] AS [Company], 
+      [vwMFGContacts].[Division] AS [Division], 
+      [vwMFGContacts].[DivisionName] AS [DivisionName], 
+      [vwMFGContacts].[ContactID] AS [ContactID]
+      FROM [dbo].[vwMFGContacts] AS [vwMFGContacts]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VwMfgPlatform" EntityType="CSNDBModel.Store.VwMfgPlatform" store:Type="Views" store:Schema="dbo" store:Name="VwMfgPlatform">
+            <DefiningQuery>SELECT 
+      [VwMfgPlatform].[MfgPlatformID] AS [MfgPlatformID], 
+      [VwMfgPlatform].[MfgName] AS [MfgName], 
+      [VwMfgPlatform].[Platform] AS [Platform], 
+      [VwMfgPlatform].[PlatformID] AS [PlatformID], 
+      [VwMfgPlatform].[MfgID] AS [MfgID]
+      FROM [dbo].[VwMfgPlatform] AS [VwMfgPlatform]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_TblGeneralActivitie_TblAccountList" Association="CSNDBModel.Store.FK_TblGeneralActivitie_TblAccountList">
+            <End Role="TblAccountList" EntitySet="TblAccountList" />
+            <End Role="TblGeneralActivitie" EntitySet="TblGeneralActivitie" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblGeneralActivitie_TblContactMaster" Association="CSNDBModel.Store.FK_TblGeneralActivitie_TblContactMaster">
+            <End Role="TblContactMaster" EntitySet="TblContactMaster" />
+            <End Role="TblGeneralActivitie" EntitySet="TblGeneralActivitie" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblGeneralActivitie_TblCSNList" Association="CSNDBModel.Store.FK_TblGeneralActivitie_TblCSNList">
+            <End Role="TblCSNList" EntitySet="TblCSNList" />
+            <End Role="TblGeneralActivitie" EntitySet="TblGeneralActivitie" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblGeneralActivitie_TblMfgs" Association="CSNDBModel.Store.FK_TblGeneralActivitie_TblMfgs">
+            <End Role="TblMfgs" EntitySet="TblMfgs" />
+            <End Role="TblGeneralActivitie" EntitySet="TblGeneralActivitie" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblGeneralActivitie_TblPlatform" Association="CSNDBModel.Store.FK_TblGeneralActivitie_TblPlatform">
+            <End Role="TblPlatform" EntitySet="TblPlatform" />
+            <End Role="TblGeneralActivitie" EntitySet="TblGeneralActivitie" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblInitiativeList_TblInitType" Association="CSNDBModel.Store.FK_TblInitiativeList_TblInitType">
+            <End Role="TblInitType" EntitySet="TblInitType" />
+            <End Role="TblInitiativeList" EntitySet="TblInitiativeList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblInitiativeList_TblMfgs" Association="CSNDBModel.Store.FK_TblInitiativeList_TblMfgs">
+            <End Role="TblMfgs" EntitySet="TblMfgs" />
+            <End Role="TblInitiativeList" EntitySet="TblInitiativeList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblInitiativeResults_TblContactMaster" Association="CSNDBModel.Store.FK_TblInitiativeResults_TblContactMaster">
+            <End Role="TblContactMaster" EntitySet="TblContactMaster" />
+            <End Role="TblInitiativeResults" EntitySet="TblInitiativeResults" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblInitiativeResults_TblInitiativeList" Association="CSNDBModel.Store.FK_TblInitiativeResults_TblInitiativeList">
+            <End Role="TblInitiativeList" EntitySet="TblInitiativeList" />
+            <End Role="TblInitiativeResults" EntitySet="TblInitiativeResults" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblInitiativeResults_TblpkInitResults" Association="CSNDBModel.Store.FK_TblInitiativeResults_TblpkInitResults">
+            <End Role="TblpkInitResults" EntitySet="TblpkInitResults" />
+            <End Role="TblInitiativeResults" EntitySet="TblInitiativeResults" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblpkInitResults_TblResponseType" Association="CSNDBModel.Store.FK_TblpkInitResults_TblResponseType">
+            <End Role="TblResponseType" EntitySet="TblResponseType" />
+            <End Role="TblpkInitResults" EntitySet="TblpkInitResults" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="TblAccountList">
+          <Key>
+            <PropertyRef Name="AccountCode" />
+          </Key>
+          <Property Name="AccountCode" Type="int" Nullable="false" />
+          <Property Name="PrimaryAcctCode" Type="int" />
+          <Property Name="Company" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanyPhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="CompanyExt" Type="nvarchar" MaxLength="10" />
+          <Property Name="CompanyFax" Type="nvarchar" MaxLength="20" />
+          <Property Name="DryOnly" Type="bit" />
+          <Property Name="Freezer" Type="bit" />
+          <Property Name="Food" Type="bit" />
+          <Property Name="NumStores" Type="int" />
+          <Property Name="Address1" Type="nvarchar" MaxLength="250" />
+          <Property Name="Address2" Type="nvarchar" MaxLength="250" />
+          <Property Name="City" Type="nvarchar" MaxLength="130" />
+          <Property Name="State" Type="varchar" MaxLength="10" />
+          <Property Name="Country" Type="varchar" MaxLength="100" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="20" />
+          <Property Name="ShipToName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShipToAddress1" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShipToAddress2" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShipToCity" Type="nvarchar" MaxLength="30" />
+          <Property Name="ShipToState" Type="nvarchar" MaxLength="30" />
+          <Property Name="ShipToCountry" Type="nvarchar" MaxLength="30" />
+          <Property Name="ShipToMailCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="Territory" Type="varchar" MaxLength="5000" />
+          <Property Name="Division" Type="nvarchar" MaxLength="20" />
+          <Property Name="CSNDirID" Type="int" />
+          <Property Name="CSNDirect" Type="nvarchar" MaxLength="50" />
+          <Property Name="DistName" Type="nvarchar" MaxLength="50" />
+          <Property Name="GasBrand" Type="nvarchar" MaxLength="100" />
+          <Property Name="CustType1" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustType2" Type="nvarchar" MaxLength="50" />
+          <Property Name="NumAccts" Type="int" />
+          <Property Name="AcctStatusID" Type="varchar" MaxLength="10" />
+          <Property Name="RollerGrid" Type="varchar" MaxLength="50" />
+          <Property Name="FoodProgram" Type="bit" />
+          <Property Name="IsDelelted" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblAccountType">
+          <Key>
+            <PropertyRef Name="AccountTypeID" />
+          </Key>
+          <Property Name="AccountTypeID" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="AccountType" Type="varchar" MaxLength="50" />
+          <Property Name="TypeName" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TblAccountTypeMaster">
+          <Key>
+            <PropertyRef Name="AccountTypeMasterId" />
+          </Key>
+          <Property Name="AccountTypeMasterId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AccountTypeName" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="TblAcctStatus">
+          <Key>
+            <PropertyRef Name="AcctStatusID" />
+          </Key>
+          <Property Name="AcctStatusID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="StatusDescription" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TblBuyersLineCarry">
+          <Key>
+            <PropertyRef Name="BLCId" />
+          </Key>
+          <Property Name="BLCId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ContactID" Type="int" Nullable="false" />
+          <Property Name="CarryLine" Type="bit" />
+          <Property Name="PlatformID" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblContactMaster">
+          <Key>
+            <PropertyRef Name="ContactID" />
+          </Key>
+          <Property Name="ContactID" Type="int" Nullable="false" />
+          <Property Name="AccountCode" Type="int" />
+          <Property Name="SingleBuyerIndex" Type="bit" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="OfficePhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneExt" Type="nvarchar" MaxLength="5" />
+          <Property Name="FaxNumber" Type="nvarchar" MaxLength="14" />
+          <Property Name="CellNumber" Type="nvarchar" MaxLength="14" />
+          <Property Name="CompanyPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanyExt" Type="nvarchar" MaxLength="14" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="MailCompanyName" Type="nvarchar" MaxLength="75" />
+          <Property Name="MailTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="MailNamePrefix" Type="nvarchar" MaxLength="20" />
+          <Property Name="MailLastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MailFirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MailNameSuffix" Type="nvarchar" MaxLength="24" />
+          <Property Name="MailLetters" Type="nvarchar" MaxLength="24" />
+          <Property Name="MailGreeting" Type="nvarchar" MaxLength="100" />
+          <Property Name="MailSalutation" Type="nvarchar" MaxLength="50" />
+          <Property Name="MailAddress1" Type="nvarchar" MaxLength="100" />
+          <Property Name="MailAddress2" Type="nvarchar" MaxLength="50" />
+          <Property Name="MailCity" Type="nvarchar" MaxLength="30" />
+          <Property Name="MailState" Type="nvarchar" MaxLength="24" />
+          <Property Name="MailCountry" Type="nvarchar" MaxLength="24" />
+          <Property Name="MailMailCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="255" />
+          <Property Name="Buyer" Type="bit" />
+          <Property Name="NewEntry" Type="bit" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="StatusChange" Type="bit" />
+          <Property Name="StatusChangeDate" Type="datetime" />
+          <Property Name="AccountChange" Type="bit" />
+          <Property Name="AccountChangeDate" Type="datetime" />
+          <Property Name="CSNRepChange" Type="bit" />
+          <Property Name="CSNRepChangeDate" Type="datetime" />
+          <Property Name="LastModified" Type="bit" />
+          <Property Name="LastModifiedDate" Type="datetime" />
+          <Property Name="LastModifiedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="CntStatusID" Type="varchar" MaxLength="10" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="Department" Type="varchar" MaxLength="50" />
+          <Property Name="IsMaskMail" Type="bit" />
+          <Property Name="IsDelelted" Type="bit" />
+        </EntityType>
+        <EntityType Name="TblContactStatus">
+          <Key>
+            <PropertyRef Name="CntStatusID" />
+          </Key>
+          <Property Name="CntStatusID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="CntDescription" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TblCSNGroup">
+          <Key>
+            <PropertyRef Name="CSNGroupID" />
+          </Key>
+          <Property Name="CSNGroupID" Type="int" Nullable="false" />
+          <Property Name="GroupName" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TblCSNList">
+          <Key>
+            <PropertyRef Name="CSNID" />
+          </Key>
+          <Property Name="CSNID" Type="int" Nullable="false" />
+          <Property Name="CSNTypeID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="FullName" Type="varchar" MaxLength="250" />
+          <Property Name="SortName" Type="varchar" MaxLength="250" />
+          <Property Name="Code" Type="varchar" MaxLength="50" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Dept" Type="varchar" MaxLength="50" />
+          <Property Name="CSNGroupID" Type="int" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="GsmEmail" Type="varchar" MaxLength="50" />
+          <Property Name="DirEmail" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Ext" Type="varchar" MaxLength="50" />
+          <Property Name="Cell" Type="varchar" MaxLength="50" />
+          <Property Name="AltNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Fax" Type="varchar" MaxLength="50" />
+          <Property Name="Address1" Type="varchar" MaxLength="50" />
+          <Property Name="Address2" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="State" Type="varchar" MaxLength="10" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+          <Property Name="Zip" Type="varchar" MaxLength="50" />
+          <Property Name="FlagFollowups" Type="varchar" MaxLength="50" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="IsActive" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="SAddress1" Type="varchar" MaxLength="50" />
+          <Property Name="SAddress2" Type="varchar" MaxLength="50" />
+          <Property Name="SCity" Type="varchar" MaxLength="50" />
+          <Property Name="SState" Type="varchar" MaxLength="10" />
+          <Property Name="SCountry" Type="varchar" MaxLength="50" />
+          <Property Name="SZip" Type="varchar" MaxLength="50" />
+          <Property Name="Roleid" Type="int" />
+          <Property Name="Division" Type="varchar" MaxLength="5000" />
+        </EntityType>
+        <EntityType Name="TBLCSNRoleAccess">
+          <Key>
+            <PropertyRef Name="CSNRoleAccessID" />
+          </Key>
+          <Property Name="CSNRoleAccessID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CSNID" Type="int" />
+          <Property Name="IncludeInStats" Type="bit" />
+          <Property Name="IncludeInReports" Type="bit" />
+          <Property Name="IncludeAllRepAccounts" Type="bit" />
+          <Property Name="AllowCasualAcctMaintenance" Type="bit" />
+          <Property Name="AllowDetailedAcctMaintenance" Type="bit" />
+          <Property Name="AllowAdminAccMaintenance" Type="bit" />
+          <Property Name="AllowInitiativeMaintenance" Type="bit" />
+          <Property Name="AllowRepMaintenance" Type="bit" />
+          <Property Name="AllowGenActivityMaintenance" Type="bit" />
+          <Property Name="AllowAcctStatusMaintenance" Type="bit" />
+          <Property Name="AllowCasualMfgMaintenance" Type="bit" />
+          <Property Name="AllowDetailedMfgMaintenance" Type="bit" />
+          <Property Name="AllowSurveyMaintenance" Type="bit" />
+          <Property Name="AllowDatabaseAudit" Type="bit" />
+          <Property Name="AllowRawDataCorrections" Type="bit" />
+          <Property Name="AllowInitiativeDataEntry" Type="bit" />
+          <Property Name="AllowGenActivityDataEntry" Type="bit" />
+          <Property Name="AllowAcctStatusDataEntry" Type="bit" />
+          <Property Name="AllowSurveyDataEntry" Type="bit" />
+          <Property Name="AllowInitiativeReview" Type="bit" />
+          <Property Name="AllowGenActivityReview" Type="bit" />
+          <Property Name="AllowAcctStatusReview" Type="bit" />
+          <Property Name="AllowSurveyReview" Type="bit" />
+          <Property Name="AllowInitiativeReports" Type="bit" />
+          <Property Name="AllowGenActivityReports" Type="bit" />
+          <Property Name="AllowAcctStatusReports" Type="bit" />
+          <Property Name="AllowSurveyReports" Type="bit" />
+          <Property Name="AllowBuyersLists" Type="bit" />
+          <Property Name="AllowContactLists" Type="bit" />
+          <Property Name="AllowAccountLists" Type="bit" />
+        </EntityType>
+        <EntityType Name="TblCSNType">
+          <Key>
+            <PropertyRef Name="CSNTypeID" />
+          </Key>
+          <Property Name="CSNTypeID" Type="int" Nullable="false" />
+          <Property Name="CSNType" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TblCustType">
+          <Key>
+            <PropertyRef Name="CustTypeID" />
+          </Key>
+          <Property Name="CustTypeID" Type="int" Nullable="false" />
+          <Property Name="CustType" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Decription" Type="varchar" MaxLength="250" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TblDivision">
+          <Key>
+            <PropertyRef Name="Division" />
+          </Key>
+          <Property Name="Division" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="State" Type="varchar" MaxLength="10" />
+          <Property Name="DivisionName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TblGeneralActivitie">
+          <Key>
+            <PropertyRef Name="ActivityItemCode" />
+          </Key>
+          <Property Name="ActivityItemCode" Type="int" Nullable="false" />
+          <Property Name="CSNID" Type="int" />
+          <Property Name="AccountId" Type="int" />
+          <Property Name="ContactID" Type="int" />
+          <Property Name="MfgId" Type="varchar" MaxLength="20" />
+          <Property Name="PlatformID" Type="varchar" MaxLength="50" />
+          <Property Name="ActivityDate" Type="datetime" />
+          <Property Name="ActivityTitle" Type="varchar" MaxLength="254" />
+          <Property Name="FollowupDate" Type="datetime" />
+          <Property Name="ActivityDesc" Type="varchar" MaxLength="500" />
+          <Property Name="ActivityComments" Type="varchar" MaxLength="500" />
+          <Property Name="InitResultID" Type="int" Nullable="false" />
+          <Property Name="DeleteFlag" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TblInitiativeList">
+          <Key>
+            <PropertyRef Name="InitiativeID" />
+          </Key>
+          <Property Name="InitiativeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MfgID" Type="varchar" MaxLength="20" />
+          <Property Name="InitiativeType" Type="int" />
+          <Property Name="InitiativeLabel" Type="varchar" MaxLength="50" />
+          <Property Name="InitiativeDesc" Type="varchar" MaxLength="500" />
+          <Property Name="InitiativeIncentive" Type="varchar" MaxLength="500" />
+          <Property Name="InitiativeDate" Type="datetime" />
+          <Property Name="InitiativeDoneBy" Type="datetime" />
+          <Property Name="InitiativeRequestedBY" Type="varchar" MaxLength="50" />
+          <Property Name="InitStatusID" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TblInitiativeResults">
+          <Key>
+            <PropertyRef Name="InitiativeItemCode" />
+          </Key>
+          <Property Name="InitiativeItemCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="InitiativeID" Type="int" />
+          <Property Name="ContactID" Type="int" />
+          <Property Name="Presented" Type="bit" />
+          <Property Name="PresentDate" Type="datetime" />
+          <Property Name="PresentTo" Type="varchar" MaxLength="50" />
+          <Property Name="InitResultID" Type="int" />
+          <Property Name="FollowupDate" Type="datetime" />
+          <Property Name="Reasons" Type="varchar" MaxLength="5000" />
+          <Property Name="Comments" Type="varchar" MaxLength="5000" />
+          <Property Name="SkusPlaced" Type="varchar" MaxLength="128" />
+          <Property Name="DistConfirm" Type="int" />
+          <Property Name="EmailText" Type="varchar" MaxLength="5000" />
+          <Property Name="ItemSuffix" Type="varchar" MaxLength="50" />
+          <Property Name="DateModified" Type="datetime" />
+          <Property Name="AccountID" Type="int" />
+          <Property Name="CSNID" Type="int" />
+          <Property Name="AppointmentPending" Type="bit" />
+          <Property Name="DISQUALIFIED" Type="bit" />
+        </EntityType>
+        <EntityType Name="TblInitStatus">
+          <Key>
+            <PropertyRef Name="InitStatusID" />
+          </Key>
+          <Property Name="InitStatusID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="InitStatusDesc" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblInitType">
+          <Key>
+            <PropertyRef Name="InitTypeID" />
+          </Key>
+          <Property Name="InitTypeID" Type="int" Nullable="false" />
+          <Property Name="InitTypeDesc" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblLineStatus">
+          <Key>
+            <PropertyRef Name="StatusItemCode" />
+          </Key>
+          <Property Name="StatusItemCode" Type="int" Nullable="false" />
+          <Property Name="ContactID" Type="int" />
+          <Property Name="AccountCode" Type="int" />
+          <Property Name="MfgID" Type="varchar" MaxLength="20" />
+          <Property Name="EffectiveDate" Type="datetime" />
+          <Property Name="ReportTitleLine1" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReportTitleLine2" Type="nvarchar" MaxLength="500" />
+          <Property Name="LineStatus" Type="ntext" />
+          <Property Name="NewEntry" Type="bit" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="LastModified" Type="datetime" />
+          <Property Name="LastModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="Flag" Type="bit" />
+        </EntityType>
+        <EntityType Name="TblMfgContactMaster">
+          <Key>
+            <PropertyRef Name="MfgContactID" />
+          </Key>
+          <Property Name="MfgContactID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MfgId" Type="varchar" MaxLength="20" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="ContactTitle" Type="varchar" MaxLength="50" />
+          <Property Name="Division" Type="varchar" MaxLength="5000" />
+          <Property Name="Address1" Type="varchar" MaxLength="50" />
+          <Property Name="Address2" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="State" Type="varchar" MaxLength="10" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+          <Property Name="Zip" Type="varchar" MaxLength="50" />
+          <Property Name="OfficePhone" Type="varchar" MaxLength="50" />
+          <Property Name="Ext" Type="varchar" MaxLength="50" />
+          <Property Name="Cell" Type="varchar" MaxLength="50" />
+          <Property Name="AltNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Fax" Type="varchar" MaxLength="50" />
+          <Property Name="Email1" Type="varchar" MaxLength="50" />
+          <Property Name="Email2" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblMfgList">
+          <Key>
+            <PropertyRef Name="SubLine" />
+          </Key>
+          <Property Name="SubLine" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="MfgID" Type="varchar" MaxLength="20" />
+          <Property Name="SublineDesc" Type="varchar" MaxLength="128" />
+          <Property Name="MFGPrintName" Type="varchar" MaxLength="50" />
+          <Property Name="MfgActive" Type="bit" />
+          <Property Name="DryOnly" Type="bit" />
+          <Property Name="FrozenFoods" Type="bit" />
+          <Property Name="Food" Type="bit" />
+          <Property Name="ItemListTableID" Type="varchar" MaxLength="128" />
+          <Property Name="NewEntry" Type="bit" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="StatusChange" Type="bit" />
+          <Property Name="StatusChangeDate" Type="datetime" />
+          <Property Name="LastModified" Type="datetime" />
+          <Property Name="LastModifiedBy" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLMfgPlatform">
+          <Key>
+            <PropertyRef Name="MfgPlatformID" />
+          </Key>
+          <Property Name="MfgPlatformID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MfgID" Type="varchar" MaxLength="20" />
+          <Property Name="PlatformID" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblMfgs">
+          <Key>
+            <PropertyRef Name="MfgID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MfgID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="MfgName" Type="varchar" MaxLength="50" />
+          <Property Name="MFGPrintName" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="5000" />
+          <Property Name="Platform" Type="varchar" MaxLength="50" />
+          <Property Name="DryOnly" Type="bit" />
+          <Property Name="Food" Type="bit" />
+          <Property Name="Freezen" Type="bit" />
+          <Property Name="DOTFoods" Type="bit" />
+          <Property Name="Address1" Type="varchar" MaxLength="150" />
+          <Property Name="Address2" Type="varchar" MaxLength="150" />
+          <Property Name="City" Type="varchar" MaxLength="150" />
+          <Property Name="State" Type="varchar" MaxLength="10" />
+          <Property Name="Zip" Type="varchar" MaxLength="50" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+          <Property Name="PrimaryPhone1" Type="varchar" MaxLength="50" />
+          <Property Name="PrimaryPhone2" Type="varchar" MaxLength="50" />
+          <Property Name="Fax" Type="varchar" MaxLength="50" />
+          <Property Name="EMailAddress" Type="varchar" MaxLength="50" />
+          <Property Name="Website" Type="varchar" MaxLength="50" />
+          <Property Name="MfgActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="TblMfgStates">
+          <Key>
+            <PropertyRef Name="MfgStateID" />
+          </Key>
+          <Property Name="MfgStateID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MfgID" Type="varchar" MaxLength="20" />
+          <Property Name="Division" Type="varchar" MaxLength="10" />
+          <Property Name="Represented" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'csnsales.dbo.tblPageMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="tblPageMaster">
+          <Key>
+            <PropertyRef Name="Page_Id" />
+            
+          </Key>
+          <Property Name="Page_Id" Type="numeric" Nullable="false" />
+          <Property Name="PageName" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="ParentID" Type="numeric" />
+          <Property Name="Controller" Type="nvarchar" MaxLength="200" />
+          <Property Name="Action" Type="nvarchar" MaxLength="500" />
+          <Property Name="DisplayOrder" Type="numeric" Scale="2" />
+          <Property Name="ClassName" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="TblpkInitResults">
+          <Key>
+            <PropertyRef Name="InitResultID" />
+          </Key>
+          <Property Name="InitResultID" Type="int" Nullable="false" />
+          <Property Name="ResponseType" Type="int" />
+          <Property Name="Response" Type="varchar" MaxLength="255" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="Category" Type="int" />
+          <Property Name="AccountType" Type="varchar" MaxLength="50" />
+          <Property Name="TypeId" Type="int" />
+        </EntityType>
+        <EntityType Name="TblPlatform">
+          <Key>
+            <PropertyRef Name="PlatformID" />
+          </Key>
+          <Property Name="PlatformID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Platform" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="TblResponseType">
+          <Key>
+            <PropertyRef Name="ResponseTypeID" />
+          </Key>
+          <Property Name="ResponseTypeID" Type="int" Nullable="false" />
+          <Property Name="ResponseType" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblRoleMaster">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="RoleDescription" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'csnsales.dbo.TblRolePageMapping' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="TblRolePageMapping">
+          <Key>
+            <PropertyRef Name="Id" />
+            
+            
+          </Key>
+          <Property Name="Id" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Role_Id" Type="numeric" Nullable="false" />
+          <Property Name="Page_Id" Type="numeric" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TblStates">
+          <Key>
+            <PropertyRef Name="State" />
+          </Key>
+          <Property Name="State" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="StateName" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TblTerritory">
+          <Key>
+            <PropertyRef Name="Territory" />
+          </Key>
+          <Property Name="Territory" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="TerrDesc" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="ParentId" Type="varchar" MaxLength="10" />
+          <Property Name="OrderBy" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'csnsales.dbo.SeeAccountsWithNOTerritories' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SeeAccountsWithNOTerritories">
+          <Key>
+            <PropertyRef Name="AccountCode" />
+          </Key>
+          <Property Name="AccountCode" Type="int" Nullable="false" />
+          <Property Name="Company" Type="nvarchar" MaxLength="50" />
+          <Property Name="Territory" Type="varchar" MaxLength="5000" />
+          <Property Name="AcctStatusID" Type="varchar" MaxLength="10" />
+          <Property Name="City" Type="nvarchar" MaxLength="130" />
+          <Property Name="State" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'csnsales.dbo.SeeBuyersLinesThatdoNOtexistInMFGList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SeeBuyersLinesThatdoNOtexistInMFGList">
+          <Key>
+            <PropertyRef Name="Subline" />
+          </Key>
+          <Property Name="Subline" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="Expr1" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'csnsales.dbo.SeeGeneralActivitiesWithNoContacts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SeeGeneralActivitiesWithNoContacts">
+          <Key>
+            <PropertyRef Name="ActivityItemCode" />
+          </Key>
+          <Property Name="ActivityItemCode" Type="int" Nullable="false" />
+          <Property Name="ContactID" Type="int" />
+          <Property Name="Subline" Type="varchar" MaxLength="25" />
+          <Property Name="ActivityDate" Type="datetime" />
+          <Property Name="Expr1" Type="int" />
+          <Property Name="Expr2" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'csnsales.dbo.Vw_CSN_Account_Buyers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Vw_CSN_Account_Buyers">
+          <Key>
+            <PropertyRef Name="CSNID" />
+            <PropertyRef Name="AccountCode" />
+          </Key>
+          <Property Name="CSNID" Type="int" Nullable="false" />
+          <Property Name="CSNName" Type="varchar" MaxLength="250" />
+          <Property Name="AccountCode" Type="int" Nullable="false" />
+          <Property Name="Company" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactID" Type="int" />
+          <Property Name="BuyersFirstName" Type="varchar" MaxLength="50" />
+          <Property Name="BuyersName" Type="varchar" MaxLength="101" />
+          <Property Name="AccountDryOnly" Type="bit" />
+          <Property Name="AccountFreezer" Type="bit" />
+          <Property Name="AccountFood" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'csnsales.dbo.Vw_Mfg_CSN_Account_Buyer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Vw_Mfg_CSN_Account_Buyer">
+          <Key>
+            <PropertyRef Name="MfgID" />
+            <PropertyRef Name="CSNID" />
+            <PropertyRef Name="AccountCode" />
+          </Key>
+          <Property Name="MfgID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="MfgName" Type="varchar" MaxLength="50" />
+          <Property Name="CSNID" Type="int" Nullable="false" />
+          <Property Name="SCSNID" Type="varchar" MaxLength="10" />
+          <Property Name="CSNName" Type="varchar" MaxLength="250" />
+          <Property Name="AccountCode" Type="int" Nullable="false" />
+          <Property Name="Company" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactID" Type="int" />
+          <Property Name="BuyersFirstName" Type="varchar" MaxLength="50" />
+          <Property Name="BuyersName" Type="varchar" MaxLength="101" />
+          <Property Name="DryOnly" Type="bit" />
+          <Property Name="Food" Type="bit" />
+          <Property Name="Freezen" Type="bit" />
+          <Property Name="AccountDryOnly" Type="bit" />
+          <Property Name="AccountFreezer" Type="bit" />
+          <Property Name="AccountFood" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'csnsales.dbo.Vw_Mfg_Initiative_List' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Vw_Mfg_Initiative_List">
+          <Key>
+            <PropertyRef Name="MfgID" />
+            <PropertyRef Name="InitiativeID" />
+            <PropertyRef Name="InitTypeDesc" />
+          </Key>
+          <Property Name="MfgID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="MfgName" Type="varchar" MaxLength="50" />
+          <Property Name="InitiativeID" Type="int" Nullable="false" />
+          <Property Name="InitiativeLabel" Type="varchar" MaxLength="50" />
+          <Property Name="InitTypeDesc" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="InitiativeDesc" Type="varchar" MaxLength="500" />
+          <Property Name="InitiativeDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'csnsales.dbo.vwAccountList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vwAccountList">
+          <Key>
+            <PropertyRef Name="AccountCode" />
+          </Key>
+          <Property Name="CSNID" Type="varchar" MaxLength="30" />
+          <Property Name="CSNRep" Type="varchar" MaxLength="250" />
+          <Property Name="AccountCode" Type="int" Nullable="false" />
+          <Property Name="Company" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanyPhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="CompanyExt" Type="nvarchar" MaxLength="10" />
+          <Property Name="CompanyFax" Type="nvarchar" MaxLength="20" />
+          <Property Name="DryOnly" Type="bit" />
+          <Property Name="Freezer" Type="bit" />
+          <Property Name="Food" Type="bit" />
+          <Property Name="NumStores" Type="int" />
+          <Property Name="Address1" Type="nvarchar" MaxLength="250" />
+          <Property Name="Address2" Type="nvarchar" MaxLength="250" />
+          <Property Name="City" Type="nvarchar" MaxLength="130" />
+          <Property Name="Country" Type="varchar" MaxLength="100" />
+          <Property Name="State" Type="varchar" MaxLength="10" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="20" />
+          <Property Name="ShipToName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShipToAddress1" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShipToAddress2" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShipToCity" Type="nvarchar" MaxLength="30" />
+          <Property Name="ShipToState" Type="nvarchar" MaxLength="30" />
+          <Property Name="ShipToCountry" Type="nvarchar" MaxLength="30" />
+          <Property Name="ShipToMailCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="CustType1" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustType2" Type="nvarchar" MaxLength="50" />
+          <Property Name="TypeName" Type="varchar(max)" />
+          <Property Name="StateName" Type="varchar" MaxLength="150" />
+          <Property Name="ShippingState" Type="varchar" MaxLength="150" />
+          <Property Name="Territory" Type="varchar(max)" />
+          <Property Name="TerritoryID" Type="varchar" />
+          <Property Name="Platforms" Type="varchar(max)" />
+          <Property Name="PlatformID" Type="varchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'csnsales.dbo.vwBuyersList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vwBuyersList">
+          <Key>
+            <PropertyRef Name="AccountCode" />
+          </Key>
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="CellNumber" Type="nvarchar" MaxLength="14" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="Department" Type="varchar" MaxLength="50" />
+          <Property Name="FaxNumber" Type="nvarchar" MaxLength="14" />
+          <Property Name="MailAddress1" Type="nvarchar" MaxLength="100" />
+          <Property Name="MailAddress2" Type="nvarchar" MaxLength="50" />
+          <Property Name="MailCity" Type="nvarchar" MaxLength="30" />
+          <Property Name="MailCountry" Type="nvarchar" MaxLength="24" />
+          <Property Name="PhoneExt" Type="nvarchar" MaxLength="5" />
+          <Property Name="OfficePhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="LineAssignment" Type="varchar(max)" />
+          <Property Name="AccountCode" Type="int" Nullable="false" />
+          <Property Name="Company" Type="nvarchar" MaxLength="50" />
+          <Property Name="MailState" Type="nvarchar" MaxLength="24" />
+          <Property Name="MailMailCode" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'csnsales.dbo.vwMFGAccounts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vwMFGAccounts">
+          <Key>
+            <PropertyRef Name="AccountCode" />
+            <PropertyRef Name="DivisionName" />
+            <PropertyRef Name="Division" />
+          </Key>
+          <Property Name="AccountCode" Type="int" Nullable="false" />
+          <Property Name="Company" Type="nvarchar" MaxLength="50" />
+          <Property Name="DivisionName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Division" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'csnsales.dbo.vwMFGContacts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vwMFGContacts">
+          <Key>
+            <PropertyRef Name="AccountCode" />
+            <PropertyRef Name="Division" />
+            <PropertyRef Name="DivisionName" />
+            <PropertyRef Name="ContactID" />
+          </Key>
+          <Property Name="AccountCode" Type="int" Nullable="false" />
+          <Property Name="Company" Type="nvarchar" MaxLength="50" />
+          <Property Name="Division" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="DivisionName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ContactID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'csnsales.dbo.VwMfgPlatform' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VwMfgPlatform">
+          <Key>
+            <PropertyRef Name="MfgPlatformID" />
+            <PropertyRef Name="Platform" />
+            <PropertyRef Name="PlatformID" />
+          </Key>
+          <Property Name="MfgPlatformID" Type="int" Nullable="false" />
+          <Property Name="MfgName" Type="varchar" MaxLength="50" />
+          <Property Name="Platform" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="PlatformID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MfgID" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK_TblGeneralActivitie_TblAccountList">
+          <End Role="TblAccountList" Type="CSNDBModel.Store.TblAccountList" Multiplicity="0..1" />
+          <End Role="TblGeneralActivitie" Type="CSNDBModel.Store.TblGeneralActivitie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblAccountList">
+              <PropertyRef Name="AccountCode" />
+            </Principal>
+            <Dependent Role="TblGeneralActivitie">
+              <PropertyRef Name="AccountId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblGeneralActivitie_TblContactMaster">
+          <End Role="TblContactMaster" Type="CSNDBModel.Store.TblContactMaster" Multiplicity="0..1" />
+          <End Role="TblGeneralActivitie" Type="CSNDBModel.Store.TblGeneralActivitie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblContactMaster">
+              <PropertyRef Name="ContactID" />
+            </Principal>
+            <Dependent Role="TblGeneralActivitie">
+              <PropertyRef Name="ContactID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblGeneralActivitie_TblCSNList">
+          <End Role="TblCSNList" Type="CSNDBModel.Store.TblCSNList" Multiplicity="0..1" />
+          <End Role="TblGeneralActivitie" Type="CSNDBModel.Store.TblGeneralActivitie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblCSNList">
+              <PropertyRef Name="CSNID" />
+            </Principal>
+            <Dependent Role="TblGeneralActivitie">
+              <PropertyRef Name="CSNID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblGeneralActivitie_TblMfgs">
+          <End Role="TblMfgs" Type="CSNDBModel.Store.TblMfgs" Multiplicity="0..1" />
+          <End Role="TblGeneralActivitie" Type="CSNDBModel.Store.TblGeneralActivitie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblMfgs">
+              <PropertyRef Name="MfgID" />
+            </Principal>
+            <Dependent Role="TblGeneralActivitie">
+              <PropertyRef Name="MfgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblGeneralActivitie_TblPlatform">
+          <End Role="TblPlatform" Type="CSNDBModel.Store.TblPlatform" Multiplicity="0..1" />
+          <End Role="TblGeneralActivitie" Type="CSNDBModel.Store.TblGeneralActivitie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblPlatform">
+              <PropertyRef Name="PlatformID" />
+            </Principal>
+            <Dependent Role="TblGeneralActivitie">
+              <PropertyRef Name="PlatformID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblInitiativeList_TblInitType">
+          <End Role="TblInitType" Type="CSNDBModel.Store.TblInitType" Multiplicity="0..1" />
+          <End Role="TblInitiativeList" Type="CSNDBModel.Store.TblInitiativeList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblInitType">
+              <PropertyRef Name="InitTypeID" />
+            </Principal>
+            <Dependent Role="TblInitiativeList">
+              <PropertyRef Name="InitiativeType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblInitiativeList_TblMfgs">
+          <End Role="TblMfgs" Type="CSNDBModel.Store.TblMfgs" Multiplicity="0..1" />
+          <End Role="TblInitiativeList" Type="CSNDBModel.Store.TblInitiativeList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblMfgs">
+              <PropertyRef Name="MfgID" />
+            </Principal>
+            <Dependent Role="TblInitiativeList">
+              <PropertyRef Name="MfgID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblInitiativeResults_TblContactMaster">
+          <End Role="TblContactMaster" Type="CSNDBModel.Store.TblContactMaster" Multiplicity="0..1" />
+          <End Role="TblInitiativeResults" Type="CSNDBModel.Store.TblInitiativeResults" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblContactMaster">
+              <PropertyRef Name="ContactID" />
+            </Principal>
+            <Dependent Role="TblInitiativeResults">
+              <PropertyRef Name="ContactID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblInitiativeResults_TblInitiativeList">
+          <End Role="TblInitiativeList" Type="CSNDBModel.Store.TblInitiativeList" Multiplicity="0..1" />
+          <End Role="TblInitiativeResults" Type="CSNDBModel.Store.TblInitiativeResults" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblInitiativeList">
+              <PropertyRef Name="InitiativeID" />
+            </Principal>
+            <Dependent Role="TblInitiativeResults">
+              <PropertyRef Name="InitiativeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblInitiativeResults_TblpkInitResults">
+          <End Role="TblpkInitResults" Type="CSNDBModel.Store.TblpkInitResults" Multiplicity="0..1" />
+          <End Role="TblInitiativeResults" Type="CSNDBModel.Store.TblInitiativeResults" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblpkInitResults">
+              <PropertyRef Name="InitResultID" />
+            </Principal>
+            <Dependent Role="TblInitiativeResults">
+              <PropertyRef Name="InitResultID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblpkInitResults_TblResponseType">
+          <End Role="TblResponseType" Type="CSNDBModel.Store.TblResponseType" Multiplicity="0..1" />
+          <End Role="TblpkInitResults" Type="CSNDBModel.Store.TblpkInitResults" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblResponseType">
+              <PropertyRef Name="ResponseTypeID" />
+            </Principal>
+            <Dependent Role="TblpkInitResults">
+              <PropertyRef Name="ResponseType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CSNDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CSNDBEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="TblAccountLists" EntityType="CSNDBModel.TblAccountList" />
+          <EntitySet Name="tblAccountTypes" EntityType="CSNDBModel.tblAccountType" />
+          <EntitySet Name="TblAccountTypeMasters" EntityType="CSNDBModel.TblAccountTypeMaster" />
+          <EntitySet Name="TblAcctStatus" EntityType="CSNDBModel.TblAcctStatu" />
+          <EntitySet Name="TblContactStatus" EntityType="CSNDBModel.TblContactStatu" />
+          <EntitySet Name="TblCSNGroups" EntityType="CSNDBModel.TblCSNGroup" />
+          <EntitySet Name="TblCSNLists" EntityType="CSNDBModel.TblCSNList" />
+          <EntitySet Name="TBLCSNRoleAccesses" EntityType="CSNDBModel.TBLCSNRoleAccess" />
+          <EntitySet Name="TblCSNTypes" EntityType="CSNDBModel.TblCSNType" />
+          <EntitySet Name="TblCustTypes" EntityType="CSNDBModel.TblCustType" />
+          <EntitySet Name="TblDivisions" EntityType="CSNDBModel.TblDivision" />
+          <EntitySet Name="TblGeneralActivities" EntityType="CSNDBModel.TblGeneralActivitie" />
+          <EntitySet Name="TblInitiativeLists" EntityType="CSNDBModel.TblInitiativeList" />
+          <EntitySet Name="TblInitiativeResults" EntityType="CSNDBModel.TblInitiativeResult" />
+          <EntitySet Name="TblInitStatus" EntityType="CSNDBModel.TblInitStatu" />
+          <EntitySet Name="TblInitTypes" EntityType="CSNDBModel.TblInitType" />
+          <EntitySet Name="tblLineStatus" EntityType="CSNDBModel.tblLineStatu" />
+          <EntitySet Name="TblMfgContactMasters" EntityType="CSNDBModel.TblMfgContactMaster" />
+          <EntitySet Name="TblMfgLists" EntityType="CSNDBModel.TblMfgList" />
+          <EntitySet Name="TBLMfgPlatforms" EntityType="CSNDBModel.TBLMfgPlatform" />
+          <EntitySet Name="TblMfgs" EntityType="CSNDBModel.TblMfg" />
+          <EntitySet Name="TblMfgStates" EntityType="CSNDBModel.TblMfgState" />
+          <EntitySet Name="TblPlatforms" EntityType="CSNDBModel.TblPlatform" />
+          <EntitySet Name="TblResponseTypes" EntityType="CSNDBModel.TblResponseType" />
+          <EntitySet Name="tblRoleMasters" EntityType="CSNDBModel.tblRoleMaster" />
+          <EntitySet Name="TblStates" EntityType="CSNDBModel.TblState" />
+          <EntitySet Name="TblTerritories" EntityType="CSNDBModel.TblTerritory" />
+          <AssociationSet Name="FK_TblGeneralActivities_TblMfgs" Association="CSNDBModel.FK_TblGeneralActivities_TblMfgs">
+            <End Role="TblMfg" EntitySet="TblMfgs" />
+            <End Role="TblGeneralActivitie" EntitySet="TblGeneralActivities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblGeneralActivities_TblPlatform" Association="CSNDBModel.FK_TblGeneralActivities_TblPlatform">
+            <End Role="TblPlatform" EntitySet="TblPlatforms" />
+            <End Role="TblGeneralActivitie" EntitySet="TblGeneralActivities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblInitiativeList_TblInitType" Association="CSNDBModel.FK_TblInitiativeList_TblInitType">
+            <End Role="TblInitType" EntitySet="TblInitTypes" />
+            <End Role="TblInitiativeList" EntitySet="TblInitiativeLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblInitiativeList_TblMfgs" Association="CSNDBModel.FK_TblInitiativeList_TblMfgs">
+            <End Role="TblMfg" EntitySet="TblMfgs" />
+            <End Role="TblInitiativeList" EntitySet="TblInitiativeLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblInitiativeResults_TblInitiativeList" Association="CSNDBModel.FK_TblInitiativeResults_TblInitiativeList">
+            <End Role="TblInitiativeList" EntitySet="TblInitiativeLists" />
+            <End Role="TblInitiativeResult" EntitySet="TblInitiativeResults" />
+          </AssociationSet>
+          <EntitySet Name="SeeAccountsWithNOTerritories" EntityType="CSNDBModel.SeeAccountsWithNOTerritory" />
+          <EntitySet Name="SeeBuyersLinesThatdoNOtexistInMFGLists" EntityType="CSNDBModel.SeeBuyersLinesThatdoNOtexistInMFGList" />
+          <EntitySet Name="SeeGeneralActivitiesWithNoContacts" EntityType="CSNDBModel.SeeGeneralActivitiesWithNoContact" />
+          <EntitySet Name="Vw_CSN_Account_Buyers" EntityType="CSNDBModel.Vw_CSN_Account_Buyers" />
+          <EntitySet Name="Vw_Mfg_CSN_Account_Buyer" EntityType="CSNDBModel.Vw_Mfg_CSN_Account_Buyer" />
+          <EntitySet Name="Vw_Mfg_Initiative_List" EntityType="CSNDBModel.Vw_Mfg_Initiative_List" />
+          <EntitySet Name="vwAccountLists" EntityType="CSNDBModel.vwAccountList" />
+          <EntitySet Name="vwBuyersLists" EntityType="CSNDBModel.vwBuyersList" />
+          <EntitySet Name="vwMFGAccounts" EntityType="CSNDBModel.vwMFGAccount" />
+          <EntitySet Name="vwMFGContacts" EntityType="CSNDBModel.vwMFGContact" />
+          <EntitySet Name="VwMfgPlatforms" EntityType="CSNDBModel.VwMfgPlatform" />
+          <EntitySet Name="tblPageMasters" EntityType="CSNDBModel.tblPageMaster" />
+          <EntitySet Name="TblRolePageMappings" EntityType="CSNDBModel.TblRolePageMapping" />
+          <EntitySet Name="TblpkInitResults" EntityType="CSNDBModel.TblpkInitResult" />
+          <AssociationSet Name="FK_TblGeneralActivitie_TblAccountList" Association="CSNDBModel.FK_TblGeneralActivitie_TblAccountList">
+            <End Role="TblAccountList" EntitySet="TblAccountLists" />
+            <End Role="TblGeneralActivitie" EntitySet="TblGeneralActivities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblGeneralActivitie_TblCSNList" Association="CSNDBModel.FK_TblGeneralActivitie_TblCSNList">
+            <End Role="TblCSNList" EntitySet="TblCSNLists" />
+            <End Role="TblGeneralActivitie" EntitySet="TblGeneralActivities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblInitiativeResults_TblpkInitResults" Association="CSNDBModel.FK_TblInitiativeResults_TblpkInitResults">
+            <End Role="TblpkInitResult" EntitySet="TblpkInitResults" />
+            <End Role="TblInitiativeResult" EntitySet="TblInitiativeResults" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblpkInitResults_TblResponseType" Association="CSNDBModel.FK_TblpkInitResults_TblResponseType">
+            <End Role="TblResponseType" EntitySet="TblResponseTypes" />
+            <End Role="TblpkInitResult" EntitySet="TblpkInitResults" />
+          </AssociationSet>
+          <EntitySet Name="TblContactMasters" EntityType="CSNDBModel.TblContactMaster" />
+          <AssociationSet Name="FK_TblGeneralActivitie_TblContactMaster" Association="CSNDBModel.FK_TblGeneralActivitie_TblContactMaster">
+            <End Role="TblContactMaster" EntitySet="TblContactMasters" />
+            <End Role="TblGeneralActivitie" EntitySet="TblGeneralActivities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblInitiativeResults_TblContactMaster" Association="CSNDBModel.FK_TblInitiativeResults_TblContactMaster">
+            <End Role="TblContactMaster" EntitySet="TblContactMasters" />
+            <End Role="TblInitiativeResult" EntitySet="TblInitiativeResults" />
+          </AssociationSet>
+          <EntitySet Name="TblBuyersLineCarries" EntityType="CSNDBModel.TblBuyersLineCarry" />
+        </EntityContainer>
+        <EntityType Name="TblAccountList">
+          <Key>
+            <PropertyRef Name="AccountCode" />
+          </Key>
+          <Property Type="Int32" Name="AccountCode" Nullable="false" />
+          <Property Type="Int32" Name="PrimaryAcctCode" />
+          <Property Type="String" Name="Company" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CompanyPhone" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CompanyExt" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CompanyFax" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="DryOnly" />
+          <Property Type="Boolean" Name="Freezer" />
+          <Property Type="Boolean" Name="Food" />
+          <Property Type="Int32" Name="NumStores" />
+          <Property Type="String" Name="Address1" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address2" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" MaxLength="130" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="State" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Country" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zip" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipToName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipToAddress1" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipToAddress2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipToCity" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipToState" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipToCountry" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipToMailCode" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Territory" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Division" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CSNDirID" />
+          <Property Type="String" Name="CSNDirect" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DistName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GasBrand" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CustType1" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CustType2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="NumAccts" />
+          <Property Type="String" Name="AcctStatusID" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RollerGrid" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="FoodProgram" />
+          <Property Type="Boolean" Name="IsDelelted" />
+          <NavigationProperty Name="TblGeneralActivities" Relationship="CSNDBModel.FK_TblGeneralActivitie_TblAccountList" FromRole="TblAccountList" ToRole="TblGeneralActivitie" />
+        </EntityType>
+        <EntityType Name="tblAccountType">
+          <Key>
+            <PropertyRef Name="AccountTypeID" />
+          </Key>
+          <Property Type="String" Name="AccountTypeID" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="AccountType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TypeName" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblAccountTypeMaster">
+          <Key>
+            <PropertyRef Name="AccountTypeMasterId" />
+          </Key>
+          <Property Type="String" Name="AccountTypeMasterId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AccountTypeName" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblAcctStatu">
+          <Key>
+            <PropertyRef Name="AcctStatusID" />
+          </Key>
+          <Property Type="String" Name="AcctStatusID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StatusDescription" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="String" Name="ModifiedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="TblContactStatu">
+          <Key>
+            <PropertyRef Name="CntStatusID" />
+          </Key>
+          <Property Type="String" Name="CntStatusID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CntDescription" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="String" Name="ModifiedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="TblCSNGroup">
+          <Key>
+            <PropertyRef Name="CSNGroupID" />
+          </Key>
+          <Property Type="Int32" Name="CSNGroupID" Nullable="false" />
+          <Property Type="String" Name="GroupName" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="String" Name="ModifiedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="TblCSNList">
+          <Key>
+            <PropertyRef Name="CSNID" />
+          </Key>
+          <Property Type="Int32" Name="CSNID" Nullable="false" />
+          <Property Type="Int32" Name="CSNTypeID" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FullName" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SortName" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Title" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Dept" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CSNGroupID" />
+          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GsmEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DirEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Ext" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Cell" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AltNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Fax" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address1" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address2" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="State" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zip" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FlagFollowups" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UserName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IsActive" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreatedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="String" Name="ModifiedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+          <Property Type="String" Name="SAddress1" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SAddress2" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SCity" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SState" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SCountry" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SZip" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Roleid" />
+          <Property Type="String" Name="Division" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TblGeneralActivities" Relationship="CSNDBModel.FK_TblGeneralActivitie_TblCSNList" FromRole="TblCSNList" ToRole="TblGeneralActivitie" />
+        </EntityType>
+        <EntityType Name="TBLCSNRoleAccess">
+          <Key>
+            <PropertyRef Name="CSNRoleAccessID" />
+          </Key>
+          <Property Type="Int32" Name="CSNRoleAccessID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="CSNID" />
+          <Property Type="Boolean" Name="IncludeInStats" />
+          <Property Type="Boolean" Name="IncludeInReports" />
+          <Property Type="Boolean" Name="IncludeAllRepAccounts" />
+          <Property Type="Boolean" Name="AllowCasualAcctMaintenance" />
+          <Property Type="Boolean" Name="AllowDetailedAcctMaintenance" />
+          <Property Type="Boolean" Name="AllowAdminAccMaintenance" />
+          <Property Type="Boolean" Name="AllowInitiativeMaintenance" />
+          <Property Type="Boolean" Name="AllowRepMaintenance" />
+          <Property Type="Boolean" Name="AllowGenActivityMaintenance" />
+          <Property Type="Boolean" Name="AllowAcctStatusMaintenance" />
+          <Property Type="Boolean" Name="AllowCasualMfgMaintenance" />
+          <Property Type="Boolean" Name="AllowDetailedMfgMaintenance" />
+          <Property Type="Boolean" Name="AllowSurveyMaintenance" />
+          <Property Type="Boolean" Name="AllowDatabaseAudit" />
+          <Property Type="Boolean" Name="AllowRawDataCorrections" />
+          <Property Type="Boolean" Name="AllowInitiativeDataEntry" />
+          <Property Type="Boolean" Name="AllowGenActivityDataEntry" />
+          <Property Type="Boolean" Name="AllowAcctStatusDataEntry" />
+          <Property Type="Boolean" Name="AllowSurveyDataEntry" />
+          <Property Type="Boolean" Name="AllowInitiativeReview" />
+          <Property Type="Boolean" Name="AllowGenActivityReview" />
+          <Property Type="Boolean" Name="AllowAcctStatusReview" />
+          <Property Type="Boolean" Name="AllowSurveyReview" />
+          <Property Type="Boolean" Name="AllowInitiativeReports" />
+          <Property Type="Boolean" Name="AllowGenActivityReports" />
+          <Property Type="Boolean" Name="AllowAcctStatusReports" />
+          <Property Type="Boolean" Name="AllowSurveyReports" />
+          <Property Type="Boolean" Name="AllowBuyersLists" />
+          <Property Type="Boolean" Name="AllowContactLists" />
+          <Property Type="Boolean" Name="AllowAccountLists" />
+        </EntityType>
+        <EntityType Name="TblCSNType">
+          <Key>
+            <PropertyRef Name="CSNTypeID" />
+          </Key>
+          <Property Type="Int32" Name="CSNTypeID" Nullable="false" />
+          <Property Type="String" Name="CSNType" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="String" Name="ModifiedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="TblCustType">
+          <Key>
+            <PropertyRef Name="CustTypeID" />
+          </Key>
+          <Property Type="Int32" Name="CustTypeID" Nullable="false" />
+          <Property Type="String" Name="CustType" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Decription" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="String" Name="ModifiedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="TblDivision">
+          <Key>
+            <PropertyRef Name="Division" />
+          </Key>
+          <Property Type="String" Name="Division" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="State" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DivisionName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TblGeneralActivitie">
+          <Key>
+            <PropertyRef Name="ActivityItemCode" />
+          </Key>
+          <Property Type="Int32" Name="ActivityItemCode" Nullable="false" />
+          <Property Type="Int32" Name="ContactID" />
+          <Property Type="String" Name="MfgId" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PlatformID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ActivityDate" Precision="3" />
+          <Property Type="String" Name="ActivityTitle" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FollowupDate" Precision="3" />
+          <Property Type="String" Name="ActivityDesc" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ActivityComments" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TblMfg" Relationship="CSNDBModel.FK_TblGeneralActivities_TblMfgs" FromRole="TblGeneralActivitie" ToRole="TblMfg" />
+          <NavigationProperty Name="TblPlatform" Relationship="CSNDBModel.FK_TblGeneralActivities_TblPlatform" FromRole="TblGeneralActivitie" ToRole="TblPlatform" />
+          <Property Type="Int32" Name="CSNID" />
+          <Property Type="Int32" Name="AccountId" />
+          <Property Type="Int32" Name="InitResultID" Nullable="false" />
+          <Property Type="Boolean" Name="DeleteFlag" Nullable="false" />
+          <NavigationProperty Name="TblAccountList" Relationship="CSNDBModel.FK_TblGeneralActivitie_TblAccountList" FromRole="TblGeneralActivitie" ToRole="TblAccountList" />
+          <NavigationProperty Name="TblCSNList" Relationship="CSNDBModel.FK_TblGeneralActivitie_TblCSNList" FromRole="TblGeneralActivitie" ToRole="TblCSNList" />
+          <NavigationProperty Name="TblContactMaster" Relationship="CSNDBModel.FK_TblGeneralActivitie_TblContactMaster" FromRole="TblGeneralActivitie" ToRole="TblContactMaster" />
+        </EntityType>
+        <EntityType Name="TblInitiativeList">
+          <Key>
+            <PropertyRef Name="InitiativeID" />
+          </Key>
+          <Property Type="Int32" Name="InitiativeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MfgID" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="InitiativeType" />
+          <Property Type="String" Name="InitiativeLabel" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InitiativeDesc" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InitiativeIncentive" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="InitiativeDate" Precision="3" />
+          <Property Type="DateTime" Name="InitiativeDoneBy" Precision="3" />
+          <Property Type="String" Name="InitiativeRequestedBY" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InitStatusID" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TblInitType" Relationship="CSNDBModel.FK_TblInitiativeList_TblInitType" FromRole="TblInitiativeList" ToRole="TblInitType" />
+          <NavigationProperty Name="TblMfg" Relationship="CSNDBModel.FK_TblInitiativeList_TblMfgs" FromRole="TblInitiativeList" ToRole="TblMfg" />
+          <NavigationProperty Name="TblInitiativeResults" Relationship="CSNDBModel.FK_TblInitiativeResults_TblInitiativeList" FromRole="TblInitiativeList" ToRole="TblInitiativeResult" />
+        </EntityType>
+        <EntityType Name="TblInitiativeResult">
+          <Key>
+            <PropertyRef Name="InitiativeItemCode" />
+          </Key>
+          <Property Type="Int32" Name="InitiativeItemCode" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="InitiativeID" />
+          <Property Type="Int32" Name="ContactID" />
+          <Property Type="Boolean" Name="Presented" />
+          <Property Type="DateTime" Name="PresentDate" Precision="3" />
+          <Property Type="String" Name="PresentTo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="InitResultID" />
+          <Property Type="DateTime" Name="FollowupDate" Precision="3" />
+          <Property Type="String" Name="Reasons" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Comments" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SkusPlaced" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="DistConfirm" />
+          <Property Type="String" Name="EmailText" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ItemSuffix" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DateModified" Precision="3" />
+          <NavigationProperty Name="TblInitiativeList" Relationship="CSNDBModel.FK_TblInitiativeResults_TblInitiativeList" FromRole="TblInitiativeResult" ToRole="TblInitiativeList" />
+          <Property Type="Int32" Name="AccountID" />
+          <Property Type="Int32" Name="CSNID" />
+          <Property Type="Boolean" Name="AppointmentPending" />
+          <Property Type="Boolean" Name="DISQUALIFIED" />
+          <NavigationProperty Name="TblpkInitResult" Relationship="CSNDBModel.FK_TblInitiativeResults_TblpkInitResults" FromRole="TblInitiativeResult" ToRole="TblpkInitResult" />
+          <NavigationProperty Name="TblContactMaster" Relationship="CSNDBModel.FK_TblInitiativeResults_TblContactMaster" FromRole="TblInitiativeResult" ToRole="TblContactMaster" />
+        </EntityType>
+        <EntityType Name="TblInitStatu">
+          <Key>
+            <PropertyRef Name="InitStatusID" />
+          </Key>
+          <Property Type="String" Name="InitStatusID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InitStatusDesc" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblInitType">
+          <Key>
+            <PropertyRef Name="InitTypeID" />
+          </Key>
+          <Property Type="Int32" Name="InitTypeID" Nullable="false" />
+          <Property Type="String" Name="InitTypeDesc" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="String" Name="ModifiedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+          <NavigationProperty Name="TblInitiativeLists" Relationship="CSNDBModel.FK_TblInitiativeList_TblInitType" FromRole="TblInitType" ToRole="TblInitiativeList" />
+        </EntityType>
+        <EntityType Name="tblLineStatu">
+          <Key>
+            <PropertyRef Name="StatusItemCode" />
+          </Key>
+          <Property Type="Int32" Name="StatusItemCode" Nullable="false" />
+          <Property Type="Int32" Name="ContactID" />
+          <Property Type="Int32" Name="AccountCode" />
+          <Property Type="String" Name="MfgID" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EffectiveDate" Precision="3" />
+          <Property Type="String" Name="ReportTitleLine1" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReportTitleLine2" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LineStatus" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="NewEntry" />
+          <Property Type="DateTime" Name="EntryDate" Precision="3" />
+          <Property Type="DateTime" Name="LastModified" Precision="3" />
+          <Property Type="String" Name="LastModifiedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Flag" />
+        </EntityType>
+        <EntityType Name="TblMfgContactMaster">
+          <Key>
+            <PropertyRef Name="MfgContactID" />
+          </Key>
+          <Property Type="Int32" Name="MfgContactID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MfgId" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ContactTitle" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Division" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address1" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address2" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="State" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zip" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OfficePhone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Ext" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Cell" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AltNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Fax" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email1" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email2" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblMfgList">
+          <Key>
+            <PropertyRef Name="SubLine" />
+          </Key>
+          <Property Type="String" Name="SubLine" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MfgID" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SublineDesc" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MFGPrintName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="MfgActive" />
+          <Property Type="Boolean" Name="DryOnly" />
+          <Property Type="Boolean" Name="FrozenFoods" />
+          <Property Type="Boolean" Name="Food" />
+          <Property Type="String" Name="ItemListTableID" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="NewEntry" />
+          <Property Type="DateTime" Name="EntryDate" Precision="3" />
+          <Property Type="Boolean" Name="StatusChange" />
+          <Property Type="DateTime" Name="StatusChangeDate" Precision="3" />
+          <Property Type="DateTime" Name="LastModified" Precision="3" />
+          <Property Type="String" Name="LastModifiedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLMfgPlatform">
+          <Key>
+            <PropertyRef Name="MfgPlatformID" />
+          </Key>
+          <Property Type="Int32" Name="MfgPlatformID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MfgID" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PlatformID" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblMfg">
+          <Key>
+            <PropertyRef Name="MfgID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MfgID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MfgName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MFGPrintName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Platform" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="DryOnly" />
+          <Property Type="Boolean" Name="Food" />
+          <Property Type="Boolean" Name="Freezen" />
+          <Property Type="Boolean" Name="DOTFoods" />
+          <Property Type="String" Name="Address1" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address2" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="City" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="State" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zip" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PrimaryPhone1" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PrimaryPhone2" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Fax" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMailAddress" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Website" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="MfgActive" />
+          <NavigationProperty Name="TblGeneralActivities" Relationship="CSNDBModel.FK_TblGeneralActivities_TblMfgs" FromRole="TblMfg" ToRole="TblGeneralActivitie" />
+          <NavigationProperty Name="TblInitiativeLists" Relationship="CSNDBModel.FK_TblInitiativeList_TblMfgs" FromRole="TblMfg" ToRole="TblInitiativeList" />
+        </EntityType>
+        <EntityType Name="TblMfgState">
+          <Key>
+            <PropertyRef Name="MfgStateID" />
+          </Key>
+          <Property Type="Int32" Name="MfgStateID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MfgID" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Division" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Represented" />
+        </EntityType>
+        <EntityType Name="TblPlatform">
+          <Key>
+            <PropertyRef Name="PlatformID" />
+          </Key>
+          <Property Type="String" Name="PlatformID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Platform" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TblGeneralActivities" Relationship="CSNDBModel.FK_TblGeneralActivities_TblPlatform" FromRole="TblPlatform" ToRole="TblGeneralActivitie" />
+        </EntityType>
+        <EntityType Name="TblResponseType">
+          <Key>
+            <PropertyRef Name="ResponseTypeID" />
+          </Key>
+          <Property Type="Int32" Name="ResponseTypeID" Nullable="false" />
+          <Property Type="String" Name="ResponseType" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TblpkInitResults" Relationship="CSNDBModel.FK_TblpkInitResults_TblResponseType" FromRole="TblResponseType" ToRole="TblpkInitResult" />
+        </EntityType>
+        <EntityType Name="tblRoleMaster">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="RoleName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RoleDescription" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblState">
+          <Key>
+            <PropertyRef Name="State" />
+          </Key>
+          <Property Type="String" Name="State" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StateName" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="String" Name="ModifiedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="TblTerritory">
+          <Key>
+            <PropertyRef Name="Territory" />
+          </Key>
+          <Property Type="String" Name="Territory" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TerrDesc" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ParentId" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="OrderBy" />
+        </EntityType>
+        <Association Name="FK_TblGeneralActivities_TblMfgs">
+          <End Type="CSNDBModel.TblMfg" Role="TblMfg" Multiplicity="0..1" />
+          <End Type="CSNDBModel.TblGeneralActivitie" Role="TblGeneralActivitie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblMfg">
+              <PropertyRef Name="MfgID" />
+            </Principal>
+            <Dependent Role="TblGeneralActivitie">
+              <PropertyRef Name="MfgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblGeneralActivities_TblPlatform">
+          <End Type="CSNDBModel.TblPlatform" Role="TblPlatform" Multiplicity="0..1" />
+          <End Type="CSNDBModel.TblGeneralActivitie" Role="TblGeneralActivitie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblPlatform">
+              <PropertyRef Name="PlatformID" />
+            </Principal>
+            <Dependent Role="TblGeneralActivitie">
+              <PropertyRef Name="PlatformID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblInitiativeList_TblInitType">
+          <End Type="CSNDBModel.TblInitType" Role="TblInitType" Multiplicity="0..1" />
+          <End Type="CSNDBModel.TblInitiativeList" Role="TblInitiativeList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblInitType">
+              <PropertyRef Name="InitTypeID" />
+            </Principal>
+            <Dependent Role="TblInitiativeList">
+              <PropertyRef Name="InitiativeType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblInitiativeList_TblMfgs">
+          <End Type="CSNDBModel.TblMfg" Role="TblMfg" Multiplicity="0..1" />
+          <End Type="CSNDBModel.TblInitiativeList" Role="TblInitiativeList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblMfg">
+              <PropertyRef Name="MfgID" />
+            </Principal>
+            <Dependent Role="TblInitiativeList">
+              <PropertyRef Name="MfgID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblInitiativeResults_TblInitiativeList">
+          <End Type="CSNDBModel.TblInitiativeList" Role="TblInitiativeList" Multiplicity="0..1" />
+          <End Type="CSNDBModel.TblInitiativeResult" Role="TblInitiativeResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblInitiativeList">
+              <PropertyRef Name="InitiativeID" />
+            </Principal>
+            <Dependent Role="TblInitiativeResult">
+              <PropertyRef Name="InitiativeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SeeAccountsWithNOTerritory">
+          <Key>
+            <PropertyRef Name="AccountCode" />
+          </Key>
+          <Property Type="Int32" Name="AccountCode" Nullable="false" />
+          <Property Type="String" Name="Company" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Territory" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AcctStatusID" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="City" MaxLength="130" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="State" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SeeBuyersLinesThatdoNOtexistInMFGList">
+          <Key>
+            <PropertyRef Name="Subline" />
+          </Key>
+          <Property Type="String" Name="Subline" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Expr1" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SeeGeneralActivitiesWithNoContact">
+          <Key>
+            <PropertyRef Name="ActivityItemCode" />
+          </Key>
+          <Property Type="Int32" Name="ActivityItemCode" Nullable="false" />
+          <Property Type="Int32" Name="ContactID" />
+          <Property Type="String" Name="Subline" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ActivityDate" Precision="3" />
+          <Property Type="Int32" Name="Expr1" />
+          <Property Type="String" Name="Expr2" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Vw_CSN_Account_Buyers">
+          <Key>
+            <PropertyRef Name="CSNID" />
+            <PropertyRef Name="AccountCode" />
+          </Key>
+          <Property Type="Int32" Name="CSNID" Nullable="false" />
+          <Property Type="String" Name="CSNName" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AccountCode" Nullable="false" />
+          <Property Type="String" Name="Company" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ContactID" />
+          <Property Type="String" Name="BuyersName" MaxLength="101" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BuyersFirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="AccountDryOnly" />
+          <Property Type="Boolean" Name="AccountFreezer" />
+          <Property Type="Boolean" Name="AccountFood" />
+        </EntityType>
+        <EntityType Name="Vw_Mfg_CSN_Account_Buyer">
+          <Key>
+            <PropertyRef Name="MfgID" />
+            <PropertyRef Name="CSNID" />
+            <PropertyRef Name="AccountCode" />
+          </Key>
+          <Property Type="String" Name="MfgID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MfgName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CSNID" Nullable="false" />
+          <Property Type="String" Name="CSNName" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AccountCode" Nullable="false" />
+          <Property Type="String" Name="Company" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ContactID" />
+          <Property Type="String" Name="BuyersName" MaxLength="101" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SCSNID" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BuyersFirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="DryOnly" />
+          <Property Type="Boolean" Name="Food" />
+          <Property Type="Boolean" Name="Freezen" />
+          <Property Type="Boolean" Name="AccountDryOnly" />
+          <Property Type="Boolean" Name="AccountFreezer" />
+          <Property Type="Boolean" Name="AccountFood" />
+        </EntityType>
+        <EntityType Name="Vw_Mfg_Initiative_List">
+          <Key>
+            <PropertyRef Name="MfgID" />
+            <PropertyRef Name="InitiativeID" />
+            <PropertyRef Name="InitTypeDesc" />
+          </Key>
+          <Property Type="String" Name="MfgID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MfgName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="InitiativeID" Nullable="false" />
+          <Property Type="String" Name="InitiativeLabel" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InitTypeDesc" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InitiativeDesc" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="InitiativeDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="vwAccountList">
+          <Key>
+            <PropertyRef Name="AccountCode" />
+          </Key>
+          <Property Type="String" Name="CSNID" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CSNRep" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AccountCode" Nullable="false" />
+          <Property Type="String" Name="Company" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CompanyPhone" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CompanyExt" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CompanyFax" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="DryOnly" />
+          <Property Type="Boolean" Name="Freezer" />
+          <Property Type="Boolean" Name="Food" />
+          <Property Type="Int32" Name="NumStores" />
+          <Property Type="String" Name="Address1" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address2" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" MaxLength="130" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Country" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="State" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zip" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipToName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipToAddress1" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipToAddress2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipToCity" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipToState" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipToCountry" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipToMailCode" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CustType1" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CustType2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TypeName" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StateName" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ShippingState" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Territory" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TerritoryID" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Platforms" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PlatformID" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="vwBuyersList">
+          <Key>
+            <PropertyRef Name="AccountCode" />
+          </Key>
+          <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CellNumber" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactTitle" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Department" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FaxNumber" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailAddress1" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailAddress2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailCity" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailCountry" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PhoneExt" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OfficePhone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LineAssignment" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AccountCode" Nullable="false" />
+          <Property Type="String" Name="Company" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailState" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailMailCode" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vwMFGAccount">
+          <Key>
+            <PropertyRef Name="AccountCode" />
+            <PropertyRef Name="DivisionName" />
+            <PropertyRef Name="Division" />
+          </Key>
+          <Property Type="Int32" Name="AccountCode" Nullable="false" />
+          <Property Type="String" Name="Company" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DivisionName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Division" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="vwMFGContact">
+          <Key>
+            <PropertyRef Name="AccountCode" />
+            <PropertyRef Name="Division" />
+            <PropertyRef Name="DivisionName" />
+            <PropertyRef Name="ContactID" />
+          </Key>
+          <Property Type="Int32" Name="AccountCode" Nullable="false" />
+          <Property Type="String" Name="Company" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Division" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DivisionName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ContactID" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VwMfgPlatform">
+          <Key>
+            <PropertyRef Name="MfgPlatformID" />
+            <PropertyRef Name="Platform" />
+            <PropertyRef Name="PlatformID" />
+          </Key>
+          <Property Type="Int32" Name="MfgPlatformID" Nullable="false" />
+          <Property Type="String" Name="MfgName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Platform" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PlatformID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MfgID" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblPageMaster">
+          <Key>
+            <PropertyRef Name="Page_Id" />
+          </Key>
+          <Property Type="Decimal" Name="Page_Id" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="String" Name="PageName" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="ParentID" Precision="18" Scale="0" />
+          <Property Type="String" Name="Controller" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Action" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="DisplayOrder" Precision="18" Scale="2" />
+          <Property Type="String" Name="ClassName" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblRolePageMapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Decimal" Name="Id" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="Role_Id" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="Page_Id" Nullable="false" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="TblpkInitResult">
+          <Key>
+            <PropertyRef Name="InitResultID" />
+          </Key>
+          <Property Type="Int32" Name="InitResultID" Nullable="false" />
+          <Property Type="Int32" Name="ResponseType" />
+          <Property Type="String" Name="Response" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Category" />
+          <Property Type="String" Name="AccountType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TypeId" />
+          <NavigationProperty Name="TblInitiativeResults" Relationship="CSNDBModel.FK_TblInitiativeResults_TblpkInitResults" FromRole="TblpkInitResult" ToRole="TblInitiativeResult" />
+          <NavigationProperty Name="TblResponseType" Relationship="CSNDBModel.FK_TblpkInitResults_TblResponseType" FromRole="TblpkInitResult" ToRole="TblResponseType" />
+        </EntityType>
+        <Association Name="FK_TblGeneralActivitie_TblAccountList">
+          <End Type="CSNDBModel.TblAccountList" Role="TblAccountList" Multiplicity="0..1" />
+          <End Type="CSNDBModel.TblGeneralActivitie" Role="TblGeneralActivitie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblAccountList">
+              <PropertyRef Name="AccountCode" />
+            </Principal>
+            <Dependent Role="TblGeneralActivitie">
+              <PropertyRef Name="AccountId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblGeneralActivitie_TblCSNList">
+          <End Type="CSNDBModel.TblCSNList" Role="TblCSNList" Multiplicity="0..1" />
+          <End Type="CSNDBModel.TblGeneralActivitie" Role="TblGeneralActivitie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblCSNList">
+              <PropertyRef Name="CSNID" />
+            </Principal>
+            <Dependent Role="TblGeneralActivitie">
+              <PropertyRef Name="CSNID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblInitiativeResults_TblpkInitResults">
+          <End Type="CSNDBModel.TblpkInitResult" Role="TblpkInitResult" Multiplicity="0..1" />
+          <End Type="CSNDBModel.TblInitiativeResult" Role="TblInitiativeResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblpkInitResult">
+              <PropertyRef Name="InitResultID" />
+            </Principal>
+            <Dependent Role="TblInitiativeResult">
+              <PropertyRef Name="InitResultID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblpkInitResults_TblResponseType">
+          <End Type="CSNDBModel.TblResponseType" Role="TblResponseType" Multiplicity="0..1" />
+          <End Type="CSNDBModel.TblpkInitResult" Role="TblpkInitResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblResponseType">
+              <PropertyRef Name="ResponseTypeID" />
+            </Principal>
+            <Dependent Role="TblpkInitResult">
+              <PropertyRef Name="ResponseType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TblContactMaster">
+          <Key>
+            <PropertyRef Name="ContactID" />
+          </Key>
+          <Property Type="Int32" Name="ContactID" Nullable="false" />
+          <Property Type="Int32" Name="AccountCode" />
+          <Property Type="Boolean" Name="SingleBuyerIndex" />
+          <Property Type="String" Name="ContactName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactTitle" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OfficePhone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PhoneExt" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FaxNumber" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CellNumber" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CompanyPhone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CompanyExt" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailCompanyName" MaxLength="75" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailTitle" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailNamePrefix" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailLastName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailFirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailNameSuffix" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailLetters" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailGreeting" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailSalutation" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailAddress1" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailAddress2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailCity" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailState" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailCountry" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailMailCode" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Comments" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Buyer" />
+          <Property Type="Boolean" Name="NewEntry" />
+          <Property Type="DateTime" Name="EntryDate" Precision="3" />
+          <Property Type="Boolean" Name="StatusChange" />
+          <Property Type="DateTime" Name="StatusChangeDate" Precision="3" />
+          <Property Type="Boolean" Name="AccountChange" />
+          <Property Type="DateTime" Name="AccountChangeDate" Precision="3" />
+          <Property Type="Boolean" Name="CSNRepChange" />
+          <Property Type="DateTime" Name="CSNRepChangeDate" Precision="3" />
+          <Property Type="Boolean" Name="LastModified" />
+          <Property Type="DateTime" Name="LastModifiedDate" Precision="3" />
+          <Property Type="String" Name="LastModifiedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CntStatusID" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Department" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsMaskMail" />
+          <Property Type="Boolean" Name="IsDelelted" />
+          <NavigationProperty Name="TblGeneralActivities" Relationship="CSNDBModel.FK_TblGeneralActivitie_TblContactMaster" FromRole="TblContactMaster" ToRole="TblGeneralActivitie" />
+          <NavigationProperty Name="TblInitiativeResults" Relationship="CSNDBModel.FK_TblInitiativeResults_TblContactMaster" FromRole="TblContactMaster" ToRole="TblInitiativeResult" />
+        </EntityType>
+        <Association Name="FK_TblGeneralActivitie_TblContactMaster">
+          <End Type="CSNDBModel.TblContactMaster" Role="TblContactMaster" Multiplicity="0..1" />
+          <End Type="CSNDBModel.TblGeneralActivitie" Role="TblGeneralActivitie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblContactMaster">
+              <PropertyRef Name="ContactID" />
+            </Principal>
+            <Dependent Role="TblGeneralActivitie">
+              <PropertyRef Name="ContactID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblInitiativeResults_TblContactMaster">
+          <End Type="CSNDBModel.TblContactMaster" Role="TblContactMaster" Multiplicity="0..1" />
+          <End Type="CSNDBModel.TblInitiativeResult" Role="TblInitiativeResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblContactMaster">
+              <PropertyRef Name="ContactID" />
+            </Principal>
+            <Dependent Role="TblInitiativeResult">
+              <PropertyRef Name="ContactID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TblBuyersLineCarry">
+          <Key>
+            <PropertyRef Name="BLCId" />
+          </Key>
+          <Property Type="Int32" Name="BLCId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ContactID" Nullable="false" />
+          <Property Type="Boolean" Name="CarryLine" />
+          <Property Type="String" Name="PlatformID" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CSNDBModelStoreContainer" CdmEntityContainer="CSNDBEntities">
+          <EntitySetMapping Name="TblAccountLists">
+            <EntityTypeMapping TypeName="CSNDBModel.TblAccountList">
+              <MappingFragment StoreEntitySet="TblAccountList">
+                <ScalarProperty Name="IsDelelted" ColumnName="IsDelelted" />
+                <ScalarProperty Name="FoodProgram" ColumnName="FoodProgram" />
+                <ScalarProperty Name="RollerGrid" ColumnName="RollerGrid" />
+                <ScalarProperty Name="AcctStatusID" ColumnName="AcctStatusID" />
+                <ScalarProperty Name="NumAccts" ColumnName="NumAccts" />
+                <ScalarProperty Name="CustType2" ColumnName="CustType2" />
+                <ScalarProperty Name="CustType1" ColumnName="CustType1" />
+                <ScalarProperty Name="GasBrand" ColumnName="GasBrand" />
+                <ScalarProperty Name="DistName" ColumnName="DistName" />
+                <ScalarProperty Name="CSNDirect" ColumnName="CSNDirect" />
+                <ScalarProperty Name="CSNDirID" ColumnName="CSNDirID" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="Territory" ColumnName="Territory" />
+                <ScalarProperty Name="ShipToMailCode" ColumnName="ShipToMailCode" />
+                <ScalarProperty Name="ShipToCountry" ColumnName="ShipToCountry" />
+                <ScalarProperty Name="ShipToState" ColumnName="ShipToState" />
+                <ScalarProperty Name="ShipToCity" ColumnName="ShipToCity" />
+                <ScalarProperty Name="ShipToAddress2" ColumnName="ShipToAddress2" />
+                <ScalarProperty Name="ShipToAddress1" ColumnName="ShipToAddress1" />
+                <ScalarProperty Name="ShipToName" ColumnName="ShipToName" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="NumStores" ColumnName="NumStores" />
+                <ScalarProperty Name="Food" ColumnName="Food" />
+                <ScalarProperty Name="Freezer" ColumnName="Freezer" />
+                <ScalarProperty Name="DryOnly" ColumnName="DryOnly" />
+                <ScalarProperty Name="CompanyFax" ColumnName="CompanyFax" />
+                <ScalarProperty Name="CompanyExt" ColumnName="CompanyExt" />
+                <ScalarProperty Name="CompanyPhone" ColumnName="CompanyPhone" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="PrimaryAcctCode" ColumnName="PrimaryAcctCode" />
+                <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAccountTypes">
+            <EntityTypeMapping TypeName="CSNDBModel.tblAccountType">
+              <MappingFragment StoreEntitySet="tblAccountType">
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="AccountTypeID" ColumnName="AccountTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblAccountTypeMasters">
+            <EntityTypeMapping TypeName="CSNDBModel.TblAccountTypeMaster">
+              <MappingFragment StoreEntitySet="TblAccountTypeMaster">
+                <ScalarProperty Name="AccountTypeName" ColumnName="AccountTypeName" />
+                <ScalarProperty Name="AccountTypeMasterId" ColumnName="AccountTypeMasterId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblAcctStatus">
+            <EntityTypeMapping TypeName="CSNDBModel.TblAcctStatu">
+              <MappingFragment StoreEntitySet="TblAcctStatus">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+                <ScalarProperty Name="AcctStatusID" ColumnName="AcctStatusID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblContactStatus">
+            <EntityTypeMapping TypeName="CSNDBModel.TblContactStatu">
+              <MappingFragment StoreEntitySet="TblContactStatus">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CntDescription" ColumnName="CntDescription" />
+                <ScalarProperty Name="CntStatusID" ColumnName="CntStatusID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblCSNGroups">
+            <EntityTypeMapping TypeName="CSNDBModel.TblCSNGroup">
+              <MappingFragment StoreEntitySet="TblCSNGroup">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="CSNGroupID" ColumnName="CSNGroupID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblCSNLists">
+            <EntityTypeMapping TypeName="CSNDBModel.TblCSNList">
+              <MappingFragment StoreEntitySet="TblCSNList">
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="Roleid" ColumnName="Roleid" />
+                <ScalarProperty Name="SZip" ColumnName="SZip" />
+                <ScalarProperty Name="SCountry" ColumnName="SCountry" />
+                <ScalarProperty Name="SState" ColumnName="SState" />
+                <ScalarProperty Name="SCity" ColumnName="SCity" />
+                <ScalarProperty Name="SAddress2" ColumnName="SAddress2" />
+                <ScalarProperty Name="SAddress1" ColumnName="SAddress1" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="FlagFollowups" ColumnName="FlagFollowups" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="AltNumber" ColumnName="AltNumber" />
+                <ScalarProperty Name="Cell" ColumnName="Cell" />
+                <ScalarProperty Name="Ext" ColumnName="Ext" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="DirEmail" ColumnName="DirEmail" />
+                <ScalarProperty Name="GsmEmail" ColumnName="GsmEmail" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="CSNGroupID" ColumnName="CSNGroupID" />
+                <ScalarProperty Name="Dept" ColumnName="Dept" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="SortName" ColumnName="SortName" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="CSNTypeID" ColumnName="CSNTypeID" />
+                <ScalarProperty Name="CSNID" ColumnName="CSNID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLCSNRoleAccesses">
+            <EntityTypeMapping TypeName="CSNDBModel.TBLCSNRoleAccess">
+              <MappingFragment StoreEntitySet="TBLCSNRoleAccess">
+                <ScalarProperty Name="AllowAccountLists" ColumnName="AllowAccountLists" />
+                <ScalarProperty Name="AllowContactLists" ColumnName="AllowContactLists" />
+                <ScalarProperty Name="AllowBuyersLists" ColumnName="AllowBuyersLists" />
+                <ScalarProperty Name="AllowSurveyReports" ColumnName="AllowSurveyReports" />
+                <ScalarProperty Name="AllowAcctStatusReports" ColumnName="AllowAcctStatusReports" />
+                <ScalarProperty Name="AllowGenActivityReports" ColumnName="AllowGenActivityReports" />
+                <ScalarProperty Name="AllowInitiativeReports" ColumnName="AllowInitiativeReports" />
+                <ScalarProperty Name="AllowSurveyReview" ColumnName="AllowSurveyReview" />
+                <ScalarProperty Name="AllowAcctStatusReview" ColumnName="AllowAcctStatusReview" />
+                <ScalarProperty Name="AllowGenActivityReview" ColumnName="AllowGenActivityReview" />
+                <ScalarProperty Name="AllowInitiativeReview" ColumnName="AllowInitiativeReview" />
+                <ScalarProperty Name="AllowSurveyDataEntry" ColumnName="AllowSurveyDataEntry" />
+                <ScalarProperty Name="AllowAcctStatusDataEntry" ColumnName="AllowAcctStatusDataEntry" />
+                <ScalarProperty Name="AllowGenActivityDataEntry" ColumnName="AllowGenActivityDataEntry" />
+                <ScalarProperty Name="AllowInitiativeDataEntry" ColumnName="AllowInitiativeDataEntry" />
+                <ScalarProperty Name="AllowRawDataCorrections" ColumnName="AllowRawDataCorrections" />
+                <ScalarProperty Name="AllowDatabaseAudit" ColumnName="AllowDatabaseAudit" />
+                <ScalarProperty Name="AllowSurveyMaintenance" ColumnName="AllowSurveyMaintenance" />
+                <ScalarProperty Name="AllowDetailedMfgMaintenance" ColumnName="AllowDetailedMfgMaintenance" />
+                <ScalarProperty Name="AllowCasualMfgMaintenance" ColumnName="AllowCasualMfgMaintenance" />
+                <ScalarProperty Name="AllowAcctStatusMaintenance" ColumnName="AllowAcctStatusMaintenance" />
+                <ScalarProperty Name="AllowGenActivityMaintenance" ColumnName="AllowGenActivityMaintenance" />
+                <ScalarProperty Name="AllowRepMaintenance" ColumnName="AllowRepMaintenance" />
+                <ScalarProperty Name="AllowInitiativeMaintenance" ColumnName="AllowInitiativeMaintenance" />
+                <ScalarProperty Name="AllowAdminAccMaintenance" ColumnName="AllowAdminAccMaintenance" />
+                <ScalarProperty Name="AllowDetailedAcctMaintenance" ColumnName="AllowDetailedAcctMaintenance" />
+                <ScalarProperty Name="AllowCasualAcctMaintenance" ColumnName="AllowCasualAcctMaintenance" />
+                <ScalarProperty Name="IncludeAllRepAccounts" ColumnName="IncludeAllRepAccounts" />
+                <ScalarProperty Name="IncludeInReports" ColumnName="IncludeInReports" />
+                <ScalarProperty Name="IncludeInStats" ColumnName="IncludeInStats" />
+                <ScalarProperty Name="CSNID" ColumnName="CSNID" />
+                <ScalarProperty Name="CSNRoleAccessID" ColumnName="CSNRoleAccessID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblCSNTypes">
+            <EntityTypeMapping TypeName="CSNDBModel.TblCSNType">
+              <MappingFragment StoreEntitySet="TblCSNType">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CSNType" ColumnName="CSNType" />
+                <ScalarProperty Name="CSNTypeID" ColumnName="CSNTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblCustTypes">
+            <EntityTypeMapping TypeName="CSNDBModel.TblCustType">
+              <MappingFragment StoreEntitySet="TblCustType">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Decription" ColumnName="Decription" />
+                <ScalarProperty Name="CustType" ColumnName="CustType" />
+                <ScalarProperty Name="CustTypeID" ColumnName="CustTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblDivisions">
+            <EntityTypeMapping TypeName="CSNDBModel.TblDivision">
+              <MappingFragment StoreEntitySet="TblDivision">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="DivisionName" ColumnName="DivisionName" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblGeneralActivities">
+            <EntityTypeMapping TypeName="CSNDBModel.TblGeneralActivitie">
+              <MappingFragment StoreEntitySet="TblGeneralActivitie">
+                <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+                <ScalarProperty Name="InitResultID" ColumnName="InitResultID" />
+                <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+                <ScalarProperty Name="CSNID" ColumnName="CSNID" />
+                <ScalarProperty Name="ActivityComments" ColumnName="ActivityComments" />
+                <ScalarProperty Name="ActivityDesc" ColumnName="ActivityDesc" />
+                <ScalarProperty Name="FollowupDate" ColumnName="FollowupDate" />
+                <ScalarProperty Name="ActivityTitle" ColumnName="ActivityTitle" />
+                <ScalarProperty Name="ActivityDate" ColumnName="ActivityDate" />
+                <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+                <ScalarProperty Name="MfgId" ColumnName="MfgId" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="ActivityItemCode" ColumnName="ActivityItemCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblInitiativeLists">
+            <EntityTypeMapping TypeName="CSNDBModel.TblInitiativeList">
+              <MappingFragment StoreEntitySet="TblInitiativeList">
+                <ScalarProperty Name="InitStatusID" ColumnName="InitStatusID" />
+                <ScalarProperty Name="InitiativeRequestedBY" ColumnName="InitiativeRequestedBY" />
+                <ScalarProperty Name="InitiativeDoneBy" ColumnName="InitiativeDoneBy" />
+                <ScalarProperty Name="InitiativeDate" ColumnName="InitiativeDate" />
+                <ScalarProperty Name="InitiativeIncentive" ColumnName="InitiativeIncentive" />
+                <ScalarProperty Name="InitiativeDesc" ColumnName="InitiativeDesc" />
+                <ScalarProperty Name="InitiativeLabel" ColumnName="InitiativeLabel" />
+                <ScalarProperty Name="InitiativeType" ColumnName="InitiativeType" />
+                <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+                <ScalarProperty Name="InitiativeID" ColumnName="InitiativeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblInitiativeResults">
+            <EntityTypeMapping TypeName="CSNDBModel.TblInitiativeResult">
+              <MappingFragment StoreEntitySet="TblInitiativeResults">
+                <ScalarProperty Name="DISQUALIFIED" ColumnName="DISQUALIFIED" />
+                <ScalarProperty Name="AppointmentPending" ColumnName="AppointmentPending" />
+                <ScalarProperty Name="CSNID" ColumnName="CSNID" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+                <ScalarProperty Name="ItemSuffix" ColumnName="ItemSuffix" />
+                <ScalarProperty Name="EmailText" ColumnName="EmailText" />
+                <ScalarProperty Name="DistConfirm" ColumnName="DistConfirm" />
+                <ScalarProperty Name="SkusPlaced" ColumnName="SkusPlaced" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Reasons" ColumnName="Reasons" />
+                <ScalarProperty Name="FollowupDate" ColumnName="FollowupDate" />
+                <ScalarProperty Name="InitResultID" ColumnName="InitResultID" />
+                <ScalarProperty Name="PresentTo" ColumnName="PresentTo" />
+                <ScalarProperty Name="PresentDate" ColumnName="PresentDate" />
+                <ScalarProperty Name="Presented" ColumnName="Presented" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="InitiativeID" ColumnName="InitiativeID" />
+                <ScalarProperty Name="InitiativeItemCode" ColumnName="InitiativeItemCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblInitStatus">
+            <EntityTypeMapping TypeName="CSNDBModel.TblInitStatu">
+              <MappingFragment StoreEntitySet="TblInitStatus">
+                <ScalarProperty Name="InitStatusDesc" ColumnName="InitStatusDesc" />
+                <ScalarProperty Name="InitStatusID" ColumnName="InitStatusID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblInitTypes">
+            <EntityTypeMapping TypeName="CSNDBModel.TblInitType">
+              <MappingFragment StoreEntitySet="TblInitType">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="InitTypeDesc" ColumnName="InitTypeDesc" />
+                <ScalarProperty Name="InitTypeID" ColumnName="InitTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblLineStatus">
+            <EntityTypeMapping TypeName="CSNDBModel.tblLineStatu">
+              <MappingFragment StoreEntitySet="tblLineStatus">
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+                <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="NewEntry" ColumnName="NewEntry" />
+                <ScalarProperty Name="LineStatus" ColumnName="LineStatus" />
+                <ScalarProperty Name="ReportTitleLine2" ColumnName="ReportTitleLine2" />
+                <ScalarProperty Name="ReportTitleLine1" ColumnName="ReportTitleLine1" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+                <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+                <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="StatusItemCode" ColumnName="StatusItemCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblMfgContactMasters">
+            <EntityTypeMapping TypeName="CSNDBModel.TblMfgContactMaster">
+              <MappingFragment StoreEntitySet="TblMfgContactMaster">
+                <ScalarProperty Name="Email2" ColumnName="Email2" />
+                <ScalarProperty Name="Email1" ColumnName="Email1" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="AltNumber" ColumnName="AltNumber" />
+                <ScalarProperty Name="Cell" ColumnName="Cell" />
+                <ScalarProperty Name="Ext" ColumnName="Ext" />
+                <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="ContactTitle" ColumnName="ContactTitle" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MfgId" ColumnName="MfgId" />
+                <ScalarProperty Name="MfgContactID" ColumnName="MfgContactID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblMfgLists">
+            <EntityTypeMapping TypeName="CSNDBModel.TblMfgList">
+              <MappingFragment StoreEntitySet="TblMfgList">
+                <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+                <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+                <ScalarProperty Name="StatusChangeDate" ColumnName="StatusChangeDate" />
+                <ScalarProperty Name="StatusChange" ColumnName="StatusChange" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="NewEntry" ColumnName="NewEntry" />
+                <ScalarProperty Name="ItemListTableID" ColumnName="ItemListTableID" />
+                <ScalarProperty Name="Food" ColumnName="Food" />
+                <ScalarProperty Name="FrozenFoods" ColumnName="FrozenFoods" />
+                <ScalarProperty Name="DryOnly" ColumnName="DryOnly" />
+                <ScalarProperty Name="MfgActive" ColumnName="MfgActive" />
+                <ScalarProperty Name="MFGPrintName" ColumnName="MFGPrintName" />
+                <ScalarProperty Name="SublineDesc" ColumnName="SublineDesc" />
+                <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+                <ScalarProperty Name="SubLine" ColumnName="SubLine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLMfgPlatforms">
+            <EntityTypeMapping TypeName="CSNDBModel.TBLMfgPlatform">
+              <MappingFragment StoreEntitySet="TBLMfgPlatform">
+                <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+                <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+                <ScalarProperty Name="MfgPlatformID" ColumnName="MfgPlatformID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblMfgs">
+            <EntityTypeMapping TypeName="CSNDBModel.TblMfg">
+              <MappingFragment StoreEntitySet="TblMfgs">
+                <ScalarProperty Name="MfgActive" ColumnName="MfgActive" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="EMailAddress" ColumnName="EMailAddress" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="PrimaryPhone2" ColumnName="PrimaryPhone2" />
+                <ScalarProperty Name="PrimaryPhone1" ColumnName="PrimaryPhone1" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="DOTFoods" ColumnName="DOTFoods" />
+                <ScalarProperty Name="Freezen" ColumnName="Freezen" />
+                <ScalarProperty Name="Food" ColumnName="Food" />
+                <ScalarProperty Name="DryOnly" ColumnName="DryOnly" />
+                <ScalarProperty Name="Platform" ColumnName="Platform" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="MFGPrintName" ColumnName="MFGPrintName" />
+                <ScalarProperty Name="MfgName" ColumnName="MfgName" />
+                <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblMfgStates">
+            <EntityTypeMapping TypeName="CSNDBModel.TblMfgState">
+              <MappingFragment StoreEntitySet="TblMfgStates">
+                <ScalarProperty Name="Represented" ColumnName="Represented" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+                <ScalarProperty Name="MfgStateID" ColumnName="MfgStateID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblPlatforms">
+            <EntityTypeMapping TypeName="CSNDBModel.TblPlatform">
+              <MappingFragment StoreEntitySet="TblPlatform">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Platform" ColumnName="Platform" />
+                <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblResponseTypes">
+            <EntityTypeMapping TypeName="CSNDBModel.TblResponseType">
+              <MappingFragment StoreEntitySet="TblResponseType">
+                <ScalarProperty Name="ResponseType" ColumnName="ResponseType" />
+                <ScalarProperty Name="ResponseTypeID" ColumnName="ResponseTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblRoleMasters">
+            <EntityTypeMapping TypeName="CSNDBModel.tblRoleMaster">
+              <MappingFragment StoreEntitySet="tblRoleMaster">
+                <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblStates">
+            <EntityTypeMapping TypeName="CSNDBModel.TblState">
+              <MappingFragment StoreEntitySet="TblStates">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="StateName" ColumnName="StateName" />
+                <ScalarProperty Name="State" ColumnName="State" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblTerritories">
+            <EntityTypeMapping TypeName="CSNDBModel.TblTerritory">
+              <MappingFragment StoreEntitySet="TblTerritory">
+                <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="TerrDesc" ColumnName="TerrDesc" />
+                <ScalarProperty Name="Territory" ColumnName="Territory" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SeeAccountsWithNOTerritories">
+            <EntityTypeMapping TypeName="CSNDBModel.SeeAccountsWithNOTerritory">
+              <MappingFragment StoreEntitySet="SeeAccountsWithNOTerritories">
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="AcctStatusID" ColumnName="AcctStatusID" />
+                <ScalarProperty Name="Territory" ColumnName="Territory" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SeeBuyersLinesThatdoNOtexistInMFGLists">
+            <EntityTypeMapping TypeName="CSNDBModel.SeeBuyersLinesThatdoNOtexistInMFGList">
+              <MappingFragment StoreEntitySet="SeeBuyersLinesThatdoNOtexistInMFGList">
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+                <ScalarProperty Name="Subline" ColumnName="Subline" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SeeGeneralActivitiesWithNoContacts">
+            <EntityTypeMapping TypeName="CSNDBModel.SeeGeneralActivitiesWithNoContact">
+              <MappingFragment StoreEntitySet="SeeGeneralActivitiesWithNoContacts">
+                <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+                <ScalarProperty Name="ActivityDate" ColumnName="ActivityDate" />
+                <ScalarProperty Name="Subline" ColumnName="Subline" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="ActivityItemCode" ColumnName="ActivityItemCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vw_CSN_Account_Buyers">
+            <EntityTypeMapping TypeName="CSNDBModel.Vw_CSN_Account_Buyers">
+              <MappingFragment StoreEntitySet="Vw_CSN_Account_Buyers">
+                <ScalarProperty Name="AccountFood" ColumnName="AccountFood" />
+                <ScalarProperty Name="AccountFreezer" ColumnName="AccountFreezer" />
+                <ScalarProperty Name="AccountDryOnly" ColumnName="AccountDryOnly" />
+                <ScalarProperty Name="BuyersFirstName" ColumnName="BuyersFirstName" />
+                <ScalarProperty Name="BuyersName" ColumnName="BuyersName" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+                <ScalarProperty Name="CSNName" ColumnName="CSNName" />
+                <ScalarProperty Name="CSNID" ColumnName="CSNID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vw_Mfg_CSN_Account_Buyer">
+            <EntityTypeMapping TypeName="CSNDBModel.Vw_Mfg_CSN_Account_Buyer">
+              <MappingFragment StoreEntitySet="Vw_Mfg_CSN_Account_Buyer">
+                <ScalarProperty Name="AccountFood" ColumnName="AccountFood" />
+                <ScalarProperty Name="AccountFreezer" ColumnName="AccountFreezer" />
+                <ScalarProperty Name="AccountDryOnly" ColumnName="AccountDryOnly" />
+                <ScalarProperty Name="Freezen" ColumnName="Freezen" />
+                <ScalarProperty Name="Food" ColumnName="Food" />
+                <ScalarProperty Name="DryOnly" ColumnName="DryOnly" />
+                <ScalarProperty Name="BuyersFirstName" ColumnName="BuyersFirstName" />
+                <ScalarProperty Name="SCSNID" ColumnName="SCSNID" />
+                <ScalarProperty Name="BuyersName" ColumnName="BuyersName" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+                <ScalarProperty Name="CSNName" ColumnName="CSNName" />
+                <ScalarProperty Name="CSNID" ColumnName="CSNID" />
+                <ScalarProperty Name="MfgName" ColumnName="MfgName" />
+                <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vw_Mfg_Initiative_List">
+            <EntityTypeMapping TypeName="CSNDBModel.Vw_Mfg_Initiative_List">
+              <MappingFragment StoreEntitySet="Vw_Mfg_Initiative_List">
+                <ScalarProperty Name="InitiativeDate" ColumnName="InitiativeDate" />
+                <ScalarProperty Name="InitiativeDesc" ColumnName="InitiativeDesc" />
+                <ScalarProperty Name="InitTypeDesc" ColumnName="InitTypeDesc" />
+                <ScalarProperty Name="InitiativeLabel" ColumnName="InitiativeLabel" />
+                <ScalarProperty Name="InitiativeID" ColumnName="InitiativeID" />
+                <ScalarProperty Name="MfgName" ColumnName="MfgName" />
+                <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vwAccountLists">
+            <EntityTypeMapping TypeName="CSNDBModel.vwAccountList">
+              <MappingFragment StoreEntitySet="vwAccountList">
+                <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+                <ScalarProperty Name="Platforms" ColumnName="Platforms" />
+                <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
+                <ScalarProperty Name="Territory" ColumnName="Territory" />
+                <ScalarProperty Name="ShippingState" ColumnName="ShippingState" />
+                <ScalarProperty Name="StateName" ColumnName="StateName" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="CustType2" ColumnName="CustType2" />
+                <ScalarProperty Name="CustType1" ColumnName="CustType1" />
+                <ScalarProperty Name="ShipToMailCode" ColumnName="ShipToMailCode" />
+                <ScalarProperty Name="ShipToCountry" ColumnName="ShipToCountry" />
+                <ScalarProperty Name="ShipToState" ColumnName="ShipToState" />
+                <ScalarProperty Name="ShipToCity" ColumnName="ShipToCity" />
+                <ScalarProperty Name="ShipToAddress2" ColumnName="ShipToAddress2" />
+                <ScalarProperty Name="ShipToAddress1" ColumnName="ShipToAddress1" />
+                <ScalarProperty Name="ShipToName" ColumnName="ShipToName" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="NumStores" ColumnName="NumStores" />
+                <ScalarProperty Name="Food" ColumnName="Food" />
+                <ScalarProperty Name="Freezer" ColumnName="Freezer" />
+                <ScalarProperty Name="DryOnly" ColumnName="DryOnly" />
+                <ScalarProperty Name="CompanyFax" ColumnName="CompanyFax" />
+                <ScalarProperty Name="CompanyExt" ColumnName="CompanyExt" />
+                <ScalarProperty Name="CompanyPhone" ColumnName="CompanyPhone" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+                <ScalarProperty Name="CSNRep" ColumnName="CSNRep" />
+                <ScalarProperty Name="CSNID" ColumnName="CSNID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vwBuyersLists">
+            <EntityTypeMapping TypeName="CSNDBModel.vwBuyersList">
+              <MappingFragment StoreEntitySet="vwBuyersList">
+                <ScalarProperty Name="MailMailCode" ColumnName="MailMailCode" />
+                <ScalarProperty Name="MailState" ColumnName="MailState" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+                <ScalarProperty Name="LineAssignment" ColumnName="LineAssignment" />
+                <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+                <ScalarProperty Name="PhoneExt" ColumnName="PhoneExt" />
+                <ScalarProperty Name="MailCountry" ColumnName="MailCountry" />
+                <ScalarProperty Name="MailCity" ColumnName="MailCity" />
+                <ScalarProperty Name="MailAddress2" ColumnName="MailAddress2" />
+                <ScalarProperty Name="MailAddress1" ColumnName="MailAddress1" />
+                <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="ContactTitle" ColumnName="ContactTitle" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="CellNumber" ColumnName="CellNumber" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vwMFGAccounts">
+            <EntityTypeMapping TypeName="CSNDBModel.vwMFGAccount">
+              <MappingFragment StoreEntitySet="vwMFGAccounts">
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="DivisionName" ColumnName="DivisionName" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vwMFGContacts">
+            <EntityTypeMapping TypeName="CSNDBModel.vwMFGContact">
+              <MappingFragment StoreEntitySet="vwMFGContacts">
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="DivisionName" ColumnName="DivisionName" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VwMfgPlatforms">
+            <EntityTypeMapping TypeName="CSNDBModel.VwMfgPlatform">
+              <MappingFragment StoreEntitySet="VwMfgPlatform">
+                <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+                <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+                <ScalarProperty Name="Platform" ColumnName="Platform" />
+                <ScalarProperty Name="MfgName" ColumnName="MfgName" />
+                <ScalarProperty Name="MfgPlatformID" ColumnName="MfgPlatformID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPageMasters">
+            <EntityTypeMapping TypeName="CSNDBModel.tblPageMaster">
+              <MappingFragment StoreEntitySet="tblPageMaster">
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="Controller" ColumnName="Controller" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="PageName" ColumnName="PageName" />
+                <ScalarProperty Name="Page_Id" ColumnName="Page_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblRolePageMappings">
+            <EntityTypeMapping TypeName="CSNDBModel.TblRolePageMapping">
+              <MappingFragment StoreEntitySet="TblRolePageMapping">
+                <ScalarProperty Name="Page_Id" ColumnName="Page_Id" />
+                <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblpkInitResults">
+            <EntityTypeMapping TypeName="CSNDBModel.TblpkInitResult">
+              <MappingFragment StoreEntitySet="TblpkInitResults">
+                <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Response" ColumnName="Response" />
+                <ScalarProperty Name="ResponseType" ColumnName="ResponseType" />
+                <ScalarProperty Name="InitResultID" ColumnName="InitResultID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblContactMasters">
+            <EntityTypeMapping TypeName="CSNDBModel.TblContactMaster">
+              <MappingFragment StoreEntitySet="TblContactMaster">
+                <ScalarProperty Name="IsDelelted" ColumnName="IsDelelted" />
+                <ScalarProperty Name="IsMaskMail" ColumnName="IsMaskMail" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="CntStatusID" ColumnName="CntStatusID" />
+                <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+                <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+                <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+                <ScalarProperty Name="CSNRepChangeDate" ColumnName="CSNRepChangeDate" />
+                <ScalarProperty Name="CSNRepChange" ColumnName="CSNRepChange" />
+                <ScalarProperty Name="AccountChangeDate" ColumnName="AccountChangeDate" />
+                <ScalarProperty Name="AccountChange" ColumnName="AccountChange" />
+                <ScalarProperty Name="StatusChangeDate" ColumnName="StatusChangeDate" />
+                <ScalarProperty Name="StatusChange" ColumnName="StatusChange" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="NewEntry" ColumnName="NewEntry" />
+                <ScalarProperty Name="Buyer" ColumnName="Buyer" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="MailMailCode" ColumnName="MailMailCode" />
+                <ScalarProperty Name="MailCountry" ColumnName="MailCountry" />
+                <ScalarProperty Name="MailState" ColumnName="MailState" />
+                <ScalarProperty Name="MailCity" ColumnName="MailCity" />
+                <ScalarProperty Name="MailAddress2" ColumnName="MailAddress2" />
+                <ScalarProperty Name="MailAddress1" ColumnName="MailAddress1" />
+                <ScalarProperty Name="MailSalutation" ColumnName="MailSalutation" />
+                <ScalarProperty Name="MailGreeting" ColumnName="MailGreeting" />
+                <ScalarProperty Name="MailLetters" ColumnName="MailLetters" />
+                <ScalarProperty Name="MailNameSuffix" ColumnName="MailNameSuffix" />
+                <ScalarProperty Name="MailFirstName" ColumnName="MailFirstName" />
+                <ScalarProperty Name="MailLastName" ColumnName="MailLastName" />
+                <ScalarProperty Name="MailNamePrefix" ColumnName="MailNamePrefix" />
+                <ScalarProperty Name="MailTitle" ColumnName="MailTitle" />
+                <ScalarProperty Name="MailCompanyName" ColumnName="MailCompanyName" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="CompanyExt" ColumnName="CompanyExt" />
+                <ScalarProperty Name="CompanyPhone" ColumnName="CompanyPhone" />
+                <ScalarProperty Name="CellNumber" ColumnName="CellNumber" />
+                <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+                <ScalarProperty Name="PhoneExt" ColumnName="PhoneExt" />
+                <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+                <ScalarProperty Name="ContactTitle" ColumnName="ContactTitle" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="SingleBuyerIndex" ColumnName="SingleBuyerIndex" />
+                <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblBuyersLineCarries">
+            <EntityTypeMapping TypeName="CSNDBModel.TblBuyersLineCarry">
+              <MappingFragment StoreEntitySet="TblBuyersLineCarry">
+                <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+                <ScalarProperty Name="CarryLine" ColumnName="CarryLine" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="BLCId" ColumnName="BLCId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

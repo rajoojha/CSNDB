@@ -1,0 +1,66 @@
+﻿@using System.Data;
+
+<table class="table datatable-basic">
+                        <thead>
+       
+        <tr class="bg-blue">
+            <td  style="width:10%">Account's Name</td>
+            <td  style="width:10%">Buyer's Name</td>
+            <td  style="width:10%">Principal</td>
+            <td  style="width:15%">Initiative Label</td>
+            <td  style="width:35%">Initiative Desc</td> 
+            <td  style="width:10%">Initiative Result</td> 
+            <td  style="width:10%">ACTION</td>
+        </tr>  
+    </thead>
+   <tbody>                      
+        @{ 
+            DataTable dtInitiativeListView = ViewBag.InitiativeEntryListView;
+            if (dtInitiativeListView == null)
+            {
+                <tr>
+                    <td colspan="7" align="center" style="font-size: 12px; color: #055EB2;">No Record Found.</td>
+                </tr>       
+            }
+            else if (dtInitiativeListView.Rows.Count == 0)
+            {
+                <tr>
+                    <td colspan="7" align="center" style="font-size: 12px; color: #055EB2;">No Record Found.</td>
+                </tr>       
+            }
+            else
+            {
+                
+                
+                var gInitiativeListView = (from L in dtInitiativeListView.AsEnumerable()
+                                           select new
+                                           {
+                                               Company = L["Company"],
+                                               BuyersName = L["BuyersName"],
+                                               MfgName = L["MfgName"],
+                                               InitiativeLabel = L["InitiativeLabel"],
+                                               InitiativeDesc = L["InitiativeDesc"],
+                                               Response = L["Response"],
+                                               InitiativeID = L["InitiativeID"],
+                                              // ContactID= L["ContactID"]
+                                           });
+                foreach (var row in gInitiativeListView)
+                {
+                <tr class="global-rA">
+                    @{
+                        <td>@row.Company</td>          
+                        <td>@row.BuyersName</td>
+                        <td>@row.MfgName</td>
+                        <td>@row.InitiativeLabel</td>
+                        <td>@row.InitiativeDesc</td>
+                        <td>@row.Response</td>@* 
+                        <td><button type="submit"  Class="button" onclick="javascript:InitiativeEntryPopup(@row.InitiativeID,@row.ContactID)" >Edit</button>
+                         </td>*@
+                        <td></td>
+                    }
+                </tr>
+                }
+            }
+        }           
+    </tbody>       
+</table>

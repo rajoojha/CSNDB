@@ -1,0 +1,378 @@
+﻿@model CSN.ViewModel.TblCSNListVM
+@{
+    ViewBag.Title = "Index";
+
+}
+
+
+<link href="@Url.Content("~/assets/css/icons/icomoon/styles.css")" rel="stylesheet" type="text/css">
+<link href="@Url.Content("~/assets/css/bootstrap.min.css")" rel="stylesheet" type="text/css">
+<link href="@Url.Content("~/assets/css/core.min.css")" rel="stylesheet" type="text/css">
+<link href="@Url.Content("~/assets/css/components.min.css")" rel="stylesheet" type="text/css">
+<link href="@Url.Content("~/assets/css/colors.min.css")" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="@Url.Content("~/assets/js/plugins/forms/validation/validate.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/assets/js/plugins/forms/selects/bootstrap_multiselect.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/assets/js/plugins/forms/inputs/touchspin.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/assets/js/plugins/forms/selects/select2.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/assets/js/plugins/forms/styling/switch.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/assets/js/plugins/forms/styling/switchery.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/assets/js/plugins/forms/styling/uniform.min.js")"></script>
+
+<script type="text/javascript" src="@Url.Content("~/assets/js/core/app.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/assets/js/pages/form_validation.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/assets/js/pages/components_navs.js")"></script>
+
+ 
+<div class="panel panel-flat">
+
+
+    @using (Html.BeginForm("CSNEMP", "CSNEmployeeList", FormMethod.Post, new { @class = "form-horizontal form-validate-jquery" }))
+    {
+            //this  is for create form tag
+            @Html.AntiForgeryToken()          // this is for prevent CSRF attack
+            @Html.ValidationSummary(true)
+            if (@ViewBag.Message != null)
+            {
+                            <div style="border: 1px solid red">
+                                @ViewBag.Message
+                            </div>
+            }
+
+            
+            <div class="panel-group" id="accordion-styled">
+		 
+							<div class="panel">
+								<div class="panel-heading bg-info">
+									<h6 class="panel-title">
+										<a class="" data-toggle="collapse" data-parent="#accordion-styled" href="#accordion-styled-BasicEmployeeInfo" aria-expanded="true">Basic Employee Info</a>
+									</h6>
+								</div>
+								<div id="accordion-styled-BasicEmployeeInfo" class="panel-collapse collapse in" aria-expanded="true">
+									<div class="panel-body">
+										 <div class="form-group">
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            First Name <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.FirstName, new { @required = "required", @class = "form-control", maxlength = "50", placeholder = "Enter First Name" })
+                            @Html.ValidationMessageFor(a => a.FirstName)
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Last Name <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.LastName, new { @required = "required", @class = "form-control", maxlength = "50", placeholder = "Enter Last Name" })
+                            @Html.ValidationMessageFor(a => a.LastName)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Title <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.Title, new { @required = "required", @class = "form-control", maxlength = "50", placeholder = "Enter Title" })
+                            @Html.ValidationMessageFor(a => a.Title)
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Dept <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            <select  style="height:65px!important"   class="form-control" multiple="multiple" required="required">
+                                <option value="Admin" title="Admin">Admin</option>
+                                <option value="Sales" title="Sales">Sales</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Email Address <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.Email, new { @required = "required", @class = "form-control", maxlength = "50", placeholder = "Enter Email Address" })
+                            @Html.ValidationMessageFor(a => a.Email)
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            AlterNate Email Address <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.DirEmail, new { @required = "required", @class = "form-control", maxlength = "50", placeholder = "Enter AlterNate Email Address" })
+                            @Html.ValidationMessageFor(a => a.DirEmail)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Phone <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.Phone, new { @required = "required", @class = "form-control", maxlength = "50", placeholder = "Enter Phone" })
+                            @Html.ValidationMessageFor(a => a.Phone)
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Ext <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-3">
+                            @Html.TextBoxFor(a => a.Ext, new { @required = "required", @class = "form-control", maxlength = "50", placeholder = "Ext" })
+                            @Html.ValidationMessageFor(a => a.Ext)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Cell <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.Cell, new { @required = "required", @class = "form-control", maxlength = "50", placeholder = "Enter Cell" })
+                            @Html.ValidationMessageFor(a => a.Cell)
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Alt Number <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-3">
+                            @Html.TextBoxFor(a => a.AltNumber, new { @required = "required", @class = "form-control", maxlength = "50", placeholder = "Alt Number" })
+                            @Html.ValidationMessageFor(a => a.AltNumber)
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Fax <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.Fax, new { @required = "required", @class = "form-control", maxlength = "50", placeholder = "Enter Fax" })
+                            @Html.ValidationMessageFor(a => a.Fax)
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Is Active<span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-3">
+                            @Html.CheckBoxFor(d => d.IsActive)
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            User Name <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.UserName, new { @required = "required", @class = "form-control", maxlength = "50", placeholder = "Enter User Name" })
+                            @Html.ValidationMessageFor(a => a.UserName)
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Password<span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.PasswordFor(a => a.Password, new { @required = "required", @class = "form-control", maxlength = "50", placeholder = "Enter Password" })
+                            @Html.ValidationMessageFor(a => a.Password)
+
+                        </div>
+                    </div>
+
+                </div>
+									</div>
+								</div>
+							</div>
+
+                        	
+
+                	<div class="panel">
+								<div class="panel-heading bg-info">
+									<h6 class="panel-title">
+										<a class="" data-toggle="collapse" data-parent="#accordion-styled" href="#accordion-styled-group2" aria-expanded="true">Primary Address</a>
+									</h6>
+								</div>
+								<div id="accordion-styled-group2" class="panel-collapse collapse in" aria-expanded="true">
+									<div class="panel-body">
+									<div class="form-group">
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Address 1 <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.Address1, new { @required = "required", @class = "form-control", maxlength = "200", placeholder = "Enter Address1" })
+                            @Html.ValidationMessageFor(a => a.Address1)
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Last Name <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.Address2, new  { @required = "required", @class = "form-control", maxlength = "250", placeholder = "Enter Address2" })
+                            @Html.ValidationMessageFor(a => a.Address2)
+                        </div>
+                    </div>
+                </div>
+              <div class="form-group">
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            City <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.City, new { @required = "required", @class = "form-control", maxlength = "200", placeholder = "Enter City" })
+                            @Html.ValidationMessageFor(a => a.City)
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Last Name <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.State, new  { @required = "required", @class = "form-control", maxlength = "250", placeholder = "Enter State" })
+                            @Html.ValidationMessageFor(a => a.Zip)
+                        </div>
+                    </div>
+                </div>
+
+              <div class="form-group">
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Zip <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.Zip, new { @required = "required", @class = "form-control", maxlength = "200", placeholder = "Enter City" })
+                            @Html.ValidationMessageFor(a => a.Zip)
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Country <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.Country, new  { @required = "required", @class = "form-control", maxlength = "250", placeholder = "Enter Country" })
+                            @Html.ValidationMessageFor(a => a.Country)
+                        </div>
+                    </div>
+
+                </div>
+									</div>
+								</div>
+							</div>
+                <div class="panel">
+								<div class="panel-heading bg-info">
+									<h6 class="panel-title">
+										<a class="" data-toggle="collapse" data-parent="#accordion-styled" href="#accordion-styled-PrimaryAddress" aria-expanded="true">Secondary Address</a>
+									</h6>
+								</div>
+								<div id="accordion-styled-PrimaryAddress" class="panel-collapse collapse in" aria-expanded="true">
+									<div class="panel-body">
+									<div class="form-group">
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Address 1 <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.SAddress1, new { @required = "required", @class = "form-control", maxlength = "200", placeholder = "Enter Address1" })
+                            @Html.ValidationMessageFor(a => a.SAddress1)
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Last Name <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.SAddress2, new  { @required = "required", @class = "form-control", maxlength = "250", placeholder = "Enter Address2" })
+                            @Html.ValidationMessageFor(a => a.SAddress2)
+                        </div>
+                    </div>
+                </div>
+              <div class="form-group">
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            City <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.SCity, new { @required = "required", @class = "form-control", maxlength = "200", placeholder = "Enter City" })
+                            @Html.ValidationMessageFor(a => a.SCity)
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            State <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.SState, new  { @required = "required", @class = "form-control", maxlength = "250", placeholder = "Enter State" })
+                            @Html.ValidationMessageFor(a => a.SState)
+                        </div>
+                    </div>
+                </div>
+
+              <div class="form-group">
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Zip <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.SZip, new { @required = "required", @class = "form-control", maxlength = "200", placeholder = "Enter City" })
+                            @Html.ValidationMessageFor(a => a.SZip)
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="control-label col-lg-3">
+                            Country <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(a => a.SCountry, new  { @required = "required", @class = "form-control", maxlength = "250", placeholder = "Enter Country" })
+                            @Html.ValidationMessageFor(a => a.SCountry)
+                        </div>
+                    </div>
+
+                </div>
+									</div>
+								</div>
+							</div>
+						 
+						</div>
+        
+        
+            
+         
+           
+        
+         
+         
+        
+            <div class="text-right">
+                <button type="reset" class="btn btn-default" id="reset">
+                    Reset <i class="icon-reload-alt position-right"></i>
+                </button>
+                <button type="submit" class="btn btn-primary">
+                    Submit <i class="icon-arrow-right14 position-right"></i>
+                </button>
+            </div>
+    }
+</div>
+     

@@ -1,0 +1,98 @@
+﻿@model  IQueryable<CSN.ViewModel.TblCSNListVM>
+@{
+    ViewBag.Title = "EmpList";
+} 		 
+<div class="panel panel-flat">
+					<div class="panel-heading">
+						<h5 class="panel-title">CSN List</h5>
+						 
+					</div> 
+
+				<table class="table datatable-basic">
+							<thead>
+							<tr class="bg-blue">
+									 <th>Employee Name</th>
+                            <th>Office Phone</th>
+                            <th>Ext</th>
+                            <th>Cell Phone</th>
+                            <th>Fax Number</th>
+                            <th>Email Address</th>
+                            <th>Primary Address</th>                   
+                            <th>Dept</th>
+                            <th>Title</th>
+                            <th>Action</th>
+						 
+								</tr>
+							</thead>
+							<tbody>
+                            @if (Model.Count() > 0)
+                            {
+                                foreach (var row in Model)
+                                {
+                                                                    <tr role="row" class="odd">
+                                                                        <td class="center">
+                                                                            <label class="pos-rel">
+                                                                                @row.FullName <span class="lbl"></span>
+                                                                            </label>
+                                                                        </td>
+                                                                        <td class="center">
+                                                                            <label class="pos-rel">
+                                                                                @row.Phone <span class="lbl"></span>
+                                                                            </label>
+                                                                        </td>
+                                                                        <td class="center">
+                                                                            <label class="pos-rel">
+                                                                                @row.Ext <span class="lbl"></span>
+                                                                            </label>
+                                                                        </td>
+                                                                        <td class="center">
+                                                                            <label class="pos-rel">
+                                                                                @row.Cell <span class="lbl"></span>
+                                                                            </label>
+                                                                        </td>
+
+                                                                        <td class="center">
+                                                                            <label class="pos-rel">
+                                                                                @row.Fax <span class="lbl"></span>
+                                                                            </label>
+                                                                        </td>
+                                                                        <td class="center">
+                                                                            <label class="pos-rel">
+                                                                                  @row.Email <span class="lbl"></span>
+                                                                            </label>
+                                                                        </td>
+                                                                        <td>
+                                                                             
+                                                                                  @row.PrimaryAddress 
+                                                                            
+                                                                        </td>
+                                                                       
+
+                                                                        <td class="center">
+                                                                            <label class="pos-rel">
+                                                                                  @row.Dept <span class="lbl"></span>
+                                                                            </label>
+                                                                        </td>
+                                                                         <td class="center">
+                                                                            <label class="pos-rel">
+                                                                                  @row.Title <span class="lbl"></span>
+                                                                            </label>
+                                                                        </td>
+                                                                        <td>
+                                                                            
+ 
+                                                                        </td>
+                                                                    </tr>
+                                }
+                            }
+                                                    
+                        </tbody>
+						</table>
+					</div>
+
+				 
+
+			 
+				 
+ 
+ 

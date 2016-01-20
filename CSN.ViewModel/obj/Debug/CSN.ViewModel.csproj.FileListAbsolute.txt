@@ -1,0 +1,14 @@
+G:\CSN2016\CSNApps\CSN.ViewModel\bin\Debug\CSN.ViewModel.dll
+G:\CSN2016\CSNApps\CSN.ViewModel\bin\Debug\CSN.ViewModel.pdb
+G:\CSN2016\CSNApps\CSN.ViewModel\obj\Debug\CSN.ViewModel.csprojResolveAssemblyReference.cache
+G:\CSN2016\CSNApps\CSN.ViewModel\obj\Debug\CSN.ViewModel.dll
+G:\CSN2016\CSNApps\CSN.ViewModel\obj\Debug\CSN.ViewModel.pdb
+H:\CSN2016\CSNApps\CSN.ViewModel\bin\Debug\CSN.ViewModel.dll
+H:\CSN2016\CSNApps\CSN.ViewModel\bin\Debug\CSN.ViewModel.pdb
+H:\CSN2016\CSNApps\CSN.ViewModel\obj\Debug\CSN.ViewModel.csprojResolveAssemblyReference.cache
+H:\CSN2016\CSNApps\CSN.ViewModel\obj\Debug\CSN.ViewModel.dll
+H:\CSN2016\CSNApps\CSN.ViewModel\obj\Debug\CSN.ViewModel.pdb
+G:\CSN2016\CSNApps_old\CSN.ViewModel\bin\Debug\CSN.ViewModel.dll
+G:\CSN2016\CSNApps_old\CSN.ViewModel\bin\Debug\CSN.ViewModel.pdb
+G:\CSN2016\CSNApps_old\CSN.ViewModel\obj\Debug\CSN.ViewModel.dll
+G:\CSN2016\CSNApps_old\CSN.ViewModel\obj\Debug\CSN.ViewModel.pdb

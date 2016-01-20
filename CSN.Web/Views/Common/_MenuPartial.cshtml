@@ -1,0 +1,47 @@
+﻿@model IEnumerable<CSN.ViewModel.TblPageMasterVM>
+
+<div class="navbar navbar-default" id="navbar-second">
+    <ul class="nav navbar-nav no-border visible-xs-block">
+        <li>
+            <a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle">
+                <i class="icon-menu7"></i>
+            </a>
+        </li>
+    </ul>
+
+    <div class="navbar-collapse collapse" id="navbar-second-toggle">
+        <ul class="nav navbar-nav">
+
+            @if (Model.Count() > 0)
+            {
+               
+                foreach (var menu in Model)
+                {
+               <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            @menu.PageName<span class="caret"></span>
+                                        </a>                   
+                                        <ul class="dropdown-menu width-200"> 
+                                            @{
+                                                if (menu.TblPageMasterList != null)
+                                                {
+                                                    if (menu.TblPageMasterList.Count() > 0)
+                                                    {
+                                                        foreach (var summenu in menu.TblPageMasterList)
+                                                        {
+                                                       <li class="">
+                                                          @Html.ActionLink(summenu.PageName.ToString(), summenu.Action.ToString(), summenu.Controller.ToString())
+                                                       </li>
+                                                        }
+                                                    }
+                                                }
+                                                }
+                                        </ul>
+                   </li>                     
+                }
+            }
+        </ul>
+            
+    </div>
+            
+</div>

@@ -1,0 +1,155 @@
+﻿@{
+    Layout = null;
+}
+
+<script>
+    function fnAddTask() {
+        $('#myModal').modal('show');
+    }
+
+    $('#myModal').on('show.bs.modal', function () {
+        $('.modal .modal-body').css('overflow-y', 'auto');
+        $('.modal .modal-body').css('max-height', $(window).height() * 0.7);
+    });
+</script>
+<div class="row">
+    <div class="col-md-2">
+    <p>
+    <button class="btn btn-primary" onclick="fnAddTask()">Creae a New Task</button> 
+</p>
+</div>
+    <div class="col-md-10"></div>
+
+    </div>
+
+<div class="row">
+    <div class="col-md-12">
+<ul id="tasks" class="item-list ui-sortable">
+																<li class="item-orange clearfix ui-sortable-handle">
+																	<label class="inline">
+																		<input type="checkbox" class="ace">
+																		<span class="lbl"> Answering customer questions</span>
+																	</label>
+
+																	<div class="pull-right easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="42" style="height: 30px; width: 30px; line-height: 29px;">
+																		<span class="percent">42</span>%
+																	<canvas height="30" width="30"></canvas></div>
+																</li>
+
+																<li class="item-red clearfix ui-sortable-handle">
+																	<label class="inline">
+																		<input type="checkbox" class="ace">
+																		<span class="lbl"> Fixing bugs</span>
+																	</label>
+
+																	<!-- #section:custom/extra.action-buttons -->
+																	<div class="pull-right action-buttons">
+																		<a href="#" class="blue">
+																			<i class="ace-icon fa fa-pencil bigger-130"></i>
+																		</a>
+
+																		<span class="vbar"></span>
+
+																		<a href="#" class="red">
+																			<i class="ace-icon fa fa-trash-o bigger-130"></i>
+																		</a>
+
+																		<span class="vbar"></span>
+
+																		<a href="#" class="green">
+																			<i class="ace-icon fa fa-flag bigger-130"></i>
+																		</a>
+																	</div>
+
+																	<!-- /section:custom/extra.action-buttons -->
+																</li>
+
+																<li class="item-default clearfix ui-sortable-handle">
+																	<label class="inline">
+																		<input type="checkbox" class="ace">
+																		<span class="lbl"> Adding new features</span>
+																	</label>
+
+																	<!-- #section:elements.dropdown.hover -->
+																	<div class="inline pull-right position-relative dropdown-hover">
+																		<button class="btn btn-minier bigger btn-primary">
+																			<i class="ace-icon fa fa-cog icon-only bigger-120"></i>
+																		</button>
+
+																		<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-caret dropdown-close dropdown-menu-right">
+																			<li>
+																				<a href="#" class="tooltip-success" data-rel="tooltip" title="" data-original-title="Mark&nbsp;as&nbsp;done">
+																					<span class="green">
+																						<i class="ace-icon fa fa-check bigger-110"></i>
+																					</span>
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#" class="tooltip-error" data-rel="tooltip" title="" data-original-title="Delete">
+																					<span class="red">
+																						<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																					</span>
+																				</a>
+																			</li>
+																		</ul>
+																	</div>
+
+																	<!-- /section:elements.dropdown.hover -->
+																</li>
+
+																<li class="item-blue clearfix ui-sortable-handle">
+																	<label class="inline">
+																		<input type="checkbox" class="ace">
+																		<span class="lbl"> Upgrading scripts used in template</span>
+																	</label>
+																</li>
+
+																<li class="item-grey clearfix ui-sortable-handle">
+																	<label class="inline">
+																		<input type="checkbox" class="ace">
+																		<span class="lbl"> Adding new skins</span>
+																	</label>
+																</li>
+
+																<li class="item-green clearfix ui-sortable-handle">
+																	<label class="inline">
+																		<input type="checkbox" class="ace">
+																		<span class="lbl"> Updating server software up</span>
+																	</label>
+																</li>
+
+																<li class="item-pink clearfix ui-sortable-handle">
+																	<label class="inline">
+																		<input type="checkbox" class="ace">
+																		<span class="lbl"> Cleaning up</span>
+																	</label>
+																</li>
+															</ul>
+        </div>
+    </div>
+
+
+
+
+<div   id="myModal" tabindex="-1" role="dialog" class="modal fade bs-example-modal-lg" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+     <label class="text-info">
+	  Add Task
+     </label>
+      </div>
+      <div class="modal-body">
+        @{
+            Html.RenderPartial("~/Views/ActionPlan/CreateActionPlan.cshtml");
+          }
+      </div>
+    
+     
+     
+  
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

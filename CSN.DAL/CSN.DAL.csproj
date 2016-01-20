@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{876403BF-6C50-425E-ADF6-73A2A2CC9373}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSN.DAL</RootNamespace>
+    <AssemblyName>CSN.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="clsReports.cs" />
+    <Compile Include="CSNDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CSNDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSNDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CSNDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CSNDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DALBase.cs" />
+    <Compile Include="DALHandler.cs" />
+    <Compile Include="ManageAccounts.cs" />
+    <Compile Include="ManageContacts.cs" />
+    <Compile Include="ManageInitiative.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="SeeAccountsWithNOTerritory.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SeeBuyersLinesThatdoNOtexistInMFGList.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SeeGeneralActivitiesWithNoContact.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQLHelper.cs" />
+    <Compile Include="TblAccountList.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblAccountType.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblAccountTypeMaster.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblAcctStatu.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblBuyersLineCarry.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblContactMaster.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblContactStatu.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblCSNGroup.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblCSNList.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLCSNRoleAccess.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblCSNType.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblCustType.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblDivision.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblGeneralActivitie.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblInitiativeList.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblInitiativeResult.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblInitStatu.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblInitType.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblLineStatu.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMfg.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMfgContactMaster.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMfgList.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLMfgPlatform.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMfgState.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblPageMaster.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblpkInitResult.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblPlatform.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblResponseType.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblRoleMaster.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblRolePageMapping.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblState.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblTerritory.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnitOfWork.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UnitOfWork.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwAccountList.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwBuyersList.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwMFGAccount.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwMFGContact.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VwMfgPlatform.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vw_CSN_Account_Buyers.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vw_Mfg_CSN_Account_Buyer.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vw_Mfg_Initiative_List.cs">
+      <DependentUpon>CSNDB.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="CSNDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CSNDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="CSNDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CSNDB.edmx</DependentUpon>
+      <LastGenOutput>CSNDB.Context.cs</LastGenOutput>
+    </None>
+    <None Include="CSNDB.edmx.diagram">
+      <DependentUpon>CSNDB.edmx</DependentUpon>
+    </None>
+    <None Include="CSNDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CSNDB.edmx</DependentUpon>
+      <LastGenOutput>CSNDB.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="UnitOfWork.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UnitOfWork.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSN.Common\CSN.Common.csproj">
+      <Project>{94fd560b-079e-4ba2-9ed3-ce1a7ebda663}</Project>
+      <Name>CSN.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

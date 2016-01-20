@@ -1,0 +1,741 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CSNDBModelStoreContainer" CdmEntityContainer="CSNDBEntities">
+    <EntitySetMapping Name="TblAccountLists">
+      <EntityTypeMapping TypeName="CSNDBModel.TblAccountList">
+        <MappingFragment StoreEntitySet="TblAccountList">
+          <ScalarProperty Name="IsDelelted" ColumnName="IsDelelted" />
+          <ScalarProperty Name="FoodProgram" ColumnName="FoodProgram" />
+          <ScalarProperty Name="RollerGrid" ColumnName="RollerGrid" />
+          <ScalarProperty Name="AcctStatusID" ColumnName="AcctStatusID" />
+          <ScalarProperty Name="NumAccts" ColumnName="NumAccts" />
+          <ScalarProperty Name="CustType2" ColumnName="CustType2" />
+          <ScalarProperty Name="CustType1" ColumnName="CustType1" />
+          <ScalarProperty Name="GasBrand" ColumnName="GasBrand" />
+          <ScalarProperty Name="DistName" ColumnName="DistName" />
+          <ScalarProperty Name="CSNDirect" ColumnName="CSNDirect" />
+          <ScalarProperty Name="CSNDirID" ColumnName="CSNDirID" />
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="Territory" ColumnName="Territory" />
+          <ScalarProperty Name="ShipToMailCode" ColumnName="ShipToMailCode" />
+          <ScalarProperty Name="ShipToCountry" ColumnName="ShipToCountry" />
+          <ScalarProperty Name="ShipToState" ColumnName="ShipToState" />
+          <ScalarProperty Name="ShipToCity" ColumnName="ShipToCity" />
+          <ScalarProperty Name="ShipToAddress2" ColumnName="ShipToAddress2" />
+          <ScalarProperty Name="ShipToAddress1" ColumnName="ShipToAddress1" />
+          <ScalarProperty Name="ShipToName" ColumnName="ShipToName" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="NumStores" ColumnName="NumStores" />
+          <ScalarProperty Name="Food" ColumnName="Food" />
+          <ScalarProperty Name="Freezer" ColumnName="Freezer" />
+          <ScalarProperty Name="DryOnly" ColumnName="DryOnly" />
+          <ScalarProperty Name="CompanyFax" ColumnName="CompanyFax" />
+          <ScalarProperty Name="CompanyExt" ColumnName="CompanyExt" />
+          <ScalarProperty Name="CompanyPhone" ColumnName="CompanyPhone" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="PrimaryAcctCode" ColumnName="PrimaryAcctCode" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAccountTypes">
+      <EntityTypeMapping TypeName="CSNDBModel.tblAccountType">
+        <MappingFragment StoreEntitySet="tblAccountType">
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="AccountTypeID" ColumnName="AccountTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAccountTypeMasters">
+      <EntityTypeMapping TypeName="CSNDBModel.TblAccountTypeMaster">
+        <MappingFragment StoreEntitySet="TblAccountTypeMaster">
+          <ScalarProperty Name="AccountTypeName" ColumnName="AccountTypeName" />
+          <ScalarProperty Name="AccountTypeMasterId" ColumnName="AccountTypeMasterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAcctStatus">
+      <EntityTypeMapping TypeName="CSNDBModel.TblAcctStatu">
+        <MappingFragment StoreEntitySet="TblAcctStatus">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+          <ScalarProperty Name="AcctStatusID" ColumnName="AcctStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblContactStatus">
+      <EntityTypeMapping TypeName="CSNDBModel.TblContactStatu">
+        <MappingFragment StoreEntitySet="TblContactStatus">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CntDescription" ColumnName="CntDescription" />
+          <ScalarProperty Name="CntStatusID" ColumnName="CntStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblCSNGroups">
+      <EntityTypeMapping TypeName="CSNDBModel.TblCSNGroup">
+        <MappingFragment StoreEntitySet="TblCSNGroup">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="CSNGroupID" ColumnName="CSNGroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblCSNLists">
+      <EntityTypeMapping TypeName="CSNDBModel.TblCSNList">
+        <MappingFragment StoreEntitySet="TblCSNList">
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="Roleid" ColumnName="Roleid" />
+          <ScalarProperty Name="SZip" ColumnName="SZip" />
+          <ScalarProperty Name="SCountry" ColumnName="SCountry" />
+          <ScalarProperty Name="SState" ColumnName="SState" />
+          <ScalarProperty Name="SCity" ColumnName="SCity" />
+          <ScalarProperty Name="SAddress2" ColumnName="SAddress2" />
+          <ScalarProperty Name="SAddress1" ColumnName="SAddress1" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FlagFollowups" ColumnName="FlagFollowups" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="AltNumber" ColumnName="AltNumber" />
+          <ScalarProperty Name="Cell" ColumnName="Cell" />
+          <ScalarProperty Name="Ext" ColumnName="Ext" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="DirEmail" ColumnName="DirEmail" />
+          <ScalarProperty Name="GsmEmail" ColumnName="GsmEmail" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CSNGroupID" ColumnName="CSNGroupID" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="SortName" ColumnName="SortName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="CSNTypeID" ColumnName="CSNTypeID" />
+          <ScalarProperty Name="CSNID" ColumnName="CSNID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLCSNRoleAccesses">
+      <EntityTypeMapping TypeName="CSNDBModel.TBLCSNRoleAccess">
+        <MappingFragment StoreEntitySet="TBLCSNRoleAccess">
+          <ScalarProperty Name="AllowAccountLists" ColumnName="AllowAccountLists" />
+          <ScalarProperty Name="AllowContactLists" ColumnName="AllowContactLists" />
+          <ScalarProperty Name="AllowBuyersLists" ColumnName="AllowBuyersLists" />
+          <ScalarProperty Name="AllowSurveyReports" ColumnName="AllowSurveyReports" />
+          <ScalarProperty Name="AllowAcctStatusReports" ColumnName="AllowAcctStatusReports" />
+          <ScalarProperty Name="AllowGenActivityReports" ColumnName="AllowGenActivityReports" />
+          <ScalarProperty Name="AllowInitiativeReports" ColumnName="AllowInitiativeReports" />
+          <ScalarProperty Name="AllowSurveyReview" ColumnName="AllowSurveyReview" />
+          <ScalarProperty Name="AllowAcctStatusReview" ColumnName="AllowAcctStatusReview" />
+          <ScalarProperty Name="AllowGenActivityReview" ColumnName="AllowGenActivityReview" />
+          <ScalarProperty Name="AllowInitiativeReview" ColumnName="AllowInitiativeReview" />
+          <ScalarProperty Name="AllowSurveyDataEntry" ColumnName="AllowSurveyDataEntry" />
+          <ScalarProperty Name="AllowAcctStatusDataEntry" ColumnName="AllowAcctStatusDataEntry" />
+          <ScalarProperty Name="AllowGenActivityDataEntry" ColumnName="AllowGenActivityDataEntry" />
+          <ScalarProperty Name="AllowInitiativeDataEntry" ColumnName="AllowInitiativeDataEntry" />
+          <ScalarProperty Name="AllowRawDataCorrections" ColumnName="AllowRawDataCorrections" />
+          <ScalarProperty Name="AllowDatabaseAudit" ColumnName="AllowDatabaseAudit" />
+          <ScalarProperty Name="AllowSurveyMaintenance" ColumnName="AllowSurveyMaintenance" />
+          <ScalarProperty Name="AllowDetailedMfgMaintenance" ColumnName="AllowDetailedMfgMaintenance" />
+          <ScalarProperty Name="AllowCasualMfgMaintenance" ColumnName="AllowCasualMfgMaintenance" />
+          <ScalarProperty Name="AllowAcctStatusMaintenance" ColumnName="AllowAcctStatusMaintenance" />
+          <ScalarProperty Name="AllowGenActivityMaintenance" ColumnName="AllowGenActivityMaintenance" />
+          <ScalarProperty Name="AllowRepMaintenance" ColumnName="AllowRepMaintenance" />
+          <ScalarProperty Name="AllowInitiativeMaintenance" ColumnName="AllowInitiativeMaintenance" />
+          <ScalarProperty Name="AllowAdminAccMaintenance" ColumnName="AllowAdminAccMaintenance" />
+          <ScalarProperty Name="AllowDetailedAcctMaintenance" ColumnName="AllowDetailedAcctMaintenance" />
+          <ScalarProperty Name="AllowCasualAcctMaintenance" ColumnName="AllowCasualAcctMaintenance" />
+          <ScalarProperty Name="IncludeAllRepAccounts" ColumnName="IncludeAllRepAccounts" />
+          <ScalarProperty Name="IncludeInReports" ColumnName="IncludeInReports" />
+          <ScalarProperty Name="IncludeInStats" ColumnName="IncludeInStats" />
+          <ScalarProperty Name="CSNID" ColumnName="CSNID" />
+          <ScalarProperty Name="CSNRoleAccessID" ColumnName="CSNRoleAccessID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblCSNTypes">
+      <EntityTypeMapping TypeName="CSNDBModel.TblCSNType">
+        <MappingFragment StoreEntitySet="TblCSNType">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CSNType" ColumnName="CSNType" />
+          <ScalarProperty Name="CSNTypeID" ColumnName="CSNTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblCustTypes">
+      <EntityTypeMapping TypeName="CSNDBModel.TblCustType">
+        <MappingFragment StoreEntitySet="TblCustType">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Decription" ColumnName="Decription" />
+          <ScalarProperty Name="CustType" ColumnName="CustType" />
+          <ScalarProperty Name="CustTypeID" ColumnName="CustTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblDivisions">
+      <EntityTypeMapping TypeName="CSNDBModel.TblDivision">
+        <MappingFragment StoreEntitySet="TblDivision">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DivisionName" ColumnName="DivisionName" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Division" ColumnName="Division" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblGeneralActivities">
+      <EntityTypeMapping TypeName="CSNDBModel.TblGeneralActivitie">
+        <MappingFragment StoreEntitySet="TblGeneralActivitie">
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+          <ScalarProperty Name="InitResultID" ColumnName="InitResultID" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="CSNID" ColumnName="CSNID" />
+          <ScalarProperty Name="ActivityComments" ColumnName="ActivityComments" />
+          <ScalarProperty Name="ActivityDesc" ColumnName="ActivityDesc" />
+          <ScalarProperty Name="FollowupDate" ColumnName="FollowupDate" />
+          <ScalarProperty Name="ActivityTitle" ColumnName="ActivityTitle" />
+          <ScalarProperty Name="ActivityDate" ColumnName="ActivityDate" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="MfgId" ColumnName="MfgId" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="ActivityItemCode" ColumnName="ActivityItemCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblInitiativeLists">
+      <EntityTypeMapping TypeName="CSNDBModel.TblInitiativeList">
+        <MappingFragment StoreEntitySet="TblInitiativeList">
+          <ScalarProperty Name="InitStatusID" ColumnName="InitStatusID" />
+          <ScalarProperty Name="InitiativeRequestedBY" ColumnName="InitiativeRequestedBY" />
+          <ScalarProperty Name="InitiativeDoneBy" ColumnName="InitiativeDoneBy" />
+          <ScalarProperty Name="InitiativeDate" ColumnName="InitiativeDate" />
+          <ScalarProperty Name="InitiativeIncentive" ColumnName="InitiativeIncentive" />
+          <ScalarProperty Name="InitiativeDesc" ColumnName="InitiativeDesc" />
+          <ScalarProperty Name="InitiativeLabel" ColumnName="InitiativeLabel" />
+          <ScalarProperty Name="InitiativeType" ColumnName="InitiativeType" />
+          <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+          <ScalarProperty Name="InitiativeID" ColumnName="InitiativeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblInitiativeResults">
+      <EntityTypeMapping TypeName="CSNDBModel.TblInitiativeResult">
+        <MappingFragment StoreEntitySet="TblInitiativeResults">
+          <ScalarProperty Name="DISQUALIFIED" ColumnName="DISQUALIFIED" />
+          <ScalarProperty Name="AppointmentPending" ColumnName="AppointmentPending" />
+          <ScalarProperty Name="CSNID" ColumnName="CSNID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="ItemSuffix" ColumnName="ItemSuffix" />
+          <ScalarProperty Name="EmailText" ColumnName="EmailText" />
+          <ScalarProperty Name="DistConfirm" ColumnName="DistConfirm" />
+          <ScalarProperty Name="SkusPlaced" ColumnName="SkusPlaced" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Reasons" ColumnName="Reasons" />
+          <ScalarProperty Name="FollowupDate" ColumnName="FollowupDate" />
+          <ScalarProperty Name="InitResultID" ColumnName="InitResultID" />
+          <ScalarProperty Name="PresentTo" ColumnName="PresentTo" />
+          <ScalarProperty Name="PresentDate" ColumnName="PresentDate" />
+          <ScalarProperty Name="Presented" ColumnName="Presented" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="InitiativeID" ColumnName="InitiativeID" />
+          <ScalarProperty Name="InitiativeItemCode" ColumnName="InitiativeItemCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblInitStatus">
+      <EntityTypeMapping TypeName="CSNDBModel.TblInitStatu">
+        <MappingFragment StoreEntitySet="TblInitStatus">
+          <ScalarProperty Name="InitStatusDesc" ColumnName="InitStatusDesc" />
+          <ScalarProperty Name="InitStatusID" ColumnName="InitStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblInitTypes">
+      <EntityTypeMapping TypeName="CSNDBModel.TblInitType">
+        <MappingFragment StoreEntitySet="TblInitType">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="InitTypeDesc" ColumnName="InitTypeDesc" />
+          <ScalarProperty Name="InitTypeID" ColumnName="InitTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLineStatus">
+      <EntityTypeMapping TypeName="CSNDBModel.tblLineStatu">
+        <MappingFragment StoreEntitySet="tblLineStatus">
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="NewEntry" ColumnName="NewEntry" />
+          <ScalarProperty Name="LineStatus" ColumnName="LineStatus" />
+          <ScalarProperty Name="ReportTitleLine2" ColumnName="ReportTitleLine2" />
+          <ScalarProperty Name="ReportTitleLine1" ColumnName="ReportTitleLine1" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="StatusItemCode" ColumnName="StatusItemCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblMfgContactMasters">
+      <EntityTypeMapping TypeName="CSNDBModel.TblMfgContactMaster">
+        <MappingFragment StoreEntitySet="TblMfgContactMaster">
+          <ScalarProperty Name="Email2" ColumnName="Email2" />
+          <ScalarProperty Name="Email1" ColumnName="Email1" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="AltNumber" ColumnName="AltNumber" />
+          <ScalarProperty Name="Cell" ColumnName="Cell" />
+          <ScalarProperty Name="Ext" ColumnName="Ext" />
+          <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="ContactTitle" ColumnName="ContactTitle" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MfgId" ColumnName="MfgId" />
+          <ScalarProperty Name="MfgContactID" ColumnName="MfgContactID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblMfgLists">
+      <EntityTypeMapping TypeName="CSNDBModel.TblMfgList">
+        <MappingFragment StoreEntitySet="TblMfgList">
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="StatusChangeDate" ColumnName="StatusChangeDate" />
+          <ScalarProperty Name="StatusChange" ColumnName="StatusChange" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="NewEntry" ColumnName="NewEntry" />
+          <ScalarProperty Name="ItemListTableID" ColumnName="ItemListTableID" />
+          <ScalarProperty Name="Food" ColumnName="Food" />
+          <ScalarProperty Name="FrozenFoods" ColumnName="FrozenFoods" />
+          <ScalarProperty Name="DryOnly" ColumnName="DryOnly" />
+          <ScalarProperty Name="MfgActive" ColumnName="MfgActive" />
+          <ScalarProperty Name="MFGPrintName" ColumnName="MFGPrintName" />
+          <ScalarProperty Name="SublineDesc" ColumnName="SublineDesc" />
+          <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+          <ScalarProperty Name="SubLine" ColumnName="SubLine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLMfgPlatforms">
+      <EntityTypeMapping TypeName="CSNDBModel.TBLMfgPlatform">
+        <MappingFragment StoreEntitySet="TBLMfgPlatform">
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+          <ScalarProperty Name="MfgPlatformID" ColumnName="MfgPlatformID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblMfgs">
+      <EntityTypeMapping TypeName="CSNDBModel.TblMfg">
+        <MappingFragment StoreEntitySet="TblMfgs">
+          <ScalarProperty Name="MfgActive" ColumnName="MfgActive" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="EMailAddress" ColumnName="EMailAddress" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="PrimaryPhone2" ColumnName="PrimaryPhone2" />
+          <ScalarProperty Name="PrimaryPhone1" ColumnName="PrimaryPhone1" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="DOTFoods" ColumnName="DOTFoods" />
+          <ScalarProperty Name="Freezen" ColumnName="Freezen" />
+          <ScalarProperty Name="Food" ColumnName="Food" />
+          <ScalarProperty Name="DryOnly" ColumnName="DryOnly" />
+          <ScalarProperty Name="Platform" ColumnName="Platform" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MFGPrintName" ColumnName="MFGPrintName" />
+          <ScalarProperty Name="MfgName" ColumnName="MfgName" />
+          <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblMfgStates">
+      <EntityTypeMapping TypeName="CSNDBModel.TblMfgState">
+        <MappingFragment StoreEntitySet="TblMfgStates">
+          <ScalarProperty Name="Represented" ColumnName="Represented" />
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+          <ScalarProperty Name="MfgStateID" ColumnName="MfgStateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblPlatforms">
+      <EntityTypeMapping TypeName="CSNDBModel.TblPlatform">
+        <MappingFragment StoreEntitySet="TblPlatform">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Platform" ColumnName="Platform" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblResponseTypes">
+      <EntityTypeMapping TypeName="CSNDBModel.TblResponseType">
+        <MappingFragment StoreEntitySet="TblResponseType">
+          <ScalarProperty Name="ResponseType" ColumnName="ResponseType" />
+          <ScalarProperty Name="ResponseTypeID" ColumnName="ResponseTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRoleMasters">
+      <EntityTypeMapping TypeName="CSNDBModel.tblRoleMaster">
+        <MappingFragment StoreEntitySet="tblRoleMaster">
+          <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblStates">
+      <EntityTypeMapping TypeName="CSNDBModel.TblState">
+        <MappingFragment StoreEntitySet="TblStates">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblTerritories">
+      <EntityTypeMapping TypeName="CSNDBModel.TblTerritory">
+        <MappingFragment StoreEntitySet="TblTerritory">
+          <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="TerrDesc" ColumnName="TerrDesc" />
+          <ScalarProperty Name="Territory" ColumnName="Territory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeeAccountsWithNOTerritories">
+      <EntityTypeMapping TypeName="CSNDBModel.SeeAccountsWithNOTerritory">
+        <MappingFragment StoreEntitySet="SeeAccountsWithNOTerritories">
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="AcctStatusID" ColumnName="AcctStatusID" />
+          <ScalarProperty Name="Territory" ColumnName="Territory" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeeBuyersLinesThatdoNOtexistInMFGLists">
+      <EntityTypeMapping TypeName="CSNDBModel.SeeBuyersLinesThatdoNOtexistInMFGList">
+        <MappingFragment StoreEntitySet="SeeBuyersLinesThatdoNOtexistInMFGList">
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Subline" ColumnName="Subline" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeeGeneralActivitiesWithNoContacts">
+      <EntityTypeMapping TypeName="CSNDBModel.SeeGeneralActivitiesWithNoContact">
+        <MappingFragment StoreEntitySet="SeeGeneralActivitiesWithNoContacts">
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="ActivityDate" ColumnName="ActivityDate" />
+          <ScalarProperty Name="Subline" ColumnName="Subline" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="ActivityItemCode" ColumnName="ActivityItemCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_CSN_Account_Buyers">
+      <EntityTypeMapping TypeName="CSNDBModel.Vw_CSN_Account_Buyers">
+        <MappingFragment StoreEntitySet="Vw_CSN_Account_Buyers">
+          <ScalarProperty Name="AccountFood" ColumnName="AccountFood" />
+          <ScalarProperty Name="AccountFreezer" ColumnName="AccountFreezer" />
+          <ScalarProperty Name="AccountDryOnly" ColumnName="AccountDryOnly" />
+          <ScalarProperty Name="BuyersFirstName" ColumnName="BuyersFirstName" />
+          <ScalarProperty Name="BuyersName" ColumnName="BuyersName" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="CSNName" ColumnName="CSNName" />
+          <ScalarProperty Name="CSNID" ColumnName="CSNID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_Mfg_CSN_Account_Buyer">
+      <EntityTypeMapping TypeName="CSNDBModel.Vw_Mfg_CSN_Account_Buyer">
+        <MappingFragment StoreEntitySet="Vw_Mfg_CSN_Account_Buyer">
+          <ScalarProperty Name="AccountFood" ColumnName="AccountFood" />
+          <ScalarProperty Name="AccountFreezer" ColumnName="AccountFreezer" />
+          <ScalarProperty Name="AccountDryOnly" ColumnName="AccountDryOnly" />
+          <ScalarProperty Name="Freezen" ColumnName="Freezen" />
+          <ScalarProperty Name="Food" ColumnName="Food" />
+          <ScalarProperty Name="DryOnly" ColumnName="DryOnly" />
+          <ScalarProperty Name="BuyersFirstName" ColumnName="BuyersFirstName" />
+          <ScalarProperty Name="SCSNID" ColumnName="SCSNID" />
+          <ScalarProperty Name="BuyersName" ColumnName="BuyersName" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="CSNName" ColumnName="CSNName" />
+          <ScalarProperty Name="CSNID" ColumnName="CSNID" />
+          <ScalarProperty Name="MfgName" ColumnName="MfgName" />
+          <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_Mfg_Initiative_List">
+      <EntityTypeMapping TypeName="CSNDBModel.Vw_Mfg_Initiative_List">
+        <MappingFragment StoreEntitySet="Vw_Mfg_Initiative_List">
+          <ScalarProperty Name="InitiativeDate" ColumnName="InitiativeDate" />
+          <ScalarProperty Name="InitiativeDesc" ColumnName="InitiativeDesc" />
+          <ScalarProperty Name="InitTypeDesc" ColumnName="InitTypeDesc" />
+          <ScalarProperty Name="InitiativeLabel" ColumnName="InitiativeLabel" />
+          <ScalarProperty Name="InitiativeID" ColumnName="InitiativeID" />
+          <ScalarProperty Name="MfgName" ColumnName="MfgName" />
+          <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwAccountLists">
+      <EntityTypeMapping TypeName="CSNDBModel.vwAccountList">
+        <MappingFragment StoreEntitySet="vwAccountList">
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="Platforms" ColumnName="Platforms" />
+          <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
+          <ScalarProperty Name="Territory" ColumnName="Territory" />
+          <ScalarProperty Name="ShippingState" ColumnName="ShippingState" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="CustType2" ColumnName="CustType2" />
+          <ScalarProperty Name="CustType1" ColumnName="CustType1" />
+          <ScalarProperty Name="ShipToMailCode" ColumnName="ShipToMailCode" />
+          <ScalarProperty Name="ShipToCountry" ColumnName="ShipToCountry" />
+          <ScalarProperty Name="ShipToState" ColumnName="ShipToState" />
+          <ScalarProperty Name="ShipToCity" ColumnName="ShipToCity" />
+          <ScalarProperty Name="ShipToAddress2" ColumnName="ShipToAddress2" />
+          <ScalarProperty Name="ShipToAddress1" ColumnName="ShipToAddress1" />
+          <ScalarProperty Name="ShipToName" ColumnName="ShipToName" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="NumStores" ColumnName="NumStores" />
+          <ScalarProperty Name="Food" ColumnName="Food" />
+          <ScalarProperty Name="Freezer" ColumnName="Freezer" />
+          <ScalarProperty Name="DryOnly" ColumnName="DryOnly" />
+          <ScalarProperty Name="CompanyFax" ColumnName="CompanyFax" />
+          <ScalarProperty Name="CompanyExt" ColumnName="CompanyExt" />
+          <ScalarProperty Name="CompanyPhone" ColumnName="CompanyPhone" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="CSNRep" ColumnName="CSNRep" />
+          <ScalarProperty Name="CSNID" ColumnName="CSNID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwBuyersLists">
+      <EntityTypeMapping TypeName="CSNDBModel.vwBuyersList">
+        <MappingFragment StoreEntitySet="vwBuyersList">
+          <ScalarProperty Name="MailMailCode" ColumnName="MailMailCode" />
+          <ScalarProperty Name="MailState" ColumnName="MailState" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="LineAssignment" ColumnName="LineAssignment" />
+          <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+          <ScalarProperty Name="PhoneExt" ColumnName="PhoneExt" />
+          <ScalarProperty Name="MailCountry" ColumnName="MailCountry" />
+          <ScalarProperty Name="MailCity" ColumnName="MailCity" />
+          <ScalarProperty Name="MailAddress2" ColumnName="MailAddress2" />
+          <ScalarProperty Name="MailAddress1" ColumnName="MailAddress1" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="ContactTitle" ColumnName="ContactTitle" />
+          <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+          <ScalarProperty Name="CellNumber" ColumnName="CellNumber" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwMFGAccounts">
+      <EntityTypeMapping TypeName="CSNDBModel.vwMFGAccount">
+        <MappingFragment StoreEntitySet="vwMFGAccounts">
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="DivisionName" ColumnName="DivisionName" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwMFGContacts">
+      <EntityTypeMapping TypeName="CSNDBModel.vwMFGContact">
+        <MappingFragment StoreEntitySet="vwMFGContacts">
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="DivisionName" ColumnName="DivisionName" />
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VwMfgPlatforms">
+      <EntityTypeMapping TypeName="CSNDBModel.VwMfgPlatform">
+        <MappingFragment StoreEntitySet="VwMfgPlatform">
+          <ScalarProperty Name="MfgID" ColumnName="MfgID" />
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="Platform" ColumnName="Platform" />
+          <ScalarProperty Name="MfgName" ColumnName="MfgName" />
+          <ScalarProperty Name="MfgPlatformID" ColumnName="MfgPlatformID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPageMasters">
+      <EntityTypeMapping TypeName="CSNDBModel.tblPageMaster">
+        <MappingFragment StoreEntitySet="tblPageMaster">
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Controller" ColumnName="Controller" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="Page_Id" ColumnName="Page_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblRolePageMappings">
+      <EntityTypeMapping TypeName="CSNDBModel.TblRolePageMapping">
+        <MappingFragment StoreEntitySet="TblRolePageMapping">
+          <ScalarProperty Name="Page_Id" ColumnName="Page_Id" />
+          <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblpkInitResults">
+      <EntityTypeMapping TypeName="CSNDBModel.TblpkInitResult">
+        <MappingFragment StoreEntitySet="TblpkInitResults">
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Response" ColumnName="Response" />
+          <ScalarProperty Name="ResponseType" ColumnName="ResponseType" />
+          <ScalarProperty Name="InitResultID" ColumnName="InitResultID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblContactMasters">
+      <EntityTypeMapping TypeName="CSNDBModel.TblContactMaster">
+        <MappingFragment StoreEntitySet="TblContactMaster">
+          <ScalarProperty Name="IsDelelted" ColumnName="IsDelelted" />
+          <ScalarProperty Name="IsMaskMail" ColumnName="IsMaskMail" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="CntStatusID" ColumnName="CntStatusID" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="CSNRepChangeDate" ColumnName="CSNRepChangeDate" />
+          <ScalarProperty Name="CSNRepChange" ColumnName="CSNRepChange" />
+          <ScalarProperty Name="AccountChangeDate" ColumnName="AccountChangeDate" />
+          <ScalarProperty Name="AccountChange" ColumnName="AccountChange" />
+          <ScalarProperty Name="StatusChangeDate" ColumnName="StatusChangeDate" />
+          <ScalarProperty Name="StatusChange" ColumnName="StatusChange" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="NewEntry" ColumnName="NewEntry" />
+          <ScalarProperty Name="Buyer" ColumnName="Buyer" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="MailMailCode" ColumnName="MailMailCode" />
+          <ScalarProperty Name="MailCountry" ColumnName="MailCountry" />
+          <ScalarProperty Name="MailState" ColumnName="MailState" />
+          <ScalarProperty Name="MailCity" ColumnName="MailCity" />
+          <ScalarProperty Name="MailAddress2" ColumnName="MailAddress2" />
+          <ScalarProperty Name="MailAddress1" ColumnName="MailAddress1" />
+          <ScalarProperty Name="MailSalutation" ColumnName="MailSalutation" />
+          <ScalarProperty Name="MailGreeting" ColumnName="MailGreeting" />
+          <ScalarProperty Name="MailLetters" ColumnName="MailLetters" />
+          <ScalarProperty Name="MailNameSuffix" ColumnName="MailNameSuffix" />
+          <ScalarProperty Name="MailFirstName" ColumnName="MailFirstName" />
+          <ScalarProperty Name="MailLastName" ColumnName="MailLastName" />
+          <ScalarProperty Name="MailNamePrefix" ColumnName="MailNamePrefix" />
+          <ScalarProperty Name="MailTitle" ColumnName="MailTitle" />
+          <ScalarProperty Name="MailCompanyName" ColumnName="MailCompanyName" />
+          <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+          <ScalarProperty Name="CompanyExt" ColumnName="CompanyExt" />
+          <ScalarProperty Name="CompanyPhone" ColumnName="CompanyPhone" />
+          <ScalarProperty Name="CellNumber" ColumnName="CellNumber" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="PhoneExt" ColumnName="PhoneExt" />
+          <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+          <ScalarProperty Name="ContactTitle" ColumnName="ContactTitle" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="SingleBuyerIndex" ColumnName="SingleBuyerIndex" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblBuyersLineCarries">
+      <EntityTypeMapping TypeName="CSNDBModel.TblBuyersLineCarry">
+        <MappingFragment StoreEntitySet="TblBuyersLineCarry">
+          <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+          <ScalarProperty Name="CarryLine" ColumnName="CarryLine" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="BLCId" ColumnName="BLCId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

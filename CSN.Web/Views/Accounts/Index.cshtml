@@ -1,0 +1,710 @@
+﻿@model CSN.ViewModel.AccountListVM
+@{
+    ViewBag.Title = "Index";
+}
+@using (Html.BeginForm("Account", "CSNAccountList", FormMethod.Post))
+{
+    //this  is for create form tag
+    @Html.AntiForgeryToken()          // this is for prevent CSRF attack
+    @Html.ValidationSummary(true)
+    if (@ViewBag.Message != null)
+    {
+    <div style="border: 1px solid red">
+        @ViewBag.Message
+    </div>
+    }
+ <div class="page-header">
+							<h1>
+						Manage CSN List
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+								Employee
+								</small>
+							</h1>
+						</div>
+ 
+<div class="widget-box widget-color-green ui-sortable-handle">
+											<!-- #section:custom/widget-box.options.collapsed -->
+<div class="widget-header widget-header-small">
+												<h6 class="widget-title ">
+													<i class="fa fa-user "></i><i class="fa fa-info"></i>Account Basic Info
+												</h6>
+
+												<div class="widget-toolbar"> 
+
+													<a href="#" data-action="collapse">
+														<i class="ace-icon fa fa-minus" data-icon-show="fa-plus" data-icon-hide="fa-minus"></i>
+													</a>
+
+												 
+												</div>
+											</div>
+
+											<!-- /section:custom/widget-box.options.collapsed -->
+											<div class="widget-body" style="display: block;">
+												<div class="widget-main">
+													     <div class="row">
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Account Name</label>
+                                @*<input type="text" class="form-control" maxlength="50" placeholder="Enter First Name">*@
+                                 @Html.TextBoxFor(a => a.AccountName, new { @class = "form-control", maxlength = "50", placeholder = "Enter First Name" })
+                                    @Html.ValidationMessageFor(a => a.AccountName)
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">CSN Report</label>
+                                <select class="form-control">
+                                    <option value="">---Select Country---</option>
+                                    <option value="1">A11</option>
+                                    <option value="2">A12</option>
+
+                                    <option value="4">Other</option>
+                                </select>
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                  
+
+                        
+                       
+                          <div class="row">
+                              
+                              
+                              <div class="col-sm-4">
+                       <div>
+															<label for="form-field-select-2">Account Type2</label>
+
+															<select class="form-control" id="form-field-select-2" multiple="multiple">
+																<option value="AL">Alabama</option>
+																<option value="AK">Alaska</option>
+																<option value="AZ">Arizona</option>
+																<option value="AR">Arkansas</option>
+																<option value="CA">California</option>
+																<option value="CO">Colorado</option>
+																<option value="CT">Connecticut</option>
+																<option value="DE">Delaware</option>
+																<option value="FL">Florida</option>
+																<option value="GA">Georgia</option>
+																<option value="HI">Hawaii</option>
+																<option value="ID">Idaho</option>
+																<option value="IL">Illinois</option>
+																<option value="IN">Indiana</option>
+																<option value="IA">Iowa</option>
+																<option value="KS">Kansas</option>
+																<option value="KY">Kentucky</option>
+																<option value="LA">Louisiana</option>
+																<option value="ME">Maine</option>
+															</select>
+														</div>
+                    </div>
+                                <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Account Type 2</label>
+                                <select class="form-control">
+                                    <option value="">---Select Country---</option>
+                                    <option value="1">Distributor</option>
+                                    <option value="2">Retaler</option>
+
+                                    <option value="4">Other</option>
+                                </select>
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+</div>
+                  
+       <div class="row">
+                           
+                              
+                            </div>
+       <div class="row">
+                            <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Number Of Account</label>
+                               @* <input type="text" class="form-control" maxlength="50" placeholder="Enter Middle Name">*@
+                                 @Html.TextBoxFor(a => a.NumberAccount, new { @class = "form-control", maxlength = "50", placeholder = "Enter First Name" })
+                            @Html.ValidationMessageFor(a => a.NumberAccount)
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+
+                            <div class="checkbox">
+													<label>
+														<input name="form-field-checkbox" type="checkbox" class="ace">
+														<span class="lbl">DistributorType	Dry </span>
+													</label>
+												</div>
+           
+                                <div class="checkbox">
+													<label>
+														<input name="form-field-checkbox" type="checkbox" class="ace">
+														<span class="lbl">FROZEN</span>
+													</label>
+												</div>
+           
+                              <div class="checkbox">
+													<label>
+														<input name="form-field-checkbox" type="checkbox" class="ace">
+														<span class="lbl">REF.</span>
+													</label>
+												</div>
+
+                    </div>
+    <div class="row">
+                            <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Compny Phone</label>
+                                @*<input type="text" class="form-control" maxlength="50" placeholder="Enter Middle Name">*@
+                                 @Html.TextBoxFor(a => a.Compny_Phone, new { @class = "form-control", maxlength = "50", placeholder = "Enter First Name" })
+                            @Html.ValidationMessageFor(a => a.Compny_Phone)
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+
+                            <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">EXT.</label>
+                                @*<input type="text" class="form-control" maxlength="50" placeholder="Enter Middle Name">*@
+                                 @Html.TextBoxFor(a => a.EXT, new { @class = "form-control", maxlength = "50", placeholder = "Enter First Name" })
+                            @Html.ValidationMessageFor(a => a.EXT)
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+
+                    </div>
+     <div class="row">
+                            <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Company Fax </label>
+                                @*<input type="text" class="form-control" maxlength="50" placeholder="Enter Middle Name">*@
+                                 @Html.TextBoxFor(a => a.CompanyFax, new { @class = "form-control", maxlength = "50", placeholder = "Enter First Name" })
+                            @Html.ValidationMessageFor(a => a.CompanyFax)
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+
+                          
+                            </div>
+                  
+
+												</div>
+											
+			</div>
+    </div>							
+
+<div class="widget-box widget-color-green ui-sortable-handle">
+											<!-- #section:custom/widget-box.options.collapsed -->
+											<div class="widget-header widget-header-small">
+											    <h6 class="widget-title"><i class="fa fa-home"></i>Mailing Address</h6>
+
+												<div class="widget-toolbar"> 
+
+													<a href="#" data-action="collapse">
+														<i class="ace-icon fa fa-minus" data-icon-show="fa-plus" data-icon-hide="fa-minus"></i>
+													</a>
+
+												 
+												</div>
+											</div>
+
+											<!-- /section:custom/widget-box.options.collapsed -->
+											<div class="widget-body" style="display: block;">
+												<div class="widget-main">
+													     
+                      
+
+                    <div class="row">
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Address1</label>
+                                @*<input type="text" class="form-control" maxlength="50" placeholder="Enter First Name">*@
+                                 @Html.TextBoxFor(a => a.Mal_Address1, new { @class = "form-control", maxlength = "50", placeholder = "Enter First Name" })
+                            @Html.ValidationMessageFor(a => a.Mal_Address1)
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                   <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Address2</label>
+                               @* <input type="text" class="form-control" maxlength="50" placeholder="Enter First Name">*@
+                                 @Html.TextBoxFor(a => a.Mal_Address2, new { @class = "form-control", maxlength = "50", placeholder = "Enter First Name" })
+                            @Html.ValidationMessageFor(a => a.Mal_Address2)
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                      
+                  </div>
+                     <div class="row">
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Zip</label>
+                               @* <input type="text" class="form-control" maxlength="50" placeholder="Enter First Name">*@
+                                 @Html.TextBoxFor(a => a.Mal_Zip, new { @class = "form-control", maxlength = "50", placeholder = "Enter First Name" })
+                            @Html.ValidationMessageFor(a => a.Mal_Zip)
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                   
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Country</label>
+                               @* <input type="text" class="form-control" maxlength="50" placeholder="Enter City">*@
+                                 @Html.TextBoxFor(a => a.Mal_Country, new { @class = "form-control", maxlength = "50", placeholder = "Enter First Name" })
+                            @Html.ValidationMessageFor(a => a.Mal_Country)
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                  </div>
+                       
+                   
+
+                    <div class="row">
+                            
+                         <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">State</label>
+                                <select class="form-control">
+                                    <option value="">---Select Country---</option>
+                                    <option value="1">India</option>
+                                    <option value="2">Nepal</option>
+
+                                    <option value="4">Other</option>
+                                </select>
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">City</label>
+                               @* <input type="text" class="form-control" maxlength="50" placeholder="Enter City">*@
+                                 @Html.TextBoxFor(a => a.Mal_City, new { @class = "form-control", maxlength = "50", placeholder = "Enter First Name" })
+                            @Html.ValidationMessageFor(a => a.Mal_City)
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+												</div>
+											</div>
+										</div>
+<div class="widget-box widget-color-green ui-sortable-handle">
+											<!-- #section:custom/widget-box.options.collapsed -->
+											<div class="widget-header widget-header-small">
+											    <h6 class="widget-title"><i class="fa fa-home"></i>Shipping Address</h6>
+
+												<div class="widget-toolbar"> 
+
+													<a href="#" data-action="collapse">
+														<i class="ace-icon fa fa-minus" data-icon-show="fa-plus" data-icon-hide="fa-minus"></i>
+													</a>
+
+												 
+												</div>
+											</div>
+
+											<!-- /section:custom/widget-box.options.collapsed -->
+											<div class="widget-body" style="display: block;">
+												<div class="widget-main">
+													     
+                      
+
+                    <div class="row">
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Address1</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter First Name">
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                   <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Address2</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter First Name">
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                      
+                  </div>
+                     <div class="row">
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Zip</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter First Name">
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                   
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Country</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter City">
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                  </div>
+                       
+                   
+
+                    <div class="row">
+                            
+                         <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">State</label>
+                                <select class="form-control">
+                                    <option value="">---Select Country---</option>
+                                    <option value="1">India</option>
+                                    <option value="2">Nepal</option>
+
+                                    <option value="4">Other</option>
+                                </select>
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">City</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter City">
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+												</div>
+											</div>
+										</div>
+<div class="widget-box widget-color-green ui-sortable-handle">
+											<!-- #section:custom/widget-box.options.collapsed -->
+<div class="widget-header widget-header-small">
+												<h6 class="widget-title">
+													<i class="fa fa-user"></i><i class="fa fa-info"></i>Buyer Basic Info
+												</h6>
+
+												<div class="widget-toolbar"> 
+
+													<a href="#" data-action="collapse">
+														<i class="ace-icon fa fa-minus" data-icon-show="fa-plus" data-icon-hide="fa-minus"></i>
+													</a>
+
+												 
+												</div>
+											</div>
+
+											<!-- /section:custom/widget-box.options.collapsed -->
+											<div class="widget-body" style="display: block;">
+												<div class="widget-main">
+													     <div class="row">
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">First Name</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter First Name">
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Middle Name</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter Middle Name">
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Last Name</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter Last Name">
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                  
+
+                        
+                       
+                          <div class="row">
+                               <div class="col-sm-4">
+                            <div class="form-groupr">
+                                <label class="control-label">Title</label>
+                                <input type="text" class="form-control" placeholder="Select Date of Birth" size="10">
+
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+                               <div class="col-sm-4">
+
+                      <div>
+					<label for="form-field-11">Department</label>
+
+						<textarea id="form-field-11" class="autosize-transition form-control" style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 52px;"></textarea>
+														</div>
+
+                               
+                            </div>
+                       @* <div class="col-sm-4">
+                            <div class="form-groupr">
+                                <label class="control-label">Mohter Tongue</label>
+                                <input type="text" class="form-control" placeholder="Enter Mohter Tongue" size="10">
+
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>*@
+                    </div>
+
+                    <div class="row">
+                            <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Email Address</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter Middle Name">
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+
+                            <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">AlterNate Email Address</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter Middle Name">
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+
+                       @* <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Nationality</label>
+                                <select class="form-control">
+                                    <option value="">---Select Nationality---</option>
+                                    <option value="1">Indian</option>
+                                    <option value="2">American</option>
+                                    <option value="3">Australian</option>
+                                    <option value="4">Other</option>
+                                </select>
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>*@
+                    </div>
+       <div class="row">
+                            <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Phone </label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter Middle Name">
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+
+                            <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Ext</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter Middle Name">
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+                            </div>
+       <div class="row">
+                            <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Cell</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter Middle Name">
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+
+                            <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Alt Number</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter Middle Name">
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+
+                    </div>
+    <div class="row">
+                            <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Fax</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter Middle Name">
+
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+
+                            <div class="checkbox">
+													<label>
+														<input name="form-field-checkbox" type="checkbox" class="ace">
+														<span class="lbl">DO NOT Send Mass Emailspan></span>
+													</label>
+												</div>
+
+                    </div>
+     
+                  
+
+												</div>
+											
+			</div>
+    </div>	
+<div class="widget-box widget-color-green ui-sortable-handle">
+											<!-- #section:custom/widget-box.options.collapsed -->
+											<div class="widget-header widget-header-small">
+											    <h6 class="widget-title"><i class="fa fa-home"></i>Shipping Address</h6>
+
+												<div class="widget-toolbar"> 
+
+													<a href="#" data-action="collapse">
+														<i class="ace-icon fa fa-minus" data-icon-show="fa-plus" data-icon-hide="fa-minus"></i>
+													</a>
+
+												 
+												</div>
+											</div>
+
+											<!-- /section:custom/widget-box.options.collapsed -->
+											<div class="widget-body" style="display: block;">
+												<div class="widget-main">
+													     
+                      
+
+                    <div class="row">
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Address1</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter First Name">
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                   <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Address2</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter First Name">
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                      
+                  </div>
+                     <div class="row">
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Zip</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter First Name">
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                   
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">Country</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter City">
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                  </div>
+                       
+                   
+
+                    <div class="row">
+                            
+                         <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">State</label>
+                                <select class="form-control">
+                                    <option value="">---Select Country---</option>
+                                    <option value="1">India</option>
+                                    <option value="2">Nepal</option>
+
+                                    <option value="4">Other</option>
+                                </select>
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="control-label">City</label>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Enter City">
+
+                                <div class="help-block"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+												</div>
+											</div>
+										</div>
+ 
+<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												Submit
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="ace-icon fa fa-undo bigger-110"></i>
+												Reset
+											</button>
+										</div>
+									</div>
+
+}

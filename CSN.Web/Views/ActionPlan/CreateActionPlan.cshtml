@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "CreateTask";
+    Layout = null;
+}
+  
+  
+<form id="stu-admission-master-form" action="#" method="post" enctype="multipart/form-data">
+ 
+     <div class="box-body">
+<!-- Personal Information -->
+   
+    <div class="row">
+	 
+	<div class="col-sm-6">
+	<div class="form-group required">
+<label class="control-label">Task Name</label>
+<input type="text"   class="form-control"   maxlength="250" placeholder="Enter Goal Name">
+
+<div class="help-block"></div>
+</div>
+
+	</div>
+
+    <div class="col-sm-4">
+	<div class="form-group required">
+<label class="control-label">Task Frequency</label>
+<select id="stuadmissionmaster-stu_gender" class="form-control" name="StuAdmissionMaster[stu_gender]">
+<option value="">---Select Task Frequency---</option>
+<option value="Male">Daily</option>
+<option value="Female">Weekly</option>
+</select>
+
+
+<div class="help-block"></div>
+</div>
+
+	</div>   
+	 
+    </div>
+     
+    <div class="row">
+	 
+	<div class="col-sm-10">
+	<div class="form-group required">
+<label class="control-label">Task Description</label>
+<textarea   class="form-control"   maxlength="250" placeholder="Enter Description/Purpose"></textarea>
+
+<div class="help-block"></div>
+</div>
+
+	</div>
+	 
+    </div>
+    
+    <div class="row">
+	 
+	<div class="col-sm-6">
+	<div class="form-group required">
+<label class="control-label">When do you plan to Start this Task : </label>
+<input type="text"   class="form-control"   placeholder="Enter Start date">
+
+<div class="help-block"></div>
+</div>
+
+	</div>
+	 <div class="col-sm-6">
+	<div class="form-group required">
+<label class="control-label">When do you plan to End this Task : </label>
+<input type="text"   class="form-control"   placeholder="Enter End date">
+
+<div class="help-block"></div>
+</div>
+
+	</div>
+    </div>
+  
+</div>
+    
+<div class="help-block"></div>
+    <div class="box-footer">
+        	<div class="col-sm-2"></div>
+        	<div class="col-sm-8">
+    <button type="submit" class="btn btn-primary btn-create">Save Task</button>  
+                <button type="submit" class="btn btn-primary btn-create">Save & Add NewTask</button>  	
+      <a class="btn btn-default btn-create" href="#">Cancel</a></div>
+        </div>
+    </form>
+  
+ 

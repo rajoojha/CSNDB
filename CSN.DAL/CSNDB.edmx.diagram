@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="222607ee0a6947738743b79002930395" Name="Diagram1" ZoomLevel="72">
+        <EntityTypeShape EntityType="CSNDBModel.TblAccountList" Width="1.5" PointX="8.9546383511995149" PointY="11.878368413019166" />
+        <EntityTypeShape EntityType="CSNDBModel.tblAccountType" Width="1.5" PointX="2.5662820984452415" PointY="10.820972700985601" />
+        <EntityTypeShape EntityType="CSNDBModel.TblAccountTypeMaster" Width="1.5" PointX="3.2040702585149878" PointY="0.38349585252976781" />
+        <EntityTypeShape EntityType="CSNDBModel.TblAcctStatu" Width="1.5" PointX="1.2195147654132521" PointY="3.0489281728160234" />
+        <EntityTypeShape EntityType="CSNDBModel.TblContactStatu" Width="1.5" PointX="9.0881854151786232" PointY="8.0883964188808566" />
+        <EntityTypeShape EntityType="CSNDBModel.TblCSNGroup" Width="1.5" PointX="0.93557695156688658" PointY="8.5488633851282589" />
+        <EntityTypeShape EntityType="CSNDBModel.TblCSNList" Width="1.5" PointX="1.7512012691009797" PointY="30.308455913471271" />
+        <EntityTypeShape EntityType="CSNDBModel.TBLCSNRoleAccess" Width="1.5" PointX="10.345994587217454" PointY="11.315490310692923" />
+        <EntityTypeShape EntityType="CSNDBModel.TblCSNType" Width="1.5" PointX="5.4769625670634969" PointY="25.718480777795651" />
+        <EntityTypeShape EntityType="CSNDBModel.TblCustType" Width="1.5" PointX="7.1560590728912779" PointY="28.169346122150007" />
+        <EntityTypeShape EntityType="CSNDBModel.TblDivision" Width="1.5" PointX="10.682824154702399" PointY="9.8429877356826267" />
+        <EntityTypeShape EntityType="CSNDBModel.TblGeneralActivitie" Width="1.5" PointX="6.4951344460691951" PointY="6.0093377558557961" />
+        <EntityTypeShape EntityType="CSNDBModel.TblInitiativeList" Width="1.5" PointX="5.6311479609604689" PointY="6.4248592138406169" />
+        <EntityTypeShape EntityType="CSNDBModel.TblInitiativeResult" Width="1.5" PointX="3.5937903335289056" PointY="29.607724516469858" />
+        <EntityTypeShape EntityType="CSNDBModel.TblInitStatu" Width="1.5" PointX="4.3208862805370636" PointY="7.5538245176681436" />
+        <EntityTypeShape EntityType="CSNDBModel.TblInitType" Width="1.5" PointX="10.772743490884427" PointY="7.562037814204599" />
+        <EntityTypeShape EntityType="CSNDBModel.tblLineStatu" Width="1.5" PointX="3.6029058767496172" PointY="11.020111372238077" />
+        <EntityTypeShape EntityType="CSNDBModel.TblMfgContactMaster" Width="1.5" PointX="8.3173319158690653" PointY="22.538727040653455" />
+        <EntityTypeShape EntityType="CSNDBModel.TblMfgList" Width="1.5" PointX="0.29399950629752108" PointY="21.90368617600933" />
+        <EntityTypeShape EntityType="CSNDBModel.TBLMfgPlatform" Width="1.5" PointX="11.861370384628591" PointY="7.9492732025446715" />
+        <EntityTypeShape EntityType="CSNDBModel.TblMfg" Width="1.5" PointX="5.3485380864462524" PointY="2.7583892656296443" />
+        <EntityTypeShape EntityType="CSNDBModel.TblMfgState" Width="1.5" PointX="4.04279291631784" PointY="2.7425665272132336" />
+        <EntityTypeShape EntityType="CSNDBModel.TblPlatform" Width="1.5" PointX="6.7913005122874406" PointY="16.805394344406853" />
+        <EntityTypeShape EntityType="CSNDBModel.TblResponseType" Width="1.5" PointX="1.9884456405362325" PointY="30.160554825403054" />
+        <EntityTypeShape EntityType="CSNDBModel.tblRoleMaster" Width="1.5" PointX="9.29832908199091" PointY="10.674072807037305" />
+        <EntityTypeShape EntityType="CSNDBModel.TblState" Width="1.5" PointX="5.6486764986294675" PointY="29.242701618579542" />
+        <EntityTypeShape EntityType="CSNDBModel.TblTerritory" Width="1.5" PointX="7.51220010384554" PointY="25.59983156323425" />
+        <AssociationConnector Association="CSNDBModel.FK_TblGeneralActivities_TblMfgs" />
+        <AssociationConnector Association="CSNDBModel.FK_TblGeneralActivities_TblPlatform" />
+        <AssociationConnector Association="CSNDBModel.FK_TblInitiativeList_TblInitType" />
+        <AssociationConnector Association="CSNDBModel.FK_TblInitiativeList_TblMfgs" />
+        <AssociationConnector Association="CSNDBModel.FK_TblInitiativeResults_TblInitiativeList" />
+        <EntityTypeShape EntityType="CSNDBModel.tblPageMaster" Width="1.5" PointX="11.163646112738013" PointY="23.610445674327408" />
+        <EntityTypeShape EntityType="CSNDBModel.TblRolePageMapping" Width="1.5" PointX="0.706365416155367" PointY="10.396275644375139" />
+        <EntityTypeShape EntityType="CSNDBModel.TblpkInitResult" Width="1.5" PointX="1.8569033825103674" PointY="1.7003731586506465" />
+        <AssociationConnector Association="CSNDBModel.FK_TblGeneralActivitie_TblAccountList" />
+        <AssociationConnector Association="CSNDBModel.FK_TblGeneralActivitie_TblCSNList" />
+        <AssociationConnector Association="CSNDBModel.FK_TblInitiativeResults_TblpkInitResults" />
+        <AssociationConnector Association="CSNDBModel.FK_TblpkInitResults_TblResponseType" />
+        <EntityTypeShape EntityType="CSNDBModel.TblContactMaster" Width="1.5" PointX="2.0101118264766931" PointY="28.491598634278215" />
+        <AssociationConnector Association="CSNDBModel.FK_TblGeneralActivitie_TblContactMaster" />
+        <AssociationConnector Association="CSNDBModel.FK_TblInitiativeResults_TblContactMaster" />
+        <EntityTypeShape EntityType="CSNDBModel.TblBuyersLineCarry" Width="1.5" PointX="1.514946398099394" PointY="21.62184680515055" />
+      </Diagram>
+      <Diagram DiagramId="691093751b7c4f1bb4ba863166c02657" Name="View" >
+        <EntityTypeShape EntityType="CSNDBModel.SeeAccountsWithNOTerritory" Width="1.5" PointX="3.5939115917281765" PointY="19.510530123259187" />
+        <EntityTypeShape EntityType="CSNDBModel.SeeBuyersLinesThatdoNOtexistInMFGList" Width="1.5" PointX="8.304555012055" PointY="29.050037442264166" />
+        <EntityTypeShape EntityType="CSNDBModel.SeeGeneralActivitiesWithNoContact" Width="1.5" PointX="6.6173232433466813" PointY="12.522808170189526" />
+        <EntityTypeShape EntityType="CSNDBModel.Vw_CSN_Account_Buyers" Width="1.5" PointX="6.5662785426556507" PointY="12.561288198717538" />
+        <EntityTypeShape EntityType="CSNDBModel.Vw_Mfg_CSN_Account_Buyer" Width="1.5" PointX="2.3188567712525172" PointY="22.051461066143336" />
+        <EntityTypeShape EntityType="CSNDBModel.Vw_Mfg_Initiative_List" Width="1.5" PointX="7.8643357082569683" PointY="18.50981152919578" />
+        <EntityTypeShape EntityType="CSNDBModel.vwAccountList" Width="1.5" PointX="4.3908949477555677" PointY="28.754063679256507" />
+        <EntityTypeShape EntityType="CSNDBModel.vwBuyersList" Width="1.5" PointX="9.8460701936139117" PointY="21.62572490685886" />
+        <EntityTypeShape EntityType="CSNDBModel.vwMFGAccount" Width="1.5" PointX="5.8928843764089445" PointY="24.922044720930067" />
+        <EntityTypeShape EntityType="CSNDBModel.vwMFGContact" Width="1.5" PointX="10.205852932392551" PointY="18.152653493989565" />
+        <EntityTypeShape EntityType="CSNDBModel.VwMfgPlatform" Width="1.5" PointX="8.5635339657606249" PointY="29.35355973120479" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

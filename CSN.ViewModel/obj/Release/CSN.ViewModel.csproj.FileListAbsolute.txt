@@ -1,0 +1,5 @@
+G:\CSN2016\CSNApps_old\CSN.ViewModel\bin\Release\CSN.ViewModel.dll
+G:\CSN2016\CSNApps_old\CSN.ViewModel\bin\Release\CSN.ViewModel.pdb
+G:\CSN2016\CSNApps_old\CSN.ViewModel\obj\Release\CSN.ViewModel.csprojResolveAssemblyReference.cache
+G:\CSN2016\CSNApps_old\CSN.ViewModel\obj\Release\CSN.ViewModel.dll
+G:\CSN2016\CSNApps_old\CSN.ViewModel\obj\Release\CSN.ViewModel.pdb

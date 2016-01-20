@@ -1,0 +1,70 @@
+﻿@using System.Data;
+@using System.Linq;
+@{
+    ViewBag.Title = "AccountListView";
+ 
+}
+<div class="panel panel-flat">
+    <div class="panel-heading">
+        <h5 class="panel-title">Accounts List</h5>
+    </div>
+
+    <table class="table datatable-basic">
+        <thead>
+            <tr class="bg-blue">
+                <th>Company</th>
+                <th>CompanyPhone</th>
+                <th>CompanyFax</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip</th>
+                <th>Country</th>
+                <th>CSN Rep</th>
+                <th>CustTyp</th>
+                <th>NumStores</th>
+                <th colspan="2">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{ 
+                var gAccountList = ViewBag.AccountList1;
+                if (gAccountList.Count == 0)
+                {
+                <tr>
+                    <td colspan="10" align="center" style="font-size: 12px; color: #055EB2;">No Record Found.</td>
+                </tr>       
+                }
+                else
+                {
+
+                    foreach (var row in gAccountList)
+                    {
+                <tr>
+                    @{       
+                        <td>@row.Company</td>
+                        <td>@row.CompanyPhone</td>
+                        <td>@row.CompanyFax</td>
+                        <td>@*@row.Address*@</td>
+                        <td>@row.City</td>
+                        <td>@*@row.States*@</td>
+                        <td>@row.Zip</td>
+                        <td>@row.Country</td>
+                        <td>@*@if (@row.TblCSNList != null)
+                            { @row.TblCSNList.SortName }*@</td>
+                        <td>@row.CustType1</td>
+                        <td>@row.NumStores</td> 
+                        <td>@Html.ActionLink("Edit", "ManageAccount", "Accounts", new { AccountCode = @row.AccountCode }, null) </td> 
+                        if (Session["RoleID"].ToString() == "28")
+                        {
+                        <td><a href="javascript:void(0);" onclick="DeleteAccount(@row.AccountCode,@row.AccountCode);">Delete</a></td> 
+                        }
+                    }
+                </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,11 @@
+G:\CSN2016\CSNApps_old\CSN.Business\bin\Release\CSN.Business.dll
+G:\CSN2016\CSNApps_old\CSN.Business\bin\Release\CSN.Business.pdb
+G:\CSN2016\CSNApps_old\CSN.Business\bin\Release\CSN.DAL.dll
+G:\CSN2016\CSNApps_old\CSN.Business\bin\Release\CSN.ViewModel.dll
+G:\CSN2016\CSNApps_old\CSN.Business\bin\Release\EntityFramework.dll
+G:\CSN2016\CSNApps_old\CSN.Business\bin\Release\CSN.DAL.pdb
+G:\CSN2016\CSNApps_old\CSN.Business\bin\Release\CSN.ViewModel.pdb
+G:\CSN2016\CSNApps_old\CSN.Business\bin\Release\EntityFramework.xml
+G:\CSN2016\CSNApps_old\CSN.Business\obj\Release\CSN.Business.csprojResolveAssemblyReference.cache
+G:\CSN2016\CSNApps_old\CSN.Business\obj\Release\CSN.Business.dll
+G:\CSN2016\CSNApps_old\CSN.Business\obj\Release\CSN.Business.pdb

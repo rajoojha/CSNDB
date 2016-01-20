@@ -1,0 +1,113 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ include file="EF.Utility.CS.ttinclude"#>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".cs" #>
+<#        
+if(Errors.HasErrors)
+{
+    return String.Empty;
+}
+ 
+CodeGenerationTools code = new CodeGenerationTools(this){FullyQualifySystemTypes = true, CamelCaseFields = false};
+MetadataLoader loader = new MetadataLoader(this);
+ 
+string open = "<";
+string close = ">";
+string SourceCsdlPath = FindEDMXFileName();
+ReferenceCsdlPaths = new string[] {};
+string namespaceName = "CSN.DAL";
+ItemCollection = loader.CreateEdmItemCollection(SourceCsdlPath, ReferenceCsdlPaths.ToArray());
+EntityContainer container = ItemCollection.GetItems<EntityContainer>().FirstOrDefault();
+#>
+using System;
+using System.Collections.Generic;
+using System.Data.Objects;
+using System.Linq;
+using System.Text;
+using System.Linq.Expressions;
+ 
+namespace <#=namespaceName#>
+{
+  
+ 
+  public  class UnitOfWork : IDisposable
+  {
+   
+       private CSNDBEntities context = new CSNDBEntities();
+ 
+       <#
+              foreach(EntitySet set in container.BaseEntitySets.OfType<EntitySet>())
+        {
+                    
+       #>
+       private Repository<#= open #><#= set.ElementType.Name #><#= close #> <#= set.Name.ToLower() #>Repository ;
+       <#
+        }
+                     #>
+    #region UnitOfWork Members
+ 
+    <#
+        foreach (EntitySet set in container.BaseEntitySets.OfType<EntitySet>())
+        {   
+    #>
+ 
+      
+    public Repository<#= open #><#= set.ElementType.Name #><#= close #> <#= set.Name #>Repository
+    {
+        get
+        {
+            if (this.<#= set.Name.ToLower() #>Repository == null)
+            {
+                this.<#= set.Name.ToLower()#>Repository = new Repository<#= open #><#= set.ElementType.Name #><#= close #>(context);
+            }
+            return <#= set.Name.ToLower()#>Repository;
+        }
+    }
+    <#
+        }
+    #>   
+    
+    public void Save()
+    {
+              context.SaveChanges();
+    }
+ 
+    private bool disposed = false;
+ 
+    protected virtual void Dispose(bool disposing)
+    {
+              if (!this.disposed)
+                     {
+                if (disposing)
+                {
+                    context.Dispose();
+                }
+            }
+            this.disposed = true;
+    }
+ 
+   public void Dispose()
+   {
+              Dispose(true);
+        GC.SuppressFinalize(this);
+   }
+ 
+    #endregion
+  }
+}
+<#+
+public string SourceCsdlPath{ get; set; }
+public EdmItemCollection ItemCollection{ get; set; }
+public IEnumerable<string> ReferenceCsdlPaths{ get; set; }
+ 
+string FindEDMXFileName()
+{           
+    string[] entityFrameworkFiles = Directory.GetFiles(Host.ResolvePath(string.Empty), "*.edmx");
+    if(entityFrameworkFiles.Length > 0)
+    {
+        return entityFrameworkFiles[0];
+    }
+   
+    return string.Empty;
+}
+#>

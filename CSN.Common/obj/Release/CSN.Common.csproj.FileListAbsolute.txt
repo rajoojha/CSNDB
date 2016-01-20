@@ -1,0 +1,13 @@
+G:\CSN2016\CSNApps_old\CSN.Common\bin\Release\CSN.Common.dll
+G:\CSN2016\CSNApps_old\CSN.Common\bin\Release\CSN.Common.pdb
+G:\CSN2016\CSNApps_old\CSN.Common\obj\Release\CSN.Common.csprojResolveAssemblyReference.cache
+G:\CSN2016\CSNApps_old\CSN.Common\obj\Release\CSN.Common.dll
+G:\CSN2016\CSNApps_old\CSN.Common\obj\Release\CSN.Common.pdb
+G:\CSN2016\CSNApps_old\CSN.Common\bin\Release\CSN.Common.dll.config
+G:\CSN2016\CSNApps_old\CSN.Common\bin\Release\DotNetOpenAuth.Core.dll
+G:\CSN2016\CSNApps_old\CSN.Common\bin\Release\System.Net.Http.Extensions.dll
+G:\CSN2016\CSNApps_old\CSN.Common\bin\Release\System.Net.Http.Primitives.dll
+G:\CSN2016\CSNApps_old\CSN.Common\bin\Release\DotNetOpenAuth.Core.xml
+G:\CSN2016\CSNApps_old\CSN.Common\bin\Release\System.Net.Http.Extensions.xml
+G:\CSN2016\CSNApps_old\CSN.Common\bin\Release\System.Net.Http.Primitives.xml
+G:\CSN2016\CSNApps_old\CSN.Common\obj\Release\CSN.Common.csproj.App.config
